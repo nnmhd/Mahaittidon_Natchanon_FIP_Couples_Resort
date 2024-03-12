@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Couples Resort — Chateau</title>
+    <!-- Google Fonts installation -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d0e8431583.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="#" />
+
+    <style>
+      .hidden {
+        color: blue;
+        text-decoration: underline;
+        opacity: 30%;
+      }
+
+      * {
+        font-family: "Sanchez";
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="hidden">
+        Welcome to The Couples Resort, This is our Chateau Room
+      </h1>
+      <!-- Header & Navigator -->
+      <nav id="main-nav">
+        <h2 class="hidden">Main Navigation</h2>
+        <input type="checkbox" id="hamburger" />
+        <img src="/images/burger.svg" alt="Hamburger menu icon" />
+        <div id="burger-ctn">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="/index.html">Rooms</a></li>
+            <li><a href="">Packages</a></li>
+            <li><a href="">Dining</a></li>
+            <li><a href="/activities.html">Spa Activities</a></li>
+            <li><a href="/reservations.html">Reservations</a></li>
+          </ul>
+        </div>
+      </nav>
+      <img
+        src="/images/couples_resort_logo.svg"
+        alt="Couples Resort"
+        id="cr-logo"
+      />
+    </header>
+
+    <!-- Hero Section : Chateau -->
+    <h2 class="hidden">Chateau Room's details</h2>
+    <main>
+      <section id="rm-ctn" class="chateau">
+        <img src="#" alt="" class="hr-img" />
+        <section id="hl-box">
+          <h2 class="hl-box">
+            <span class="sub-hl">Room Style</span><br />
+            Chateau
+          </h2>
+        </section>
+
+        <div class="rm-func line-separator">
+          <img class="rm-func-ic" src="#" alt="" />
+          <p>1400 ft<sup>2</sup></p>
+          <img class="rm-func-ic" src="#" alt="" />
+          <p>King Size Beds</p>
+        </div>
+        <div class="rm-del-bx">
+          <p class="rm-del">
+            Old European Boutique Chateaus and each with a Private Screened in
+            Gazebo, Walkout Balcony and Outdoor Hot Tub to soothe life’s pains
+            away while enjoying views of spectacular scenery overlooking
+            sparkling Galeairy Lake onto the romantic forests of Algonquin Park.
+            <br /><br />
+            Travel the World and one will quickly see that it does not get any
+            better than this anywhere.<br /><br />
+            In all 4 seasons, explore the stars from your private Outdoor Hot
+            Tub located on your deck.<br /><br />
+            Towering 16 foot vaulted ceiling and a massive 2 sided stone
+            fireplace between the bedroom and living room. Furnished by Canada’s
+            finest furniture store The Art Shoppe of Toronto.<br /><br />
+            All rooms accessed daily for outdoor hot tub inspection.
+          </p>
+
+          <!-- Dining Promotion -->
+          <h2 class="hidden">Dining Promotion of Couples Resort</h2>
+          <aside class="pro-dinn" style="background-color: brown">
+            <p>All room prices include daily 5 course dinner and breakfast</p>
+            <a href="#" class="book-btn">Book Now</a>
+          </aside>
+
+          <h3>Chateau Feature</h3>
+          <br /><br />
+          Private Out Door Hot Tubs<br />
+          Private Sauna<br />
+          Steam Generator for the double shower<br />
+          4 shower heads &amp; benches<br />
+          Exceeds 5 Diamond/Star Room Standards<br />
+          Private Out Door Hot Tubs<br />
+          Spacious Lakeside View<br />
+          Walkout Balcony or Deck<br />
+          King Size Beds<br />
+          Fiber-optic Internet - Free WIFI<br />
+          Free - Netflix<br />
+          Bidet<br />
+          Microwave<br />
+          European Shower (2 or more heads)<br />
+          50 inch Television<br />
+          Wood Burning Fireplace<br />
+          2 bath robes<br />
+          Hair Dryer, cosmetic mirror<br />
+          Irons/Ironing Boards<br />
+          Keurig Coffee Maker with K-caps<br />
+          Bar Fridge<br />
+          Phones - Free long Distance<br />
+          2 Chaise Lounge Chairs - Spring, Summer, Fall<br />
+          2 person Whirlpool Bath Tub<br />
+          Safes<br />
+          Alarm Clock<br />
+          Drink - Tap Water - Algonquin Park Aquifer<br />
+        </div>
+
+        <figure class="rm-del-img-ctn">
+          <ul class="rm-del-img-bx">
+            <li class="rm-del-img"><img src="#" alt="" /></li>
+            <li class="rm-del-img"><img src="#" alt="" /></li>
+            <li class="rm-del-img"><img src="#" alt="" /></li>
+            <li class="rm-del-img"><img src="#" alt="" /></li>
+            <li class="rm-del-img"><img src="#" alt="" /></li>
+            <li class="rm-del-img"><img src="#" alt="" /></li>
+          </ul>
+        </figure>
+      </section>
+
+      <!-- Booking Section -->
+      <section class="booking-del" style="background-color: blanchedalmond">
+        <div class="rm-price">
+          <p class="price">
+            <span>&dollar;200 CAD</span>
+            / night
+          </p>
+        </div>
+        <form action="#">
+          <div id="check-in">
+            <label for="check-in">Check-in</label>
+            <input
+              type="text"
+              onfocus="(this.type='date')"
+              placeholder="Date"
+            />
+          </div>
+          <div id="check-out">
+            <label for="check-in">Check-out</label>
+            <input
+              type="text"
+              onfocus="(this.type='date')"
+              placeholder="Date"
+            />
+          </div>
+          <div id="guest">
+            <label for="guest">Guests</label>
+            <select name="guest">
+              <option value="single">Single</option>
+              <option value="couple">Couple</option>
+            </select>
+          </div>
+          <input type="submit" value="Book" />
+        </form>
+        <div class="total-price-bx">
+          <p>Total</p>
+          <p class="total-price">&dollar;<span>226</span> CAD</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <h2 class="hidden">Footer of Couples Resort</h2>
+
+    <footer id="footer-hero" class="grid-con">
+      <section id="footer-contact-info" class="col-span-full">
+        <h3>Couples Resort</h3>
+        <p>
+          1198 Osprey Rd, (End of) <br />
+          Minden, Soyers Lake, ON, <br />
+          K0M 2K0
+        </p>
+        <p>
+          Toll Free:+1 877 201-1156 <br />
+          FAX:+1 613 638 2217 <br />
+          E-mail: info@coupleresort.com
+        </p>
+      </section>
+
+      <div id="footer-privacy" class="col-span-full line-separator">
+        <p id="price-policy">
+          All Prices and services on this website and in our reservation system
+          are based on conditions at the time of publishing abd are subject to
+          change. Please call to confirm services, availability and pricing.
+          &copy;2013 Couples Resort Inc. All Rights Reserved Privacy Policy
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
