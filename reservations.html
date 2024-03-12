@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Couples Resort — Reservations</title>
+    <!-- Google Fonts installation -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d0e8431583.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="#" />
+
+    <style>
+      .hidden {
+        color: blue;
+        text-decoration: underline;
+        opacity: 30%;
+      }
+
+      * {
+        font-family: "Sanchez";
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="hidden">Couples Resort Reservation page</h1>
+      <!-- Header & Navigator -->
+      <nav id="main-nav">
+        <h2 class="hidden">Main Navigation</h2>
+        <input type="checkbox" id="hamburger" />
+        <img src="/images/burger.svg" alt="Hamburger menu icon" />
+        <div id="burger-ctn">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="/index.html">Rooms</a></li>
+            <li><a href="">Packages</a></li>
+            <li><a href="">Dining</a></li>
+            <li><a href="/activities.html">Spa Activities</a></li>
+            <li><a href="/reservations.html">Reservations</a></li>
+          </ul>
+        </div>
+      </nav>
+      <img
+        src="/images/couples_resort_logo.svg"
+        alt="Couples Resort"
+        id="cr-logo"
+      />
+    </header>
+
+    <!-- Couples Resort : Reservation Details and Guest Info-->
+    <h2 class="hidden">Couples Resort Booking Details and Guest Info</h2>
+    <main>
+      <section id="hl-box">
+        <h2 class="hl-box">
+          <span class="sub-hl">You Almost Done</span><br />
+          Request Booking
+        </h2>
+      </section>
+
+      <!--Booking Details Section -->
+      <section class="book-sum">
+        <div class="rm-type">
+          <h5>Room Type</h5>
+          <p class="rm-type">Chateau</p>
+        </div>
+        <div class="date-sum">
+          <h5>Date</h5>
+          <p class="date-sum">4-5 April 2024</p>
+        </div>
+        <div class="guest-sum">
+          <h5>Guets</h5>
+          <p class="guest-sum">Couple</p>
+        </div>
+      </section>
+      <section class="price-sum">
+        <div class="rm-price-sum">
+          <p class="rm-price-sum">
+            &dollar;<span class="rm-price">200</span>CAD x
+            <span class="night-sum">2</span> night(s)
+          </p>
+          <p>Taxes (additional 13%)</p>
+        </div>
+        <div class="total-price">
+          <p>in total</p>
+          <p>&dollar;<span class="total-price">226</span>CAD</p>
+        </div>
+      </section>
+
+      <!-- Guest Info Section -->
+      <h2 class="hidden">Couples Resort : Guest Info</h2>
+      <section class="guest-info">
+        <h3>Guest Info</h3>
+        <form action="">
+          <ul>
+            <li>
+              <label for="fname">Full Name</label>
+              <input type="text" name="fname" />
+            </li>
+            <li>
+              <label for="email">Email</label>
+              <input type="email" name="email" />
+            </li>
+            <li>
+              <label for="tel">Phone Number</label>
+              <input type="number" name="tel" />
+            </li>
+            <li>
+              <label for="request">Special requests (optional)</label>
+              <textarea name="request" cols="30" rows="10"></textarea>
+            </li>
+          </ul>
+        </form>
+      </section>
+      <input class="pay-btn" type="submit" value="Pay Now" />
+      <hr class="hr-bl bl" />
+
+      <!-- Payment Section -->
+      <h2 class="hidden">Couples Resort : Payment info</h2>
+      <section class="pay-info">
+        <h3>Select Payment</h3>
+        <div class="payment-box cards">
+          <input type="radio" name="payment" value="cards" />
+          <label for="payment">Cards</label>
+        </div>
+        <div class="payment-box paypal">
+          <input type="radio" name="payment" value="paypal" />
+          <label for="payment">PayPal</label>
+        </div>
+        <div class="payment-box apple">
+          <input type="radio" name="payment" value="apple" />
+          <label for="payment">Apple Pay</label>
+        </div>
+      </section>
+
+      <!-- Payment : Billing info Section -->
+      <section class="bill-info">
+        <form action="" class="bill-info-box">
+          <fieldset name="bill-info">
+            <legend>Billing Info</legend>
+            <label for="fname">Full Name</label>
+            <input type="text" name="fname" />
+
+            <label for="address">Address</label>
+            <input type="text" name="address" />
+
+            <label for="city">City</label>
+            <input type="text" name="city" />
+
+            <label for="fname">Postal Code</label>
+            <input type="text" name="postcode" />
+
+            <label for="country">Country</label>
+            <input type="text" name="country" />
+
+            <label for="tel">Phone Number</label>
+            <input type="tel" name="tel" />
+          </fieldset>
+
+          <div class="card-info" style="background-color: #999">
+            <fieldset name="card-info">
+              <legend>Card Info</legend>
+              <label for="card-no">Card Number</label>
+              <input type="number" />
+              <select name="card-type">
+                <option value="visa">Visa</option>
+                <option value="amex">AMEX</option>
+                <option value="master">Master</option>
+              </select>
+
+              <label for="holder">Card Holder Name</label>
+              <input type="text" name="holder" />
+
+              <label for="exp">Expiration</label>
+              <input type="month" name="exp" />
+
+              <label for="ccv">CCV</label>
+              <input type="text" name="ccv" maxlength="3" />
+            </fieldset>
+          </div>
+          <input class="pay-btn" type="submit" value="Pay" />
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <h2 class="hidden">Footer of Couples Resort</h2>
+    <footer id="footer-hero" class="grid-con">
+      <section id="footer-contact-info" class="col-span-full">
+        <h3>Couples Resort</h3>
+        <p>
+          1198 Osprey Rd, (End of) <br />
+          Minden, Soyers Lake, ON, <br />
+          K0M 2K0
+        </p>
+        <p>
+          Toll Free:+1 877 201-1156 <br />
+          FAX:+1 613 638 2217 <br />
+          E-mail: info@coupleresort.com
+        </p>
+      </section>
+
+      <div id="footer-privacy" class="col-span-full line-separator">
+        <p id="price-policy">
+          All Prices and services on this website and in our reservation system
+          are based on conditions at the time of publishing abd are subject to
+          change. Please call to confirm services, availability and pricing.
+          &copy;2013 Couples Resort Inc. All Rights Reserved Privacy Policy
+        </p>
+      </div>
+    </footer>
+
+    <!-- light box -->
+    <h2 class="hidden">Confirmation Light box</h2>
+    <section class="lb-cf">
+      <div class="lb-cf-bx">
+        <a href="" class="close-lb">X</a>
+        <section class="hr-det">
+          <h3 class="hr-sub_hl">We are on the Last Step</h3>
+          <h2 class="hr-hl">Booking Confirmation</h2>
+          <hr class="hr-bl bl" />
+        </section>
+        <img class="rm-cf" src="#" alt="" />
+
+        <section class="guest-del">
+          <h4>Guest Details</h4>
+
+          <h3>Guest Namel</h3>
+          <p class="fname">Saul Goodman</p>
+          <h3>Room Type</h3>
+          <p class="rm-type">Chateau</p>
+          <h3>Date</h3>
+          <p class="date-csum">4-5 April 2024</p>
+          <h3>Guests</h3>
+          <p class="gues-sum">2</p>
+        </section>
+
+        <section class="pay-del">
+          <h4>Payment Details</h4>
+
+          <h3>Total Price</h3>
+          <p class="price-sum">$226 CAD</p>
+          <h3>Payment</h3>
+          <p class="pay-via-sum">
+            <span class="card-type">Visa</span>
+            *
+            <span class="card-digit">2450</span>
+          </p>
+        </section>
+
+        <button value="discard">Discard</button>
+        <button value="confirm">Confirm Booking</button>
+      </div>
+    </section>
+
+    <!-- light box: Booking Success -->
+    <h2 class="hidden">Successfully booking Light box</h2>
+    <section class="lb-sc">
+      <div class="lb-sc-bx">
+        <section class="hr-det">
+          <h3 class="hr-sub_hl">We are on the Last Step</h3>
+          <h2 class="hr-hl">Booking Confirmation</h2>
+        </section>
+        <img src="/images/couples_resort_logo-icon.svg" alt="" />
+
+        <p>
+          We can't wait the <span class="date-sum"></span>! <br />
+          See you at at Couples Resort
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
