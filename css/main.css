@@ -22,6 +22,9 @@ h5 {
   line-height: 21px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 /* ---Mobile Library Grid Styles--- */
 
 .grid-con {
@@ -527,13 +530,66 @@ footer p {
 
 /* Images Album */
 
-#rm-album {
+/* #rm-album {
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
 #rm-album input {
   display: none;
+} */
+
+#rm-album {
+  position: relative;
+  margin: 30px auto;
+  width: 100%;
+  height: 247px;
+}
+
+.ab-hl-con {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.ab-hl-con img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+.slider-nav {
+  display: flex;
+  justify-content: center;
+  column-gap: 15px;
+  position: absolute;
+  bottom: 20px;
+  left: 40%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.slider-nav a {
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: opacity ease 0.2s;
+}
+
+.ab-hl-con #slide-1,
+.ab-hl-con #slide-2,
+.ab-hl-con #slide-3,
+.ab-hl-con #slide-4 {
+  scroll-margin-top: 50%;
+}
+
+.slider-nav a:hover {
+  opacity: 1;
 }
 
 .img-album-hl {
@@ -568,11 +624,7 @@ footer p {
   width: 120px;
 }
 
-/* .img-2 input:checked ~ .pack img:nth-child(2) {
-  transform: rotate(90deg);
-} */
-
-.ab-hl-con {
+/* .ab-hl-con {
   position: relative;
 }
 
@@ -580,9 +632,9 @@ footer p {
   position: absolute;
   top: 0;
   left: 0;
-}
+} */
 
-.hl-1 {
+/* .hl-1 {
   z-index: 1;
 }
 .hl-2 {
@@ -596,7 +648,7 @@ footer p {
 .hl-4 {
   z-index: 1;
   opacity: 0;
-}
+} */
 
 /* Dining Promotion */
 
@@ -650,6 +702,10 @@ footer p {
   border: 1px solid #999;
 }
 
+#guest {
+  position: relative;
+}
+
 #guest select {
   height: 50px;
   width: 382px;
@@ -659,6 +715,17 @@ footer p {
   border: 1px solid #999;
   border-radius: 9px;
   color: #999;
+  appearance: none;
+}
+
+.booking-bx-chevron {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  right: 0;
+  transform: translateX(-20px) translateY(45px) rotate(180deg);
+  pointer-events: none;
 }
 
 .booking-rm-btn input {
