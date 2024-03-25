@@ -10,7 +10,7 @@
      <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
      <script src="https://kit.fontawesome.com/d0e8431583.js" crossorigin="anonymous"></script>
      <!-- CSS link -->
-    <link rel="stylesheet" href="#">
+    <link rel="stylesheet" href="./css/main.css">
 
     <style> 
         .hidden {
@@ -26,46 +26,50 @@
 
 </head>
 <body>
-<header>
-    <h1 class="hidden">Welcome to The Couples Resort Room Types</h1>
-<!-- Header & Navigator -->
-        <nav id="main-nav">
-            <h2 class="hidden">Main Navigation</h2>
-            <input type="checkbox" id="hamburger">
-            <img src="/images/burger.svg" alt="Hamburger menu icon">
-            <div id="burger-ctn">
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="/index.html">Rooms</a></li>
-                    <li><a href="">Packages</a></li>
-                    <li><a href="">Dining</a></li>
-                    <li><a href="/activities.html">Spa Activities</a></li>
-                    <li><a href="/reservations.html">Reservations</a></li>
-                </ul>
-            </div>
+    <header class="grid-con" id="main-header">
+        <nav id="main-nav" class="col-span-full">
+          <h2 class="hidden">Main Navigation</h2>
+          <input type="checkbox" id="hamburger" />
+          <label for="hamburger">
+            <img src="/images/burger.svg" alt="Hamburger menu icon" />
+          </label>
+          <div id="burger-con">
+            <ul>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="">Rooms</a></li>
+              <li><a href="">Packages</a></li>
+              <li><a href="">Dining</a></li>
+              <li><a href="">Spa Activities</a></li>
+              <li><a href="">Reservations</a></li>
+            </ul>
+          </div>
         </nav>
-        <img src="/images/couples_resort_logo.svg" alt="Couples Resort" id="cr-logo">
-</header>
+        <div id="logo" class="col-span-full">
+          <img src="/images/couples_resort_logo.svg" alt="Couples Resort" />
+        </div>
+      </header>
 
 <!-- Main Section : Room Types -->
-<main>
+<main class="grid-con">
     <h2 class="hidden">Room Types</h2>
-            <section id="hl-box">
-                <h2 class="hl-box">
-                    <span class="sub-hl">Suite Selection</span><br>
-                    Room Types
-                </h2>
+            <section id="hl-box" class="col-span-full gi">
+                <div class="hl-box">
+                    <h4 class="sub-hl">Couples Resort</h4>
+                    <h2 class="hl">Room Types</h2>
+                </div>
             </section>
 
 <!-- Room Filter -->
 
-    <section id="filt-rm" class="line-separator">
+    <section id="filt-rm" class="line-separator col-span-full">
     <h2 class="hidden">Filter your room</h2>
-        <input type="checkbox" id="filt-btn">
-            <label for="filt-btn">
-                Filter Rooms 
-                <span id="filt-chv"><img src="#" alt=""></span>
+            <input type="checkbox" id="filt-btn">
+            <label class="filt-btn" for="filt-btn">
+                Filter Rooms
+                <img src="./images/chevron-up-cr.svg" alt="">
+
             </label>
+
             <form class="filt-ctn">
                 <ul>
                     <li class="filt-guest filt-bx">
@@ -96,7 +100,7 @@
 
                     <li class="private-tub-filt filt-bx">
                         <label for="private-tub">Private Tub</label>
-                        <input name="private-tub" type="checkbox">
+                        <input name="private-tub" type="checkbox" id="private-tub">
                     </li>
 
                     <li class="private-sauna-filt filt-bx">
@@ -129,20 +133,24 @@
     
 <!-- Filter results : Room Type : Chateau -->
 <h2 class="hidden">Take a look the Chateau room</h2>
-    <section class="rm-type" id="chateau-rm">
+    <section class="rm-type col-span-full line-separator" id="chateau-rm">
         <div class="rm-sec">
-            <h3 class="sec-hl">Chateau</h3>
-            <a href="/chateau.html" class="rdy-btn">Ready to Book</a>
+            <div class="rm-name">
+                <h3 class="sec-hl">Chateau</h3>
+                <a href="/chateau.html" class="rdy-btn">Ready to Book</a>
+            </div>
                 <div class="rm-func">
                     <img class="rm-func-ic" src="#" alt="">
                     <p>1400 ft<sup>2</sup></p>
                     <img class="rm-func-ic" src="#" alt="">
                     <p>King Size Beds</p>
                 </div>
-            <img class="rm-del-hl" src="#" alt="Chateau Room">
+                <a href="#">
+            <img class="rm-del-hl-img" src="./images/room-type-assets/mobl/chataeu-m.jpg" alt="Chateau Room">
+        </a>
             <section>
                 <h2 class="rm-del-hl">Exclusive Chateau</h2>
-                <p>
+                <p class="rm-del-p">
                     Private Out Door Hot Tubs <br>
                     Private Sauna <br>
                     Steam Generator for the double shower <br>
@@ -150,8 +158,8 @@
                     Bidet <br>
                     Microwave <br>
                 </p>
-                <p>
-                    FREE: <br>
+                <p class="rm-del-p">
+                    <span> FREE: </span><br>
                     Room Basket of lotions, bath salts, specialty products <br>
                     Soapstone products (Bath and Body) in room. <br>
                     lly Espresso / Americano Machine with Caps.
@@ -162,40 +170,42 @@
     
 <!-- Room — Villas -->
 <h2 class="hidden">Chilling in the Villas room</h2>
-    <section class="rm-type villas-rm">
-        <div class="rm-sec">
-            <h2 class="sec-hl">Villas</h2>
+<section class="rm-type col-span-full line-separator" id="villas-rm">
+    <div class="rm-sec">
+        <div class="rm-name">
+            <h3 class="sec-hl">Villas</h3>
             <a href="#" class="rdy-btn">Ready to Book</a>
-                <div class="rm-func">
-                    <img class="rm-func-ic" src="#" alt="">
-                    <p>1000 ft<sup>2</sup></p>
-                    <img class="rm-func-ic" src="#" alt="">
-                    <p>King Size Beds</p>
-                </div>
-            <img class="rm-del-hl" src="#" alt="Villas Room">
-            <section>
-                <h2 class="rm-del-hl">Exclusive Spa Villas</h2>
-                <p>
-                    Private Screened in Gazebo with Outdoor Hot Tub <br>
-                    14 foot vaulted Pine ceiling <br>
-                    2 Person Shower, 4 Shower Head and Benches <br>
-                    Sauna <br>
-                    Steam Shower
-                </p>
-                <p>
-                    Microwave <br>
-                    Bidet <br>
-                    Illy Espresso / Americano Machine with Caps ($0/Cap).
-                </p>
-            </section>
         </div>
-    </section>
+            <div class="rm-func">
+                <img class="rm-func-ic" src="#" alt="">
+                <p>1400 ft<sup>2</sup></p>
+                <img class="rm-func-ic" src="#" alt="">
+                <p>King Size Beds</p>
+            </div>
+        <img class="rm-del-hl-img" src="./images/room-type-assets/mobl/villas-m.jpg" alt="Villas Room">
+        <section>
+            <h2 class="rm-del-hl">Exclusive Spa Villas</h2>
+            <p class="rm-del-p">
+                Private Screened in Gazebo with Outdoor Hot Tub <br>
+                14 foot vaulted Pine ceiling <br>
+                2 Person Shower, 4 Shower Head and Benches <br>
+                Sauna <br>
+                Steam Shower
+            </p>
+            <p class="rm-del-p">
+                <span> FREE: </span><br>
+                lly Espresso / Americano Machine with Caps.
+            </p>
+        </section>
+    </div>
+</section>
+
 
 <!-- Aside : Room Features -->
 <h2 class="hidden">All rooms features</h2>
-    <section class="rm-feature" style="background-color: gray">
-        <h3>Every Guest room features</h3>
+    <section class="rm-feature col-span-full">
         <div class="rm-feature-ctn">
+            <h3>Every Guest room features</h3>
             <div class="feature-bx">
                 <p>
                     Exceeds 5 Diamond/Star Room Standards <br>
@@ -223,41 +233,50 @@
                     Drink - Tap Water - Algonquin Park Aquifer
                 </p>
             </div>
-            <div class="call-cr-bx">
-                <img src="#" alt="">
-                <p>Call for Information</p>
-                <span>—</span>
-                <p>1 866 202-1179</p>
-            </div>
+        </div>
+        <div class="call-cr-bx">
+            <img src="./images/phone-solid .svg" alt="">
+            <p>Call for <br> Information</p>
+            <span>—</span>
+            <p>1 866 202-1179</p>
         </div>
     </section>
 
-
 <!-- Dining Promotion -->
 <h2 class="hidden">Dining Promotion</h2>
-    <aside class="pro-dinn" style="background-color: brown;">
-        <p>All room prices include daily 5 course dinner and breakfast</p>
-        <a href="#" class="book-btn">Book Now</a>
+    <aside class="pro col-span-full">
+        <div class="pro-dinn">
+            <p>All room prices include daily 5 course dinner and breakfast</p>
+            <img src="/images/room-type-assets/mobl//ad-m.jpg" alt="">
+        </div>
+        <span style="width: 412px;"></span>
+        <div class="book-btn-ads">
+        <a href="#">Book Now</a>
+        </div>
     </aside>
 
 
 <!-- Room — Master -->
 <h2 class="hidden">More about the Master room</h2>
-    <section class="rm-type master-rm">
+    <section class="rm-type col-span-full" id="master-rm">
         <div class="rm-sec">
-            <h2 class="sec-hl">Master</h2>
-            <a href="#" class="not-rdy-btn">Not Available</a>
-            <p class="minimum">3 nights minimum</p>
+            <div class="rm-name">
+                <h3 class="sec-hl">Master</h3>
+                <div class="booking-minimum">
+                    <a href="/chateau.html" class="not-rdy-btn">Not Available</a>
+                    <p class="minimum">3 nights minimum</p>
+                </div>
+            </div>
                 <div class="rm-func">
                     <img class="rm-func-ic" src="#" alt="">
                     <p>1000 ft<sup>2</sup></p>
                     <img class="rm-func-ic" src="#" alt="">
                     <p>King Size Beds</p>
                 </div>
-            <img class="rm-del-hl" src="#" alt="Master Room">
+            <img class="rm-del-hl-img" src="./images/room-type-assets/mobl/masters-m.jpg" alt="Master Room">
             <section>
                 <h2 class="rm-del-hl">Exclusive Master</h2>
-                <p>
+                <p class="rm-del-p">
                     Private Out Door Hot Tubs <br>
                     Private Sauna <br>
                     Steam Generator for the double shower <br>
@@ -265,8 +284,8 @@
                     Bidet <br>
                     Microwave <br>
                 </p>
-                <p>
-                    FREE: <br>
+                <p class="rm-del-p">
+                    <span> FREE: </span><br>
                     Room Basket of lotions, bath salts, specialty products <br>
                     Soapstone products (Bath and Body) in room. <br>
                     lly Espresso / Americano Machine with Caps.
@@ -275,22 +294,27 @@
         </div>
     </section>
 
+
 <!-- Room — Exotics -->
 <h2 class="hidden">Explore the Exotics room</h2>
-    <section class="rm-type exotics-rm">
+    <section class="rm-type col-span-full line-separator" id="exotic-rm">
         <div class="rm-sec">
-            <h2 class="sec-hl">Exotics</h2>
-            <a href="#" class="rdy-btn">Ready to Book</a>
+            <div class="rm-name">
+                <h3 class="sec-hl">Exotics</h3>
+                <div class="booking-minimum">
+                    <a href="#" class="rdy-btn">Ready to Book</a>
+                </div>
+            </div>
                 <div class="rm-func">
                     <img class="rm-func-ic" src="#" alt="">
                     <p>1000 &amp; 600 ft<sup>2</sup></p>
                     <img class="rm-func-ic" src="#" alt="">
                     <p>King Size Beds</p>
                 </div>
-            <img class="rm-del-hl" src="#" alt="Exotics Room">
+            <img class="rm-del-hl-img" src="./images/room-type-assets/mobl/exotics-m.jpg" alt="Exotics Room">
             <section>
                 <h2 class="rm-del-hl">Exclusive Exotics</h2>
-                <p>
+                <p class="rm-del-p">
                     2 at 1000 sq ft &amp; 4 at 600 sq ft <br>
                     Private Out Door Hot Tubs on Balcony <br>
                     2 Person Shower <br>
@@ -301,23 +325,29 @@
         </div>
     </section>
 
+
 <!-- Room — Chalet -->
 <h2 class="hidden">Chalet room type</h2>
-    <section class="rm-type chalet-rm">
+    <section class="rm-type col-span-full line-separator" id="chalet-rm">
         <div class="rm-sec">
-            <h2 class="sec-hl">Chalet</h2>
-            <a href="#" class="not-rdy-btn">Not Available</a>
-            <p class="minimum">3 nights minimum</p>
+            <div class="rm-name">
+                <h3 class="sec-hl">Chalet</h3>
+                <div class="booking-minimum">
+                    <a href="#" class="not-rdy-btn">Not Available</a>
+                    <p class="minimum">3 nights minimum</p>
+                    <p class="minimum"><i></i></p>
+                </div>
+            </div>
                 <div class="rm-func">
                     <img class="rm-func-ic" src="#" alt="">
                     <p>700 ft<sup>2</sup></p>
                     <img class="rm-func-ic" src="#" alt="">
                     <p>King Size Beds</p>
                 </div>
-            <img class="rm-del-hl" src="#" alt="Chalet Room">
+            <img class="rm-del-hl-img" src="./images/room-type-assets/mobl/chalets-m.jpg" alt="Chalet Room">
             <section>
                 <h2 class="rm-del-hl">Exclusive Chalet</h2>
-                <p>
+                <p class="rm-del-p">
                     Private Cabin with Outdoor Hot Tub on Deck <br>
                     Rain Shower
                 </p>
@@ -325,41 +355,54 @@
         </div>
     </section>
 
-<!-- Room — Junior -->
+
+
+<!-- Room — Juniors -->
 <h2 class="hidden">Junior room type</h2>
-    <section class="rm-type junior-rm">
-        <div class="rm-sec">
-            <h2 class="sec-hl">Junior</h2>
-            <a href="#" class="not-rdy-btn">Not Available</a>
-            <p class="minimum">3 nights minimum</p>
-                <div class="rm-func">
-                    <img class="rm-func-ic" src="#" alt="">
-                    <p>600 ft<sup>2</sup></p>
-                    <img class="rm-func-ic" src="#" alt="">
-                    <p>King Size Beds</p>
-                </div>
-            <img class="rm-del-hl" src="#" alt="Junior Room">
-            <section>
-                <h2 class="rm-del-hl">Exclusive Chalet</h2>
-                <p>
-                    Private Out Door Hot Tub on Balcony
-                </p>
-            </section>
+<section class="rm-type col-span-full line-separator" id="junior-rm">
+    <div class="rm-sec">
+        <div class="rm-name">
+            <h3 class="sec-hl">Juniors</h3>
+            <div class="booking-minimum">
+                <a href="#" class="not-rdy-btn">Not Available</a>
+                <p class="minimum">3 nights minimum</p>
+                <p class="minimum"><i></i></p>
+            </div>
         </div>
-    </section>
+            <div class="rm-func">
+                <img class="rm-func-ic" src="#" alt="">
+                <p>600 ft<sup>2</sup></p>
+                <img class="rm-func-ic" src="#" alt="">
+                <p>King Size Beds</p>
+            </div>
+        <img class="rm-del-hl-img" src="./images/room-type-assets/mobl/juniors-m.jpg" alt="Juniors Room">
+        <section>
+            <h2 class="rm-del-hl">Exclusive Juniors</h2>
+            <p class="rm-del-p">
+                Private Out Door Hot Tub on Balcony
+            </p>
+        </section>
+    </div>
+</section>
 
 
 <!-- Package Promotion -->
 <h2 class="hidden">Couples Resort's Sweet packages</h2>
-<section class="pckg-pro-ctn">
-    <h3>Explore Our Sweet Packages</h3>
+<section class="pckg-pro-ctn col-span-full">
+    <h3><a href="#">Explore Our <br>Sweet Packages</a></h3>
     <div class="pck-bx">
-        <img src="#" alt="Free night on third night">
+        <a href="#">
+        <img src="/images/room-type-assets/mobl/3rd-m.jpg" alt="Free night on third night">
+        </a>
         <h4>Free Night on 3<sup>rd</sup> Day</h4>
         <p>Determine your stay duration, add a night before and after to check for Very Low Rates or Free Nights. Repeat this process as Free Nights are included in online prices.</p>
+
     </div>
+
     <div class="pck-box">
-        <img src="#" alt="Spring Activities">
+        <a href="#">
+        <img src="/images/room-type-assets/mobl/spring-m.jpg" alt="Spring Activities">
+        </a>
         <h4>Spring Activities</h4>
         <p>Join us for daily hikes, free motorboat use, and Moose Sightings in June! Plus, enjoy Pickleball, Tennis, and Spa.</p>
     </div>
@@ -367,8 +410,8 @@
 
 <!-- Reservation information / Policy -->
 <h2 class="hidden">Policy</h2>
-    <section id="policy" class="policy" style="background-color: aquamarine;">
-        <h3>Reservation &amp; Booking Information</h3>
+    <section id="policy" class="policy col-span-full">
+        <h3>Reservations <br> &amp; Booking Information</h3>
         <details>
             <summary>Location</summary>
             <p class="pc-del-bx">
@@ -392,7 +435,7 @@
             </p>
         </details>
         <details>
-            <summary>Guest Cancellation and Change Date Fees</summary>
+            <summary>Guest Cancellation <br>and Change Date Fees</summary>
             <p class="pc-del-bx">
                 <ol>
                     <li>$200 Administration Fee will be charged to Change Dates and to Cancellations, Absolutely No Exceptions. There is a 24 hour delay, from booking time, before Fee takes effect.</li>
@@ -485,7 +528,8 @@
             <summary>Where to Direct Questions About The Couples Resort's Privacy Policy</summary>
             <p class="pc-del-bx">
                 If you have any questions about this Privacy Policy or the practices described herein, you may contact: <br>
-                Attention: John Sorensen <br>
+                <br>
+                <b>Attention:</b> John Sorensen <br><br>
                 Couples Resort <br>
                 P. O. Box 310 <br>
                 139 Galeairy Lake Road <br>
@@ -494,18 +538,15 @@
             </p>
         </details>
     </section>
-    <div class="tdlr-bx">
-        <div class="call-cr-bx">
-            <p>Call for Information</p>
-            <span>—</span>
-            <p>1 866 202-1179</p>
-        </div>
+
+    <div class="tdlr-bx col-span-full">
         <p>
             The content and pricing on this website is accurate to the best of our abilities. All prices on this website and in our reservation system are based on conditions at the time of publishing and are subject to change. Please call to confirm availability and pricing
         </p>
 
     </div>
 </main>
+
 
 <!-- Footer -->
 <h2 class="hidden">Footer of Couples Resort</h2>
