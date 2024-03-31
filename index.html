@@ -3,37 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/couples_resort_logo-icon.svg" type="image/x-icon">
     <title>Couples Resort — Room Types</title>
+
     <!-- Google Fonts installation -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
-     <script src="https://kit.fontawesome.com/d0e8431583.js" crossorigin="anonymous"></script>
+
+     <!-- Icon library link -->
+    <script
+      src="https://kit.fontawesome.com/5ea80a4b63.js"
+      crossorigin="anonymous"
+    ></script>
+
      <!-- CSS link -->
     <link rel="stylesheet" href="./css/main.css">
-
-    <style> 
-        .hidden {
-            color: blue;
-            text-decoration: underline;
-            opacity: 30%;
-        }
-        
-        * {
-            font-family: 'Sanchez';
-        }
-    </style>
-
 </head>
+
 <body>
     <header class="grid-con" id="main-header">
         <nav id="main-nav" class="col-span-full">
           <h2 class="hidden">Main Navigation</h2>
           <input type="checkbox" id="hamburger" />
           <label for="hamburger">
-            <img src="/images/burger.svg" alt="Hamburger menu icon" />
+            <i class="fa-sharp fa-regular fa-bars"></i>
           </label>
-          <div id="burger-con">
+          <div id="burger-con" class="full-span">
             <ul>
               <li><a href="/index.html">Home</a></li>
               <li><a href="">Rooms</a></li>
@@ -45,49 +41,52 @@
           </div>
         </nav>
         <div id="logo" class="col-span-full">
-          <img src="/images/couples_resort_logo.svg" alt="Couples Resort" />
+          <img src="/images/couples_resort_logo.svg" alt="Couples Resort's logo" />
         </div>
       </header>
 
 <!-- Main Section : Room Types -->
+
 <main class="grid-con">
-    <h2 class="hidden">Room Types</h2>
-            <section id="hl-box" class="col-span-full gi">
+    <h2 class="hidden">Couples' Resort room types, Where you can grab the happiness.</h2>
+            <section id="hl-box" class="full-span">
                 <div class="hl-box">
-                    <h4 class="sub-hl">Couples Resort</h4>
-                    <h2 class="hl">Room Types</h2>
+                    <h4 class="txt-red-cr">Couples Resort</h4>
+                    <h2>Room Types</h2>
                 </div>
             </section>
 
 <!-- Room Filter -->
-
     <section id="filt-rm" class="line-separator col-span-full">
-    <h2 class="hidden">Filter your room</h2>
+    <h2 class="hidden">Filter the Couples Resort room types</h2>
             <input type="checkbox" id="filt-btn">
             <label class="filt-btn" for="filt-btn">
-                Filter Rooms
-                <img src="./images/chevron-up-cr.svg" alt="">
-
+                <h4>Filter Rooms</h4>
+                <span><i class="fa-regular fa-chevron-right"></i></span>
             </label>
 
             <form class="filt-ctn">
                 <ul>
                     <li class="filt-guest filt-bx">
-                        <label for="guest">Guest <span class="chev"><img src="#" alt=""></span></label>
-                        <select name="guest">
-                            <option value="single">Single</option>
+                        <label for="guest">Guest
+                        <select type="text" name="guest" required>
+                            <option value="" selected disabled></option>
                             <option value="couple">Couple</option>
+                            <option value="single">Single</option>
                         </select>
+                        </label>
                     </li>
 
                     <li class="date-filt filt-bx">
-                        <label for="date">Arrive</label>
-                        <input type="text" onfocus="(this.type='date')" placeholder="Date" name="date">
+                        <label for="date">Arrive
+                        <input type="text" onfocus="(this.type='date')" placeholder="Date" name="date" required>
+                        </label>
                     </li>
 
                     <li class="night-filt filt-bx">
-                        <label for="night">Night</label>
-                        <select name="night">
+                        <label for="night">Night
+                        <select type="numerous" name="night" required>
+                            <option value="" selected disabled></option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -96,36 +95,43 @@
                             <option value="6">6</option>
                             <option value="7">7</option>
                         </select>
+                        </label>
                     </li>
 
                     <li class="private-tub-filt filt-bx">
-                        <label for="private-tub">Private Tub</label>
+                        <label for="private-tub"> Private Tub
                         <input name="private-tub" type="checkbox" id="private-tub">
+                        </label>
                     </li>
 
                     <li class="private-sauna-filt filt-bx">
-                        <label for="private-sauna">Private Sauna</label>
-                        <input name="private-sauna" type="checkbox">
+                        <label for="private-sauna">Private Sauna
+                        <input name="private-sauna" type="checkbox" id="private-sauna">
+                        </label>
                     </li>
 
                     <li class="private-cabin-filt filt-bx">
-                        <label for="private-cabin">Private Cabin</label>
-                        <input name="private-cabin" type="checkbox">
+                        <label for="private-cabin">Private Cabin
+                        <input name="private-cabin" type="checkbox" id="private-cabin">
+                        </label>
                     </li>
 
                     <li class="river-view-filt filt-bx">
-                        <label for="river-view">River View</label>
-                        <input name="river-view" type="checkbox">
+                        <label for="river-view">River View
+                        <input name="river-view" type="checkbox" id="river-view">
+                        </label>
                     </li>
 
                     <li class="large-ceiling-filt filt-bx">
-                        <label for="large-ceiling">Large Ceiling</label>
-                        <input name="large-ceiling" type="checkbox">
+                        <label for="large-ceiling">Large Ceiling
+                        <input name="large-ceiling" type="checkbox" id="large-ceiling">
+                        </label>
                     </li>
                     
                     <li class="steam-shower-filt filt-bx">
-                        <label for="steam-shower">Steam Shower</label>
-                        <input name="steam-shower" type="checkbox">
+                        <label for="steam-shower">Steam Shower
+                        <input name="steam-shower" type="checkbox" id="steam-shower">
+                        </label>
                     </li>
                 </ul>
             </form>
@@ -136,20 +142,24 @@
     <section class="rm-type col-span-full line-separator" id="chateau-rm">
         <div class="rm-sec">
             <div class="rm-name">
-                <h3 class="sec-hl">Chateau</h3>
-                <a href="/chateau.html" class="rdy-btn">Ready to Book</a>
+                <h3>Chateau</h3>
+                <a href="/chateau.html" class="rdy-btn cta">Ready to Book</a>
             </div>
-                <div class="rm-func">
-                    <img class="rm-func-ic" src="#" alt="">
-                    <p>1400 ft<sup>2</sup></p>
-                    <img class="rm-func-ic" src="#" alt="">
-                    <p>King Size Beds</p>
-                </div>
+            <div class="rm-func-rm-pg">
+                <span
+                  ><i
+                    class="fa-light fa-arrow-up-right-and-arrow-down-left-from-center"
+                  ></i
+                ></span>
+                <p>1400 ft<sup>2</sup></p>
+                <span> <i class="fa-regular fa-bed-empty"></i></span>
+                <p>King Size Beds</p>
+              </div>
                 <a href="#">
-            <img class="rm-del-hl-img" src="./images/room-type-assets/mobl/chataeu-m.jpg" alt="Chateau Room">
+            <img class="rm-del-hl-img full-span" src="./images/room-type-assets/mobl/chataeu-m.jpg" alt="Chateau Room">
         </a>
             <section>
-                <h2 class="rm-del-hl">Exclusive Chateau</h2>
+                <h3 class="rm-del-hl">Exclusive Chateau</h3>
                 <p class="rm-del-p">
                     Private Out Door Hot Tubs <br>
                     Private Sauna <br>
@@ -173,16 +183,20 @@
 <section class="rm-type col-span-full line-separator" id="villas-rm">
     <div class="rm-sec">
         <div class="rm-name">
-            <h3 class="sec-hl">Villas</h3>
-            <a href="#" class="rdy-btn">Ready to Book</a>
+            <h3>Villas</h3>
+            <a href="#" class="rdy-btn cta">Ready to Book</a>
         </div>
-            <div class="rm-func">
-                <img class="rm-func-ic" src="#" alt="">
-                <p>1400 ft<sup>2</sup></p>
-                <img class="rm-func-ic" src="#" alt="">
-                <p>King Size Beds</p>
-            </div>
-        <img class="rm-del-hl-img" src="./images/room-type-assets/mobl/villas-m.jpg" alt="Villas Room">
+        <div class="rm-func-rm-pg">
+            <span
+              ><i
+                class="fa-light fa-arrow-up-right-and-arrow-down-left-from-center"
+              ></i
+            ></span>
+            <p>1400 ft<sup>2</sup></p>
+            <span> <i class="fa-regular fa-bed-empty"></i></span>
+            <p>King Size Beds</p>
+          </div>
+        <img class="rm-del-hl-img full-span" src="./images/room-type-assets/mobl/villas-m.jpg" alt="Villas Room">
         <section>
             <h2 class="rm-del-hl">Exclusive Spa Villas</h2>
             <p class="rm-del-p">
@@ -203,7 +217,7 @@
 
 <!-- Aside : Room Features -->
 <h2 class="hidden">All rooms features</h2>
-    <section class="rm-feature col-span-full">
+    <section class="rm-feature col-span-full full-span">
         <div class="rm-feature-ctn">
             <h3>Every Guest room features</h3>
             <div class="feature-bx">
@@ -235,19 +249,19 @@
             </div>
         </div>
         <div class="call-cr-bx">
-            <img src="./images/phone-solid .svg" alt="">
+            <i class="fa-thin fa-circle-phone"></i>
             <p>Call for <br> Information</p>
-            <span>—</span>
-            <p>1 866 202-1179</p>
+            <p><a href="tel:+18662021179">1 866 202-1179</a></p>
+            <!-- <p>1 866 202-1179</p> -->
         </div>
     </section>
 
 <!-- Dining Promotion -->
 <h2 class="hidden">Dining Promotion</h2>
-    <aside class="pro col-span-full">
+    <aside class="pro col-span-full full-span">
         <div class="pro-dinn">
             <p>All room prices include daily 5 course dinner and breakfast</p>
-            <img src="/images/room-type-assets/mobl//ad-m.jpg" alt="">
+            <img src="/images/room-type-assets/mobl//ad-m.jpg" alt="Free dining and breakfast courses for every booking">
         </div>
         <span style="width: 412px;"></span>
         <div class="book-btn-ads">
@@ -261,19 +275,23 @@
     <section class="rm-type col-span-full" id="master-rm">
         <div class="rm-sec">
             <div class="rm-name">
-                <h3 class="sec-hl">Master</h3>
+                <h3>Master</h3>
                 <div class="booking-minimum">
-                    <a href="/chateau.html" class="not-rdy-btn">Not Available</a>
+                    <a href="#" class="not-rdy-btn">Not Available</a>
                     <p class="minimum">3 nights minimum</p>
                 </div>
             </div>
-                <div class="rm-func">
-                    <img class="rm-func-ic" src="#" alt="">
-                    <p>1000 ft<sup>2</sup></p>
-                    <img class="rm-func-ic" src="#" alt="">
-                    <p>King Size Beds</p>
-                </div>
-            <img class="rm-del-hl-img" src="./images/room-type-assets/mobl/masters-m.jpg" alt="Master Room">
+            <div class="rm-func-rm-pg">
+                <span
+                  ><i
+                    class="fa-light fa-arrow-up-right-and-arrow-down-left-from-center"
+                  ></i
+                ></span>
+                <p>1000 ft<sup>2</sup></p>
+                <span> <i class="fa-regular fa-bed-empty"></i></span>
+                <p>King Size Beds</p>
+              </div>
+            <img class="rm-del-hl-img full-span" src="./images/room-type-assets/mobl/masters-m.jpg" alt="Master Room">
             <section>
                 <h2 class="rm-del-hl">Exclusive Master</h2>
                 <p class="rm-del-p">
@@ -300,18 +318,22 @@
     <section class="rm-type col-span-full line-separator" id="exotic-rm">
         <div class="rm-sec">
             <div class="rm-name">
-                <h3 class="sec-hl">Exotics</h3>
+                <h3>Exotics</h3>
                 <div class="booking-minimum">
-                    <a href="#" class="rdy-btn">Ready to Book</a>
+                    <a href="#" class="rdy-btn cta">Ready to Book</a>
                 </div>
             </div>
-                <div class="rm-func">
-                    <img class="rm-func-ic" src="#" alt="">
-                    <p>1000 &amp; 600 ft<sup>2</sup></p>
-                    <img class="rm-func-ic" src="#" alt="">
-                    <p>King Size Beds</p>
-                </div>
-            <img class="rm-del-hl-img" src="./images/room-type-assets/mobl/exotics-m.jpg" alt="Exotics Room">
+            <div class="rm-func-rm-pg">
+                <span
+                  ><i
+                    class="fa-light fa-arrow-up-right-and-arrow-down-left-from-center"
+                  ></i
+                ></span>
+                <p>1000 &amp; 600 ft<sup>2</sup></p>
+                <span> <i class="fa-regular fa-bed-empty"></i></span>
+                <p>King Size Beds</p>
+              </div>
+            <img class="rm-del-hl-img full-span" src="./images/room-type-assets/mobl/exotics-m.jpg" alt="Exotics Room">
             <section>
                 <h2 class="rm-del-hl">Exclusive Exotics</h2>
                 <p class="rm-del-p">
@@ -331,20 +353,24 @@
     <section class="rm-type col-span-full line-separator" id="chalet-rm">
         <div class="rm-sec">
             <div class="rm-name">
-                <h3 class="sec-hl">Chalet</h3>
+                <h3>Chalet</h3>
                 <div class="booking-minimum">
                     <a href="#" class="not-rdy-btn">Not Available</a>
                     <p class="minimum">3 nights minimum</p>
                     <p class="minimum"><i></i></p>
                 </div>
             </div>
-                <div class="rm-func">
-                    <img class="rm-func-ic" src="#" alt="">
-                    <p>700 ft<sup>2</sup></p>
-                    <img class="rm-func-ic" src="#" alt="">
-                    <p>King Size Beds</p>
-                </div>
-            <img class="rm-del-hl-img" src="./images/room-type-assets/mobl/chalets-m.jpg" alt="Chalet Room">
+            <div class="rm-func-rm-pg">
+                <span
+                  ><i
+                    class="fa-light fa-arrow-up-right-and-arrow-down-left-from-center"
+                  ></i
+                ></span>
+                <p>700 ft<sup>2</sup></p>
+                <span> <i class="fa-regular fa-bed-empty"></i></span>
+                <p>King Size Beds</p>
+              </div>
+            <img class="rm-del-hl-img full-span" src="./images/room-type-assets/mobl/chalets-m.jpg" alt="Chalet Room">
             <section>
                 <h2 class="rm-del-hl">Exclusive Chalet</h2>
                 <p class="rm-del-p">
@@ -362,20 +388,24 @@
 <section class="rm-type col-span-full line-separator" id="junior-rm">
     <div class="rm-sec">
         <div class="rm-name">
-            <h3 class="sec-hl">Juniors</h3>
+            <h3>Juniors</h3>
             <div class="booking-minimum">
                 <a href="#" class="not-rdy-btn">Not Available</a>
                 <p class="minimum">3 nights minimum</p>
                 <p class="minimum"><i></i></p>
             </div>
         </div>
-            <div class="rm-func">
-                <img class="rm-func-ic" src="#" alt="">
-                <p>600 ft<sup>2</sup></p>
-                <img class="rm-func-ic" src="#" alt="">
-                <p>King Size Beds</p>
-            </div>
-        <img class="rm-del-hl-img" src="./images/room-type-assets/mobl/juniors-m.jpg" alt="Juniors Room">
+        <div class="rm-func-rm-pg">
+            <span
+              ><i
+                class="fa-light fa-arrow-up-right-and-arrow-down-left-from-center"
+              ></i
+            ></span>
+            <p>700 ft<sup>2</sup></p>
+            <span> <i class="fa-regular fa-bed-empty"></i></span>
+            <p>King Size Beds</p>
+          </div>
+        <img class="rm-del-hl-img full-span" src="./images/room-type-assets/mobl/juniors-m.jpg" alt="Juniors Room">
         <section>
             <h2 class="rm-del-hl">Exclusive Juniors</h2>
             <p class="rm-del-p">
@@ -394,22 +424,24 @@
         <a href="#">
         <img src="/images/room-type-assets/mobl/3rd-m.jpg" alt="Free night on third night">
         </a>
-        <h4>Free Night on 3<sup>rd</sup> Day</h4>
+        <h3>Free Night on 3<sup>rd</sup> Day</h3>
         <p>Determine your stay duration, add a night before and after to check for Very Low Rates or Free Nights. Repeat this process as Free Nights are included in online prices.</p>
 
     </div>
 
     <div class="pck-box">
         <a href="#">
-        <img src="/images/room-type-assets/mobl/spring-m.jpg" alt="Spring Activities">
+        <img src="/images/room-type-assets/mobl/spring-m.jpg" alt="Spring Activities is coming">
         </a>
-        <h4>Spring Activities</h4>
+        <h3>Spring Activities</h3>
         <p>Join us for daily hikes, free motorboat use, and Moose Sightings in June! Plus, enjoy Pickleball, Tennis, and Spa.</p>
     </div>
+    <div><a href="#"><i class="fa-light fa-tag"></i></a></div>
+
 </section>
 
 <!-- Reservation information / Policy -->
-<h2 class="hidden">Policy</h2>
+<h2 class="hidden">Reservation Policies</h2>
     <section id="policy" class="policy col-span-full">
         <h3>Reservations <br> &amp; Booking Information</h3>
         <details>
@@ -548,29 +580,32 @@
 </main>
 
 
-<!-- Footer -->
-<h2 class="hidden">Footer of Couples Resort</h2>
+  <!-- Footer -->
+  <footer id="footer-hero">
+    <h2 class="hidden">Footer of Couples Resort</h2>
+    <section id="footer-contact-info">
+      <h3>Couples Resort</h3>
+      <p>
+        1198 Osprey Rd, (End of) <br />
+        Minden, Soyers Lake, ON, <br />
+        K0M 2K0
+      </p>
+      <p>
+        Toll Free: +1 877 201-1156 <br />
+        FAX:+1 613 638 2217 <br />
+        E-mail: info@coupleresort.com
+      </p>
 
-<footer id="footer-hero" class="grid-con">
-    <section id="footer-contact-info" class="col-span-full">
-        <h3>Couples Resort</h3>
-        <p>
-            1198 Osprey Rd, (End of) <br>
-            Minden, Soyers Lake, ON, <br>
-            K0M 2K0
-        </p>
-        <p>
-            Toll Free:+1 877 201-1156 <br>
-            FAX:+1 613 638 2217 <br>
-            E-mail: info@coupleresort.com
-        </p>
-    </section>
-
-    <div id="footer-privacy" class="col-span-full line-separator">
+      <div id="footer-privacy" class="col-span-full line-separator">
         <p id="price-policy">
-            All Prices and services on this website and in our reservation system are based on conditions at the time of publishing abd are subject to change. Please call to confirm services, availability and pricing. &copy;2013 Couples Resort Inc. All Rights Reserved Privacy Policy
+          All Prices and services on this website and in our reservation
+          system are based on conditions at the time of publishing abd are
+          subject to change. Please call to confirm services, availability and
+          pricing. &copy;2013 Couples Resort Inc. All Rights Reserved Privacy
+          Policy
         </p>
-    </div>
-</footer>
+      </div>
+    </section>
+  </footer>
 </body>
 </html>

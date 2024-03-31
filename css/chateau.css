@@ -1,0 +1,185 @@
+/* Room Page */
+
+/* Room Page - Chateau */
+#hl-box-chateau {
+  display: flex;
+  align-items: flex-end;
+  height: 218px;
+  background: url(/images/chateau-assets/mobl/chateau-hero-m.jpg) no-repeat;
+}
+/*  */
+
+.rm-func-rm-pg {
+  width: 220px;
+  display: flex;
+  margin: 20px 0 10px 0;
+  gap: 10px;
+  font-size: 11px;
+  align-items: center;
+}
+
+.a-room {
+  margin-top: 0px;
+}
+
+.rm-del-bx {
+  margin: 20px 0;
+}
+
+/* Room's image album  */
+
+#rm-album {
+  scroll-margin: 300px;
+}
+
+.hl-1 {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.thumbnail {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  & img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    flex: 1 0 auto;
+  }
+}
+
+.ab-lb {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+
+  & span {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+
+    & img {
+      width: 412px;
+    }
+  }
+
+  &:target {
+    display: block;
+  }
+}
+
+.rm-features h3 {
+  margin-top: 20px;
+}
+
+/* Dining Promotion */
+
+.pro-dinn {
+  height: 250px;
+  display: flex;
+  margin: 30px 0;
+  background-color: #9a2018;
+  color: #efefef;
+
+  & p {
+    padding-bottom: 20px;
+  }
+
+  & img {
+    width: 55%;
+  }
+}
+
+/* Booking Section */
+
+.rm-price {
+  & h4 {
+    color: #9a2018;
+    font-size: 1.2rem;
+  }
+
+  & p {
+    font-size: 1.5rem;
+    padding: 20px 0;
+  }
+}
+
+/* .rm-price p {
+  font-size: 1.5rem;
+
+} */
+
+#rm-booking-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#rm-booking-fm-bx {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  list-style-type: none;
+
+  & input {
+    height: 50px;
+    width: 140px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 5px 0 20px 0;
+    border-radius: 9px;
+    border: 1px solid #999;
+  }
+}
+
+#guest {
+  position: relative;
+
+  & select {
+    height: 50px;
+    width: 382px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #999;
+    border-radius: 9px;
+    color: #999;
+    appearance: none;
+  }
+}
+
+.booking-bx-chevron {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  right: 0;
+  transform: translateX(-20px) translateY(40px) rotate(180deg);
+  pointer-events: none;
+}
+
+.booking-rm-btn {
+  & input {
+    width: 382px;
+    height: 50px;
+    color: white;
+    border: none;
+    border-radius: 9px;
+  }
+}
+
+.total-price-bx {
+  display: flex;
+  justify-content: space-between;
+  font-size: 21px;
+  margin: 20px 0 60px 0;
+}

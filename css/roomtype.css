@@ -1,0 +1,372 @@
+/* Room Types Page */
+/* Contents Table 
+    Filter Section
+    Filter Container 
+    Filter Layout
+    
+
+*/
+
+/* Filter Section */
+
+.filt-btn {
+  color: #9a2018;
+}
+
+.filt-btn i {
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+/* Filter container */
+
+#filt-btn {
+  display: none;
+}
+
+.filt-btn {
+  display: flex;
+}
+
+.filt-ctn {
+  display: none;
+}
+
+#filt-btn:checked ~ .filt-ctn {
+  display: block;
+}
+
+#filt-btn:checked ~ .filt-btn i {
+  transform: rotate(90deg);
+}
+
+/* Filter layout */
+
+.filt-ctn ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 15px;
+  color: #626262;
+  padding: 0;
+  margin-top: 30px;
+  list-style-type: none;
+}
+
+.filt-ctn ul li {
+  display: flex;
+  flex: 1 0 150px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.filt-bx {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #626262;
+  height: 1rem;
+  border-radius: 9px;
+}
+
+.filt-bx label {
+  display: flex;
+  width: 110%;
+  height: 100%;
+  justify-content: space-between;
+  padding: 10px 10px;
+  margin: -10px;
+  border-radius: 9px;
+}
+
+.filt-bx select,
+.filt-bx input {
+  border: none;
+  font-size: 0.75rem;
+  color: #626262;
+}
+
+#private-tub,
+#private-sauna,
+#private-cabin,
+#river-view,
+#large-ceiling,
+#steam-shower {
+  appearance: none;
+}
+
+.date-filt input {
+  margin: auto 0;
+  text-align: right;
+  height: 15px;
+}
+
+label:has(input[type="date"]:valid),
+label:has(select[type="numerous"]:valid),
+label:has(select[type="text"]:valid),
+label:has(input:checked) {
+  outline: 2px solid #9a2018;
+  color: #9a2018;
+}
+
+/* Filter results : Room type */
+
+.rm-sec {
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.rm-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rdy-btn {
+  padding: 15px 35px 15px 35px;
+  color: white;
+}
+
+.not-rdy-btn {
+  padding: 15px 35px 15px 35px;
+  font-size: 0.85rem;
+  color: white;
+  background-color: #b8b8b8;
+  transition: 0.2s ease-in-out;
+}
+
+.not-rdy-btn:hover {
+  opacity: 0.5;
+}
+
+.rm-func {
+  width: 200px;
+  display: flex;
+  margin: 20px 0 10px 0;
+  justify-content: space-between;
+  font-size: 11px;
+  align-items: center;
+}
+
+.rm-func-rm-pg {
+  font-size: 0.6rem;
+}
+
+.rm-func-rm-pg p {
+  font-size: 0.6rem;
+}
+
+.rm-func-rm-pg i {
+  color: #9a2018;
+}
+
+.rm-del-hl {
+  width: 100%;
+  font-size: 18px;
+  padding: 10px 0 10px 0px;
+  color: #9a2018;
+}
+
+.rm-del-p {
+  font-size: 14px;
+  line-height: 21px;
+  padding-top: 10px;
+}
+
+.rm-del-p span {
+  font-size: 14px;
+  line-height: 23px;
+  color: #9a2018;
+}
+
+.rm-del-hl-img {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.booking-minimum {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(15%);
+}
+
+.minimum {
+  margin-top: 10px;
+  font-size: 11px;
+  font-style: italic;
+  color: #9a2018;
+}
+
+/* Room Features */
+
+.rm-feature-ctn {
+  background-color: #f4f4f4;
+  margin-top: 30px;
+  padding: 50px 30px;
+  text-align: center;
+}
+
+.rm-feature-ctn h3 {
+  font-size: 25px;
+  text-decoration: underline;
+  margin-bottom: 30px;
+}
+
+.call-cr-bx {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  height: 120px;
+  color: white;
+  background-color: #9a2018;
+}
+
+.call-cr-bx i {
+  font-size: 45px;
+}
+
+.call-cr-bx p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1rem;
+}
+
+.call-cr-bx p a {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Dinning Promotion */
+
+.pro-dinn {
+  display: flex;
+}
+
+.pro-dinn p {
+  padding: 10px 15px;
+  align-self: flex-end;
+}
+
+.book-btn-ads {
+  margin-top: 0;
+  margin-bottom: 50px;
+  padding: 20px;
+  text-align: center;
+  background-color: #9a2018;
+  color: white;
+  transition: 0.2s;
+}
+
+.book-btn-ads a {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  color: white;
+}
+
+.book-btn-ads:hover {
+  background-color: #d92322;
+}
+
+/* Package Promotion */
+
+.pckg-pro-ctn {
+  position: relative;
+  margin-top: 30px;
+  padding: 30px 10px;
+  background-color: #ffce00;
+  color: black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.pckg-pro-ctn h3:first-child {
+  text-decoration: underline;
+}
+
+.pckg-pro-ctn h3:not(:first-child) {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.pckg-pro-ctn img {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.pckg-pro-ctn a {
+  color: black;
+}
+
+.pckg-pro-ctn i {
+  font-size: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(-20px) translateY(20px);
+}
+
+/* Policy */
+#policy {
+  margin: 50px 0 25px 0;
+  background-color: white;
+  color: black;
+}
+
+#policy details {
+  border-bottom: 1px solid #999;
+}
+
+#policy details:last-child {
+  border-bottom: none;
+}
+
+#policy summary {
+  font-size: 22px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  list-style: none;
+}
+
+#policy summary::marker {
+  text-decoration: none;
+  font-size: 18 px;
+}
+
+#policy h3 {
+  font-size: 30px;
+  text-decoration: underline;
+  margin-bottom: 40px;
+}
+
+#policy p {
+  font-size: 14px;
+  padding: 10px 0 20px 0;
+}
+
+#policy ol {
+  margin: 0;
+}
+
+#policy li {
+  font-size: 14px;
+}
+
+#policy details[open] summary {
+  text-decoration: underline;
+}
+
+.tdlr-bx {
+  margin-bottom: 30px;
+  padding: 30px;
+  font-size: 14px;
+  line-height: 21px;
+  background-color: #f4f4f4;
+}

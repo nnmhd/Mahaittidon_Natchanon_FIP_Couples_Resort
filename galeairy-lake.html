@@ -12,35 +12,23 @@
       rel="stylesheet"
     />
     <script
-      src="https://kit.fontawesome.com/d0e8431583.js"
+      src="https://kit.fontawesome.com/5ea80a4b63.js"
       crossorigin="anonymous"
     ></script>
     <!-- CSS link -->
-    <link rel="stylesheet" href="#" />
-
-    <style>
-      .hidden {
-        color: blue;
-        text-decoration: underline;
-        opacity: 30%;
-      }
-
-      * {
-        font-family: "Sanchez";
-      }
-    </style>
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <header>
-      <h1 class="hidden">Welcome to The Couples Resort Room Types</h1>
-      <!-- Header & Navigator -->
-      <nav id="main-nav">
+    <header class="grid-con" id="main-header">
+      <nav id="main-nav" class="col-span-full">
         <h2 class="hidden">Main Navigation</h2>
         <input type="checkbox" id="hamburger" />
-        <img src="/images/burger.svg" alt="Hamburger menu icon" />
-        <div id="burger-ctn">
+        <label for="hamburger">
+          <img src="/images/burger.svg" alt="Hamburger menu icon" />
+        </label>
+        <div id="burger-con">
           <ul>
-            <li><a href="">Home</a></li>
+            <li><a href="/index.html">Home</a></li>
             <li><a href="/index.html">Rooms</a></li>
             <li><a href="">Packages</a></li>
             <li><a href="">Dining</a></li>
@@ -49,32 +37,66 @@
           </ul>
         </div>
       </nav>
-      <img
-        src="/images/couples_resort_logo.svg"
-        alt="Couples Resort"
-        id="cr-logo"
-      />
+      <div id="logo" class="col-span-full">
+        <img src="/images/couples_resort_logo.svg" alt="Couples Resort" />
+      </div>
     </header>
 
     <!-- Hero Section : Activity Directory -->
     <h2 class="hidden">Activities in The Couples Resort</h2>
-    <section id="activities-ctn" class="activities-ctn">
-      <img src="#" alt="" class="hr-img" />
-      <section id="hl-box">
-        <h2 class="hl-box">
-          <span class="sub-hl">Activities</span><br />
-          Algonquin
-        </h2>
+    <section class="grid-con">
+      <h2 class="hidden">Activities Nav</h2>
+      <section
+        id="hl-box-galeairy-lake"
+        class="col-span-full gi chateau-rm full-span"
+      >
+        <div class="hl-box">
+          <h4 class="sub-hl">Activities</h4>
+          <h2 class="hl">Algonquin</h2>
+        </div>
       </section>
-      <div class="act-directory">
-        <div class="algonquin-park">
-          <ul>
+
+      <section class="act-directory col-span-full line-separator">
+        <div id="algonquin-park" class="act-bx">
+          <div class="act-bx-sw">
+            <h3>Algonquin Park</h3>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+
+          <ul class="acts algonquin-park-links">
             <li><a href="/activities.html">Algonquin Park</a></li>
             <li><a href="/galeairy-lake.html">Galeairy Lake</a></li>
           </ul>
         </div>
-        <div class="wildlife-viewing">
-          <ul>
+
+        <div id="river" class="act-bx">
+          <div class="act-bx-sw">
+            <h3>River</h3>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <ul class="acts river-links">
+            <li><a href="#">River</a></li>
+            <li><a href="#">Row Boats &amp; Kayaks &amp; Canoes</a></li>
+          </ul>
+        </div>
+
+        <div id="sports" class="act-bx">
+          <div class="act-bx-sw">
+            <h3>Sports</h3>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <ul class="acts sports-links">
+            <li><a href="#">Basketball</a></li>
+            <li><a href="#">Tennis</a></li>
+          </ul>
+        </div>
+
+        <div id="wildlife-viewing" class="act-bx">
+          <div class="act-bx-sw">
+            <h3>Wildlife Viewing</h3>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <ul class="acts wildlife-viewing-links">
             <li><a href="#">Wildlife Viewing</a></li>
             <li><a href="#">Moose Watching</a></li>
             <li><a href="#">Horseback</a></li>
@@ -82,29 +104,33 @@
             <li><a href="#"></a></li>
           </ul>
         </div>
-        <div class="sports">
-          <ul>
-            <li><a href="#">River</a></li>
-            <li><a href="#">Row Boats &amp; Kayaks &amp; Canoes</a></li>
-          </ul>
-        </div>
-        <div class="winter">
-          <ul>
+
+        <div id="winter" class="act-bx">
+          <div class="act-bx-sw">
+            <h3>Winter Activities</h3>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <ul class="acts winter-links">
             <li><a href="#">Cross country skiing &amp; Snowshoeing</a></li>
             <li>
               <a href="#">Ice Hiking &amp; Skating Snow mobile tours</a>
             </li>
           </ul>
         </div>
-      </div>
+      </section>
     </section>
 
     <!-- Main Activity : Galeairy Lake -->
-    <main id="act-ctn">
+    <main id="act-ctn" class="grid-con">
       <h2 class="hidden">Galeairy Lake</h2>
-      <section id="act-box" class="galeairy-lake">
-        <h3>Galeairy Lake</h3>
-        <img id="act-img-hr" src="#" alt="" />
+      <section id="act-box" class="algonquin-park col-span-full">
+        <img
+          class="full-span"
+          src="./images/Galeairy-lake-assets/mobl/galeairy-m-1.jpg"
+          alt=""
+        />
+        <h3>Algonquin Park</h3>
+        <h4>Galeairy Lake</h4>
         <p>
           Couples resort is located on the shores of Galeairy Lake, with direct
           access to Algonquin Park. Originally named Long lake which was renamed
@@ -117,30 +143,25 @@
           secluded coves by canoe or kayak and search for loons, beaver, otter
           and moose. Pull up on shore, have a picnic and go for a swim.
         </p>
+
+        <img src="./images/Galeairy-lake-assets/mobl/galeairy-m-2.jpg" alt="" />
+
         <p>
           Swimming in this lake is great. It is very clean and safe, with water
           temperatures hitting 25C (78F) by the end of July. Typically the lake
           temperature is above 18C (70F) from the third week of June to the
           first week of September.
         </p>
-
-        <figure>
-          <ul>
-            <li><img src="#" alt="" /></li>
-          </ul>
-        </figure>
       </section>
+      <div class="grid-con col-span-full to-act-link">
+        <a href="#">Explore Activities</a>
+      </div>
     </main>
 
-    <div>
-      <a href="#">Explore Activities</a>
-    </div>
-
     <!-- Footer -->
-    <h2 class="hidden">Footer of Couples Resort</h2>
-
-    <footer id="footer-hero" class="grid-con">
-      <section id="footer-contact-info" class="col-span-full">
+    <footer id="footer-hero">
+      <h2 class="hidden">Footer of Couples Resort</h2>
+      <section id="footer-contact-info">
         <h3>Couples Resort</h3>
         <p>
           1198 Osprey Rd, (End of) <br />
@@ -148,20 +169,21 @@
           K0M 2K0
         </p>
         <p>
-          Toll Free:+1 877 201-1156 <br />
+          Toll Free: +1 877 201-1156 <br />
           FAX:+1 613 638 2217 <br />
           E-mail: info@coupleresort.com
         </p>
-      </section>
 
-      <div id="footer-privacy" class="col-span-full line-separator">
-        <p id="price-policy">
-          All Prices and services on this website and in our reservation system
-          are based on conditions at the time of publishing abd are subject to
-          change. Please call to confirm services, availability and pricing.
-          &copy;2013 Couples Resort Inc. All Rights Reserved Privacy Policy
-        </p>
-      </div>
+        <div id="footer-privacy" class="col-span-full line-separator">
+          <p id="price-policy">
+            All Prices and services on this website and in our reservation
+            system are based on conditions at the time of publishing abd are
+            subject to change. Please call to confirm services, availability and
+            pricing. &copy;2013 Couples Resort Inc. All Rights Reserved Privacy
+            Policy
+          </p>
+        </div>
+      </section>
     </footer>
   </body>
 </html>

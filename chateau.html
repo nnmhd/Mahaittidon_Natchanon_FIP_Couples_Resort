@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./images/couples_resort_logo-icon.svg"
+      type="image/x-icon"
+    />
     <title>Couples Resort — Room Types</title>
+
     <!-- Google Fonts installation -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,34 +17,26 @@
       href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Icon library link -->
     <script
-      src="https://kit.fontawesome.com/d0e8431583.js"
+      src="https://kit.fontawesome.com/5ea80a4b63.js"
       crossorigin="anonymous"
     ></script>
+
     <!-- CSS link -->
     <link rel="stylesheet" href="./css/main.css" />
-
-    <style>
-      .hidden {
-        color: blue;
-        text-decoration: underline;
-        opacity: 30%;
-      }
-
-      * {
-        font-family: "Sanchez";
-      }
-    </style>
   </head>
+
   <body>
     <header class="grid-con" id="main-header">
       <nav id="main-nav" class="col-span-full">
         <h2 class="hidden">Main Navigation</h2>
         <input type="checkbox" id="hamburger" />
         <label for="hamburger">
-          <img src="/images/burger.svg" alt="Hamburger menu icon" />
+          <i class="fa-sharp fa-regular fa-bars"></i>
         </label>
-        <div id="burger-con">
+        <div id="burger-con" class="full-span">
           <ul>
             <li><a href="/index.html">Home</a></li>
             <li><a href="">Rooms</a></li>
@@ -50,29 +48,36 @@
         </div>
       </nav>
       <div id="logo" class="col-span-full">
-        <img src="/images/couples_resort_logo.svg" alt="Couples Resort" />
+        <img
+          src="/images/couples_resort_logo.svg"
+          alt="Couples Resort's logo"
+        />
       </div>
     </header>
 
     <!-- Hero Section : Chateau -->
     <main class="grid-con">
       <h2 class="hidden">Chateau Room's details</h2>
-      <section id="hl-box-chateau" class="col-span-full gi chateau-rm">
+      <section id="hl-box-chateau" class="col-span-full full-span">
         <div class="hl-box">
-          <h4 class="sub-hl">Room Style</h4>
-          <h2 class="hl">Chateau</h2>
+          <h4 class="txt-red-cr">Room Style</h4>
+          <h2>Chateau</h2>
         </div>
       </section>
 
       <section id="chateau-rm" class="col-span-full line-separator">
-        <div class="rm-func-rm-pg">
-          <img class="rm-func-ic" src="#" alt="" />
+        <div class="rm-func-rm-pg a-room">
+          <span
+            ><i
+              class="fa-light fa-arrow-up-right-and-arrow-down-left-from-center"
+            ></i
+          ></span>
           <p>1400 ft<sup>2</sup></p>
-          <img class="rm-func-ic" src="#" alt="" />
+          <span> <i class="fa-regular fa-bed-empty"></i></span>
           <p>King Size Beds</p>
         </div>
         <div class="rm-del-bx">
-          <p class="rm-del">
+          <p>
             Old European Boutique Chateaus and each with a Private Screened in
             Gazebo, Walkout Balcony and Outdoor Hot Tub to soothe life's pains
             away while enjoying views of spectacular scenery overlooking
@@ -92,39 +97,61 @@
         <section id="rm-album">
           <div class="pack">
             <div class="ab-hl-con">
-              <img
-                id="slide-1"
-                src="./images/chateau-assets/mobl/chateau-m-1.jpg"
-                alt="Text"
-                class="img-album-hl hl-1"
-              />
-              <img
-                id="slide-2"
-                src="./images/chateau-assets/mobl/chateau-m-2.jpg"
-                alt="Text"
-                class="img-album-hl ab-hl-img hl-2"
-              />
-              <img
-                id="slide-3"
-                src="./images/chateau-assets/mobl/chateau-m-3.jpg"
-                alt="Text"
-                class="img-album-hl ab-hl-img hl-3"
-              />
-              <img
-                id="slide-4"
-                src="./images/chateau-assets/mobl/chateau-m-4.jpg"
-                alt="Text"
-                class="img-album-hl ab-hl-img hl-4"
-              />
-            </div>
-            <div class="slider-nav">
-              <a href="#slide-1"></a>
-              <a href="#slide-2"></a>
-              <a href="#slide-3"></a>
-              <a href="#slide-4"></a>
+              <a href="#sl-1">
+                <img
+                  src="./images/chateau-assets/mobl/chateau-m-1.jpg"
+                  alt="Text"
+                  class="hl-1"
+                />
+              </a>
+              <div class="thumbnail">
+                <a href="#sl-2">
+                  <img
+                    id="slide-2"
+                    src="./images/chateau-assets/mobl/chateau-m-2.jpg"
+                    alt="Text"
+                  />
+                </a>
+                <a href="#sl-3">
+                  <img
+                    id="slide-3"
+                    src="./images/chateau-assets/mobl/chateau-m-3.jpg"
+                    alt="Text"
+                  />
+                </a>
+                <a href="#sl-4">
+                  <img
+                    id="slide-4"
+                    src="./images/chateau-assets/mobl/chateau-m-4.jpg"
+                    alt="Text"
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </section>
+
+        <!-- Room's album light Box  -->
+        <a href="#rm-album" class="ab-lb" id="sl-1">
+          <span>
+            <img src="./images/chateau-assets/mobl/chateau-m-1.jpg" />
+          </span>
+        </a>
+        <a href="#rm-album" class="ab-lb" id="sl-2">
+          <span>
+            <img src="./images/chateau-assets/mobl/chateau-m-2.jpg" />
+          </span>
+        </a>
+        <a href="#rm-album" class="ab-lb" id="sl-3">
+          <span>
+            <img src="./images/chateau-assets/mobl/chateau-m-3.jpg" />
+          </span>
+        </a>
+        <a href="#rm-album" class="ab-lb" id="sl-4">
+          <span>
+            <img src="./images/chateau-assets/mobl/chateau-m-4.jpg" />
+          </span>
+        </a>
 
         <div class="rm-features">
           <h3>Chateau features</h3>
@@ -160,8 +187,8 @@
       </section>
 
       <!-- Dining Promotion -->
-      <h2 class="hidden">Dining Promotion</h2>
-      <aside id="rm-pg" class="pro col-span-full">
+      <aside id="rm-pg-pro" class="full-span">
+        <h2 class="hidden">Dining Promotion</h2>
         <div class="pro-dinn">
           <p>All room prices include daily 5 course dinner and breakfast</p>
           <img src="/images/room-type-assets/mobl//ad-m.jpg" alt="" />
@@ -223,7 +250,7 @@
             </li>
           </ul>
           <div class="booking-rm-btn">
-            <input type="submit" value="Book" />
+            <input class="cta" type="submit" value="Book" />
           </div>
         </form>
         <div class="total-price-bx">
@@ -234,10 +261,9 @@
     </main>
 
     <!-- Footer -->
-    <h2 class="hidden">Footer of Couples Resort</h2>
-
-    <footer id="footer-hero" class="grid-con">
-      <section id="footer-contact-info" class="col-span-full">
+    <footer id="footer-hero">
+      <h2 class="hidden">Footer of Couples Resort</h2>
+      <section id="footer-contact-info">
         <h3>Couples Resort</h3>
         <p>
           1198 Osprey Rd, (End of) <br />
@@ -245,20 +271,21 @@
           K0M 2K0
         </p>
         <p>
-          Toll Free:+1 877 201-1156 <br />
+          Toll Free: +1 877 201-1156 <br />
           FAX:+1 613 638 2217 <br />
           E-mail: info@coupleresort.com
         </p>
-      </section>
 
-      <div id="footer-privacy" class="col-span-full line-separator">
-        <p id="price-policy">
-          All Prices and services on this website and in our reservation system
-          are based on conditions at the time of publishing abd are subject to
-          change. Please call to confirm services, availability and pricing.
-          &copy;2013 Couples Resort Inc. All Rights Reserved Privacy Policy
-        </p>
-      </div>
+        <div id="footer-privacy" class="col-span-full line-separator">
+          <p id="price-policy">
+            All Prices and services on this website and in our reservation
+            system are based on conditions at the time of publishing abd are
+            subject to change. Please call to confirm services, availability and
+            pricing. &copy;2013 Couples Resort Inc. All Rights Reserved Privacy
+            Policy
+          </p>
+        </div>
+      </section>
     </footer>
   </body>
 </html>
