@@ -1,63 +1,62 @@
-/* ---Mini CSS reset--- */
-
-body,
-p,
-h1,
-h2,
-h3,
-h4,
-h5 {
-  margin: 0px;
-  padding: 0px;
-}
+@import url(./layout.css);
+@import url(./roomtype.css);
+@import url(./reset.css);
+@import url(./chateau.css);
 
 /* ---Utility Classes--- */
+
+* {
+  outline: 1px solid greenyellow;
+}
 
 .hidden {
   display: none;
 }
 
-.p {
-  font-size: 14px;
-  line-height: 21px;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-/* ---Mobile Library Grid Styles--- */
-
-.grid-con {
-  display: grid;
-  grid-template-columns: repeat(4, 73px);
-  column-gap: 30px;
-  max-width: 412px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.col-span-full {
-  grid-column: 1 / -1;
-}
-
-.full-span {
-  padding-left: 30px;
-  padding-right: 30px;
-}
+/* ---Typography and Space Styles--- */
 
 body {
   display: flex;
   position: relative;
   flex-direction: column;
   justify-content: center;
-  /* color: #626262; */
   font-family: "Sanchez";
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2,
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 0.7rem;
+}
+
+h5 {
+  font-size: 0.9rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.txt-red-cr {
+  color: #9a2018;
 }
 
 a {
   text-decoration: none;
   transition: all 0.5s ease-in-out;
+}
+
+select,
+input {
+  font-family: "Sanchez";
 }
 
 input,
@@ -83,17 +82,43 @@ textarea {
   padding-top: 20px;
 }
 
+/* Main Interaction */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.cta {
+  font-size: 0.85rem;
+  background-color: #9a2018;
+  transition: 0.2s ease-in-out;
+}
+
+.cta:hover {
+  background-color: #d92322;
+}
+
+.chev-dd {
+  transition: 0.2s ease-in-out;
+}
+
+.chev-dd:hover {
+  transform: rotate(90deg);
+}
+
 /* 2. ---Main Nav--- */
-#main-nav label img {
-  width: 20px;
-  height: 20px;
+
+#main-nav label i {
+  font-size: 1.25rem;
+  color: #9a2018;
   margin-top: 15px;
   cursor: pointer;
-  transition: all 0.5s ease;
+  transition: 0.2s ease;
   margin-bottom: 20px;
 }
 
 #burger-con {
+  background-color: #9a2018;
   display: none;
 }
 
@@ -105,33 +130,31 @@ textarea {
   display: block;
 }
 
-#main-nav input:checked ~ label img {
+#main-nav input:checked ~ label i {
   transform: rotate(90deg);
 }
 
 #main-nav ul {
   list-style: none;
+  cursor: pointer;
   padding: 0;
-  margin: 0;
-}
-
-#main-nav ul li a {
-  display: block;
-  padding: 10px 0;
-  text-align: center;
-  color: #626262;
+  margin: 0 0 20px 0;
 }
 
 #main-nav ul li {
+  padding: 20px 0 20px 20px;
+  transition: 0.2s ease-in-out;
   border-bottom: 1px solid #efefef;
 }
 
-#main-nav ul li:first-child {
-  border-top: 1px solid #efefef;
+#main-nav ul li a {
+  padding: 10px 0;
+  text-align: center;
+  color: #efefef;
 }
 
-#main-nav ul li:last-child {
-  margin-bottom: 10px;
+#main-nav ul li:hover {
+  background-color: #d92322;
 }
 
 #logo {
@@ -154,26 +177,7 @@ textarea {
   padding: 20px 30px 10px 30px;
 }
 
-.hl {
-  font-size: 30px;
-  margin-top: 5px;
-  color: black;
-}
-
-h5 {
-  font-size: 12px;
-}
-
-.tx-red-cr {
-  color: #9a2018;
-}
-
-.hl-box h4,
-.hl-box-wo-image h4 {
-  font-size: 12px;
-  color: #9a2018;
-}
-
+/* To Check */
 #hl-box-wo-image {
   display: flex;
   align-items: flex-end;
@@ -183,565 +187,34 @@ h5 {
   margin: 20px 0 0px 15px;
 }
 
-/* Filter Section */
-
-.filt-btn {
-  color: #9a2018;
-}
-
-.filt-btn img {
-  width: 12px;
-  margin-left: 10px;
-  transform: rotate(180deg);
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
-}
-
-/* Filter container ON/OFF */
-
-#filt-btn {
-  display: none;
-}
-
-.filt-ctn {
-  display: none;
-}
-
-#filt-btn:checked ~ .filt-ctn {
-  display: block;
-}
-
-#filt-btn:checked ~ .filt-btn img {
-  transform: rotate(90deg);
-}
-
-#private-tub:checked ~ .private-tub-filt {
-  border: 2px solid #9a2018;
-  color: #9a2018;
-}
-
-/* Filter layout */
-.filt-ctn {
-  font-size: 11px;
-}
-
-.filt-ctn ul {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 15px;
-  color: #626262;
-  padding: 0;
-  margin-top: 30px;
-  list-style-type: none;
-}
-
-.filt-ctn ul li {
-  display: flex;
-  flex: 1 0 90px;
-  justify-content: space-between;
-  padding: 10px;
-  margin-bottom: 15px;
-}
-
-.filt-bx {
-  border: 1px solid #626262;
-  border-radius: 9px;
-}
-
-.filt-bx select {
-  border: none;
-  font-size: 11px;
-  color: #626262;
-}
-
-.filt-bx input {
-  border: none;
-  text-align: right;
-  font-size: 11px;
-  color: #626262;
-}
-
-/* Filter results : Room type */
-
-.rm-sec {
-  width: 100%;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.rm-name {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.sec-hl {
-  font-size: 30px;
-  color: black;
-}
-
-.rdy-btn {
-  padding: 15px 35px 15px 35px;
-  font-size: 13px;
-  color: white;
-  background-color: #9a2018;
-  transition: 0.2s;
-}
-
-.rdy-btn:hover {
-  background-color: #d92322;
-}
-
-.not-rdy-btn {
-  padding: 15px 35px 15px 35px;
-  font-size: 13px;
-  color: white;
-  background-color: #b8b8b8;
-}
-
-.rm-func {
-  width: 200px;
-  display: flex;
-  margin: 20px 0 10px 0;
-  justify-content: space-between;
-  font-size: 11px;
-  align-items: center;
-}
-
-.rm-del-hl {
-  width: 100%;
-  font-size: 18px;
-  padding: 10px 0 10px 0px;
-  color: #9a2018;
-}
-
-.rm-del-p {
-  font-size: 14px;
-  line-height: 21px;
-  padding-top: 10px;
-}
-
-.rm-del-p span {
-  font-size: 14px;
-  line-height: 23px;
-  color: #9a2018;
-}
-
-.rm-del-hl-img {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-.booking-minimum {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transform: translateY(15%);
-}
-
-.minimum {
-  margin-top: 10px;
-  font-size: 11px;
-  font-style: italic;
-  color: #9a2018;
-}
-
-/* Room Features */
-
-.rm-feature-ctn {
-  background-color: #f4f4f4;
-  margin-top: 30px;
-  padding: 50px 30px;
-  text-align: center;
-}
-
-.rm-feature-ctn h3 {
-  font-size: 25px;
-  text-decoration: underline;
-  margin-bottom: 30px;
-}
-
-.call-cr-bx {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
-  height: 120px;
-  color: white;
-  background-color: #9a2018;
-}
-
-.call-cr-bx p {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-style: italic;
-}
-
-.call-cr-bx img {
-  width: 30px;
-}
-
-/* Dinning Promotion */
-
-.pro-dinn {
-  display: grid;
-  grid-template-columns: 40% 50%;
-}
-
-.pro-dinn p {
-  grid-column: 1/2;
-  padding: 10px 15px;
-  align-self: flex-end;
-}
-
-.pro-dinn img {
-  grid-column: 2/3;
-  width: 120%;
-}
-
-.book-btn {
-  grid-column: 1/-1;
-}
-
-.book-btn-ads {
-  margin-top: 0;
-  margin-bottom: 50px;
-  padding: 20px;
-  text-align: center;
-  background-color: #9a2018;
-  color: white;
-  transition: 0.2s;
-}
-
-.book-btn-ads a {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-style: italic;
-  color: white;
-}
-
-.book-btn-ads:hover {
-  background-color: #d92322;
-}
-
-/* Package Promotion */
-
-.pckg-pro-ctn {
-  margin-top: 30px;
-  padding: 30px 10px;
-  background-color: #ffce00;
-  color: black;
-}
-
-.pckg-pro-ctn h3 {
-  font-size: 32px;
-  text-decoration: underline;
-}
-
-.pckg-pro-ctn img {
-  width: 100%;
-  margin: 20px 0;
-}
-
-.pckg-pro-ctn h4 {
-  margin-bottom: 20px;
-  font-size: 22px;
-}
-
-.pckg-pro-ctn a {
-  color: black;
-}
-
-/* Policy */
-#policy {
-  margin: 50px 0 25px 0;
-  background-color: white;
-  color: black;
-}
-
-#policy details {
-  border-bottom: 1px solid #999;
-}
-
-#policy details:last-child {
-  border-bottom: none;
-}
-
-#policy summary {
-  font-size: 22px;
-  margin-top: 10px;
-  padding-bottom: 10px;
-  list-style: none;
-}
-
-#policy summary::marker {
-  text-decoration: none;
-  font-size: 18 px;
-}
-
-#policy h3 {
-  font-size: 30px;
-  text-decoration: underline;
-  margin-bottom: 40px;
-}
-
-#policy p {
-  font-size: 14px;
-  padding: 10px 0 20px 0;
-}
-
-#policy ol {
-  margin: 0;
-}
-
-#policy li {
-  font-size: 14px;
-}
-
-#policy details[open] summary {
-  text-decoration: underline;
-}
-
-.tdlr-bx {
-  margin-bottom: 30px;
-  padding: 30px;
-  font-size: 14px;
-  line-height: 21px;
-  background-color: #f4f4f4;
-}
-
 /* Footer */
 
-footer {
+#footer-hero {
+  width: 412px;
+  margin: auto;
   background-image: url(/images/footer.jpg);
   color: white;
 }
 
+#footer-contact-info {
+  padding: 0px 15px;
+}
+
 footer h3 {
-  font-size: 30px;
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 100;
   padding: 30px 0 25px 10px;
 }
 
 footer p {
-  font-size: 12px;
-  line-height: 22px;
   padding: 0 0 30px 10px;
+  font-size: 0.8rem;
+  line-height: 22px;
 }
 
 #price-policy {
   text-align: center;
-  font-size: 10px;
-}
-
-/* Room Page */
-
-#hl-box-chateau {
-  display: flex;
-  align-items: flex-end;
-  height: 218px;
-  background: url(/images/chateau-assets/mobl/chateau-hero-m.jpg) no-repeat;
-}
-
-.rm-func-rm-pg {
-  width: 200px;
-  display: flex;
-  margin: 0px 0 10px 0;
-  justify-content: space-between;
-  font-size: 11px;
-  align-items: center;
-}
-
-/* Images Album */
-
-/* #rm-album {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-#rm-album input {
-  display: none;
-} */
-
-#rm-album {
-  position: relative;
-  margin: 30px auto;
-  width: 100%;
-  height: 247px;
-  scroll-margin-top: 50%;
-}
-
-.ab-hl-con {
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
-  overflow: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-}
-
-.ab-hl-con img {
-  flex: 1 0 100%;
-  scroll-snap-align: start;
-  object-fit: cover;
-}
-
-.slider-nav {
-  display: flex;
-  justify-content: center;
-  column-gap: 15px;
-  position: absolute;
-  bottom: 20px;
-  left: 40%;
-  transform: translateY(-50%);
-  z-index: 1;
-}
-
-.slider-nav a {
-  width: 8px;
-  height: 8px;
-  background-color: #fff;
-  border-radius: 50%;
-  opacity: 0.5;
-  transition: opacity ease 0.2s;
-}
-
-.ab-hl-con #slide-1,
-.ab-hl-con #slide-2,
-.ab-hl-con #slide-3,
-.ab-hl-con #slide-4 {
-  scroll-margin-top: 50%;
-}
-
-.slider-nav a:hover {
-  opacity: 1;
-}
-
-.img-album-hl {
-  width: 100%;
-  height: 247px;
-  object-fit: cover;
-}
-
-.thumb-con {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 5px;
-}
-
-.thumb-box img {
-  width: 120px;
-}
-
-.album-thumbnail-bx {
-  width: auto;
-  display: flex;
-  gap: 10px;
-}
-
-.album-thumbnail-bx label {
-  display: block;
-  flex: 1 0 auto;
-}
-
-.album-thumbnail-bx label img {
-  width: 120px;
-}
-
-/* Dining Promotion */
-
-#rm-pg .pro-dinn {
-  display: flex;
-  margin: 30px 0;
-  background-color: #9a2018;
-  color: #efefef;
-}
-
-.pro-dinn p {
-  padding-bottom: 20px;
-}
-
-.pro-dinn img {
-  width: 55%;
-}
-
-/* Room Booking Section */
-
-.rm-price h4 {
-  color: #9a2018;
-  font-size: 18px;
-}
-
-.rm-price p {
-  font-size: 22px;
-  padding: 20px 0;
-}
-
-#rm-booking-form {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#rm-booking-fm-bx {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 0;
-  list-style-type: none;
-}
-
-#rm-booking-fm-bx input {
-  height: 50px;
-  width: 140px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 5px 0 20px 0;
-  border-radius: 9px;
-  border: 1px solid #999;
-}
-
-#guest {
-  position: relative;
-}
-
-#guest select {
-  height: 50px;
-  width: 382px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 5px 0 20px 0;
-  border: 1px solid #999;
-  border-radius: 9px;
-  color: #999;
-  appearance: none;
-}
-
-.booking-bx-chevron {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 0;
-  right: 0;
-  transform: translateX(-20px) translateY(40px) rotate(180deg);
-  pointer-events: none;
-}
-
-.booking-rm-btn input {
-  width: 382px;
-  height: 50px;
-  color: white;
-  border: none;
-  border-radius: 9px;
-  background-color: #9a2018;
-}
-
-.total-price-bx {
-  display: flex;
-  justify-content: space-between;
-  font-size: 21px;
-  margin: 20px 0 60px 0;
+  font-size: 0.5rem;
 }
 
 /* Reservation Page */
@@ -1062,4 +535,184 @@ textarea {
 
 .lb-sc-bx img {
   width: 150px;
+}
+
+/* Activities Page */
+
+#hl-box-activities {
+  display: flex;
+  align-items: flex-end;
+  height: 218px;
+  background: url(/images/activities-assets/mobl/activities-hero-m.jpg)
+    no-repeat;
+}
+
+.act-directory {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: space-between;
+}
+
+.act-box h3 {
+  font-size: 12px;
+  color: #b8b8b8;
+  border-radius: 9px;
+}
+
+.act-directory ul {
+  list-style-type: none;
+}
+
+.act-directory ul li a {
+  color: black;
+}
+
+.act-bx-sw {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #b8b8b8;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.act-bx-sw h3 {
+  color: #b8b8b8;
+  font-size: 11px;
+}
+
+.act-bx-sw i {
+  font-size: 12px;
+  color: #b8b8b8;
+  transition: 0.3s;
+}
+
+.act-bx-sw:hover {
+  background-color: #9a2018;
+  border: #9a2018;
+}
+.act-bx-sw:hover h3 {
+  color: #f4f4f4;
+}
+.act-bx-sw:hover i {
+  color: #f4f4f4;
+  transform: rotate(90deg);
+}
+
+.acts {
+  width: 345px;
+  position: absolute;
+  background-color: #efefef;
+  display: none;
+  z-index: 999;
+}
+
+.acts li {
+  font-size: 12px;
+  padding-top: 10px;
+  text-align: left;
+}
+
+.acts li:last-child {
+  padding-bottom: 10px;
+}
+
+.acts li:hover {
+  text-decoration: underline;
+}
+
+.col3 {
+  width: 75px;
+}
+
+.river-links,
+.algonquin-park-links,
+.sports-links {
+  top: 45px;
+  left: 0;
+}
+
+.wildlife-viewing-links,
+.winter-links {
+  top: 85px;
+  left: 0;
+}
+
+#algonquin-park div {
+  width: 140px;
+}
+
+#river div,
+#sports div {
+  width: 80px;
+}
+
+#wildlife-viewing div,
+#winter div {
+  width: 165px;
+}
+
+#algonquin-park:hover .algonquin-park-links,
+#river:hover .river-links,
+#sports:hover .sports-links,
+#wildlife-viewing:hover .wildlife-viewing-links,
+#winter:hover .winter-links {
+  display: block;
+}
+
+#act-box img {
+  width: 100%;
+  margin-top: 20px;
+}
+
+#act-box h3 {
+  font-size: 12px;
+  padding-top: 20px;
+  color: #9a2018;
+}
+
+#act-box h4 {
+  font-size: 22px;
+  padding-top: 10px;
+}
+
+#act-box p {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.more-details {
+  margin: 30px auto;
+  font-size: 11px;
+}
+
+.more-details a {
+  font-size: 11px;
+  color: #9a2018;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.to-act-link {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  margin: 30px 0px;
+}
+
+.to-act-link a {
+  color: #9a2018;
+  text-decoration: underline;
+}
+
+/* Galeairy Lake */
+
+#hl-box-galeairy-lake {
+  display: flex;
+  align-items: flex-end;
+  height: 218px;
+  background: url(/images/Galeairy-lake-assets/mobl/galeairy-hero-m.jpg)
+    no-repeat;
 }

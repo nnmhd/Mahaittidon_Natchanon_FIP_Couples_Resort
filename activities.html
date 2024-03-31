@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Couples Resort — Room Types</title>
+    <title>Couples Resort — Activities</title>
     <!-- Google Fonts installation -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,69 +12,91 @@
       rel="stylesheet"
     />
     <script
-      src="https://kit.fontawesome.com/d0e8431583.js"
+      src="https://kit.fontawesome.com/5ea80a4b63.js"
       crossorigin="anonymous"
     ></script>
     <!-- CSS link -->
-    <link rel="stylesheet" href="#" />
-
-    <style>
-      .hidden {
-        color: blue;
-        text-decoration: underline;
-        opacity: 30%;
-      }
-
-      * {
-        font-family: "Sanchez";
-      }
-    </style>
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <header>
-      <h1 class="hidden">Welcome to The Couples Resort Room Types</h1>
-      <!-- Header & Navigator -->
-      <nav id="main-nav">
+    <header class="grid-con" id="main-header">
+      <nav id="main-nav" class="col-span-full">
         <h2 class="hidden">Main Navigation</h2>
         <input type="checkbox" id="hamburger" />
-        <img src="/images/burger.svg" alt="Hamburger menu icon" />
-        <div id="burger-ctn">
+        <label for="hamburger">
+          <img src="/images/burger.svg" alt="Hamburger menu icon" />
+        </label>
+        <div id="burger-con">
           <ul>
-            <li><a href="">Home</a></li>
+            <li><a href="/index.html">Home</a></li>
             <li><a href="/index.html">Rooms</a></li>
             <li><a href="">Packages</a></li>
             <li><a href="">Dining</a></li>
-            <li><a href="">Spa Activities</a></li>
+            <li><a href="/activities.html">Spa Activities</a></li>
             <li><a href="/reservations.html">Reservations</a></li>
           </ul>
         </div>
       </nav>
-      <img
-        src="/images/couples_resort_logo.svg"
-        alt="Couples Resort"
-        id="cr-logo"
-      />
+      <div id="logo" class="col-span-full">
+        <img src="/images/couples_resort_logo.svg" alt="Couples Resort" />
+      </div>
     </header>
 
     <!-- Hero Section : Activity Directory -->
     <h2 class="hidden">Activities in The Couples Resort</h2>
-    <section id="activities-ctn" class="activities-ctn">
-      <img src="#" alt="" class="hr-img" />
-      <section id="hl-box">
-        <h2 class="hl-box">
-          <span class="sub-hl">Activities</span><br />
-          Surrounding Couples Resort
-        </h2>
+    <section class="grid-con">
+      <h2 class="hidden">Activities Nav</h2>
+      <section
+        id="hl-box-activities"
+        class="col-span-full gi chateau-rm full-span"
+      >
+        <div class="hl-box">
+          <h4 class="sub-hl">Activities</h4>
+          <h2 class="hl">Surrounding Here</h2>
+        </div>
       </section>
-      <div class="act-directory">
-        <div class="algonquin-park">
-          <ul>
+
+      <section class="act-directory col-span-full line-separator">
+        <div id="algonquin-park" class="act-bx">
+          <div class="act-bx-sw">
+            <h3>Algonquin Park</h3>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+
+          <ul class="acts algonquin-park-links">
             <li><a href="/activities.html">Algonquin Park</a></li>
             <li><a href="/galeairy-lake.html">Galeairy Lake</a></li>
           </ul>
         </div>
-        <div class="wildlife-viewing">
-          <ul>
+
+        <div id="river" class="act-bx">
+          <div class="act-bx-sw">
+            <h3>River</h3>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <ul class="acts river-links">
+            <li><a href="#">River</a></li>
+            <li><a href="#">Row Boats &amp; Kayaks &amp; Canoes</a></li>
+          </ul>
+        </div>
+
+        <div id="sports" class="act-bx">
+          <div class="act-bx-sw">
+            <h3>Sports</h3>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <ul class="acts sports-links">
+            <li><a href="#">Basketball</a></li>
+            <li><a href="#">Tennis</a></li>
+          </ul>
+        </div>
+
+        <div id="wildlife-viewing" class="act-bx">
+          <div class="act-bx-sw">
+            <h3>Wildlife Viewing</h3>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <ul class="acts wildlife-viewing-links">
             <li><a href="#">Wildlife Viewing</a></li>
             <li><a href="#">Moose Watching</a></li>
             <li><a href="#">Horseback</a></li>
@@ -82,95 +104,96 @@
             <li><a href="#"></a></li>
           </ul>
         </div>
-        <div class="sports">
-          <ul>
-            <li><a href="#">River</a></li>
-            <li><a href="#">Row Boats &amp; Kayaks &amp; Canoes</a></li>
-          </ul>
-        </div>
-        <div class="winter">
-          <ul>
+
+        <div id="winter" class="act-bx">
+          <div class="act-bx-sw">
+            <h3>Winter Activities</h3>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <ul class="acts winter-links">
             <li><a href="#">Cross country skiing &amp; Snowshoeing</a></li>
             <li>
               <a href="#">Ice Hiking &amp; Skating Snow mobile tours</a>
             </li>
           </ul>
         </div>
+      </section>
+
+      <!-- Main Activity : Algonquin Park -->
+      <main id="act-ctn" class="col-span-full">
+        <h2 class="hidden">Algonquin Park Activities</h2>
+        <section id="act-box" class="algonquin-park">
+          <img
+            class="full-span"
+            src="./images/activities-assets/mobl/activities-1.jpg"
+            alt=""
+          />
+          <h3>Algonquin Park</h3>
+          <h4>Algonquin Area</h4>
+          <p>
+            Algonquin Park, Ontario's first provincial park, is a preserved
+            sanctuary where the noise and rush of civilization give way to the
+            rugged beauty of maple, pine, moose, and wolves. Established in
+            1893, its 7,630 square kilometers are a testament to a diverse and
+            pristine ecosystem unique to this part of the world. The park's
+            landscapes, sculpted by glaciers ten thousand years ago, present
+            stark and distinctive rock outcroppings and spring-fed lakes.
+            Conveniently situated 3 hours northeast of Toronto and 2 1/2 hours
+            west of Ottawa, Algonquin offers an ideal respite from urban life.
+          </p>
+          <p>
+            From the shores of our lakeside, just minutes away, the majestic
+            presence of Algonquin is both awe-inspiring and serene. Visitors are
+            invited to breathe in the clean air, admire the deep blue skies, and
+            explore the rich green forests and numerous pristine lakes. As a
+            living link to Ontario's wild past, the park's importance is beyond
+            measure, offering a glimpse into a wilderness that once covered the
+            province.
+          </p>
+
+          <img src="./images/activities-assets/mobl/activities-2.jpg" alt="" />
+
+          <p>
+            More than just a natural haven, Algonquin is also a hub for
+            recreational and educational activities. With 17 hiking trails
+            ranging from casual walks to ambitious treks, canoeing adventures
+            from tranquil paddles to challenging portages, and wildlife spotting
+            that ranges from loons to moose, there is something for everyone.
+            The Visitor Centre, just 15 minutes from the Bear Trail Couples
+            Resort, offers a $10 million facility constructed for the park''s
+            centennial in 1993. It houses world-class exhibits that narrate the
+            park's natural and human histories.
+          </p>
+          <p>
+            Algonquin's cultural footprint is as significant as its ecological
+            one, having inspired over 40 books, 1,800 scientific papers, various
+            films, a symphony, and the art of Tom Thomson and the Group of
+            Seven. Whether it's your first time hearing the howl of a wolf or
+            spotting a loon, Algonquin provides an unparalleled opportunity to
+            experience Ontario's wilderness legacy. Alongside its Visitor
+            Centre, the park boasts an Art Centre and a Logging Museum, allowing
+            visitors to delve deeper into the park's legacy while partaking in
+            its natural splendor.
+          </p>
+
+          <div class="more-details">
+            For more information <br />
+            <a href="#">Algonquin Park Ontario</a> <br />
+            For more photos of Algonquin <br />
+            <a href="#">Park Impressions of Algonquin Park</a>
+          </div>
+        </section>
+      </main>
+
+      <div class="grid-con col-span-full to-act-link">
+        <a href="#">Explore Activities</a>
       </div>
     </section>
 
-    <!-- Main Activity : Algonquin Park -->
-    <main id="act-ctn">
-      <h2 class="hidden">Algonquin Park Activities</h2>
-      <section id="act-box" class="algonquin-park">
-        <h3>Algonquin Park</h3>
-        <img id="act-img-hr" src="#" alt="" />
-        <p>
-          Algonquin Park, Ontario's first provincial park, is a preserved
-          sanctuary where the noise and rush of civilization give way to the
-          rugged beauty of maple, pine, moose, and wolves. Established in 1893,
-          its 7,630 square kilometers are a testament to a diverse and pristine
-          ecosystem unique to this part of the world. The park's landscapes,
-          sculpted by glaciers ten thousand years ago, present stark and
-          distinctive rock outcroppings and spring-fed lakes. Conveniently
-          situated 3 hours northeast of Toronto and 2 1/2 hours west of Ottawa,
-          Algonquin offers an ideal respite from urban life.
-        </p>
-        <p>
-          From the shores of our lakeside, just minutes away, the majestic
-          presence of Algonquin is both awe-inspiring and serene. Visitors are
-          invited to breathe in the clean air, admire the deep blue skies, and
-          explore the rich green forests and numerous pristine lakes. As a
-          living link to Ontario's wild past, the park's importance is beyond
-          measure, offering a glimpse into a wilderness that once covered the
-          province.
-        </p>
-
-        <figure>
-          <ul>
-            <li><img src="#" alt="" /></li>
-            <li><img src="#" alt="" /></li>
-          </ul>
-        </figure>
-        <p>
-          More than just a natural haven, Algonquin is also a hub for
-          recreational and educational activities. With 17 hiking trails ranging
-          from casual walks to ambitious treks, canoeing adventures from
-          tranquil paddles to challenging portages, and wildlife spotting that
-          ranges from loons to moose, there is something for everyone. The
-          Visitor Centre, just 15 minutes from the Bear Trail Couples Resort,
-          offers a $10 million facility constructed for the park''s centennial
-          in 1993. It houses world-class exhibits that narrate the park's
-          natural and human histories.
-        </p>
-        <p>
-          Algonquin's cultural footprint is as significant as its ecological
-          one, having inspired over 40 books, 1,800 scientific papers, various
-          films, a symphony, and the art of Tom Thomson and the Group of Seven.
-          Whether it's your first time hearing the howl of a wolf or spotting a
-          loon, Algonquin provides an unparalleled opportunity to experience
-          Ontario's wilderness legacy. Alongside its Visitor Centre, the park
-          boasts an Art Centre and a Logging Museum, allowing visitors to delve
-          deeper into the park's legacy while partaking in its natural splendor.
-        </p>
-
-        <div class="more-details">
-          For more information <br />
-          <a href="#">Algonquin Park Ontario</a> <br />
-          For more photos of Algonquin <br />
-          <a href="#">Park Impressions of Algonquin Park</a>
-        </div>
-      </section>
-    </main>
-    <div>
-      <a href="#">Explore Activities</a>
-    </div>
-
     <!-- Footer -->
-    <h2 class="hidden">Footer of Couples Resort</h2>
-
-    <footer id="footer-hero" class="grid-con">
-      <section id="footer-contact-info" class="col-span-full">
+    <footer id="footer-hero">
+      <h2 class="hidden">Footer of Couples Resort</h2>
+      <section id="footer-contact-info">
         <h3>Couples Resort</h3>
         <p>
           1198 Osprey Rd, (End of) <br />
@@ -178,20 +201,21 @@
           K0M 2K0
         </p>
         <p>
-          Toll Free:+1 877 201-1156 <br />
+          Toll Free: +1 877 201-1156 <br />
           FAX:+1 613 638 2217 <br />
           E-mail: info@coupleresort.com
         </p>
-      </section>
 
-      <div id="footer-privacy" class="col-span-full line-separator">
-        <p id="price-policy">
-          All Prices and services on this website and in our reservation system
-          are based on conditions at the time of publishing abd are subject to
-          change. Please call to confirm services, availabillity and pricing.
-          &copy;2013 Couples Resort Inc. All Rights Reserved Privacy Policy
-        </p>
-      </div>
+        <div id="footer-privacy" class="col-span-full line-separator">
+          <p id="price-policy">
+            All Prices and services on this website and in our reservation
+            system are based on conditions at the time of publishing abd are
+            subject to change. Please call to confirm services, availability and
+            pricing. &copy;2013 Couples Resort Inc. All Rights Reserved Privacy
+            Policy
+          </p>
+        </div>
+      </section>
     </footer>
   </body>
 </html>
