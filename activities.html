@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Couples Resort — Activities</title>
+    <link
+      rel="icon"
+      href="./images/couples_resort_logo-icon.svg"
+      type="image/x-icon"
+    />
+    <title>Couples Resort — Room Types</title>
+
     <!-- Google Fonts installation -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,34 +17,41 @@
       href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Icon library link -->
     <script
       src="https://kit.fontawesome.com/5ea80a4b63.js"
       crossorigin="anonymous"
     ></script>
+
     <!-- CSS link -->
     <link rel="stylesheet" href="./css/main.css" />
   </head>
+
   <body>
     <header class="grid-con" id="main-header">
       <nav id="main-nav" class="col-span-full">
         <h2 class="hidden">Main Navigation</h2>
         <input type="checkbox" id="hamburger" />
         <label for="hamburger">
-          <img src="/images/burger.svg" alt="Hamburger menu icon" />
+          <i class="fa-sharp fa-regular fa-bars"></i>
         </label>
-        <div id="burger-con">
+        <div id="burger-con" class="full-span">
           <ul>
             <li><a href="/index.html">Home</a></li>
-            <li><a href="/index.html">Rooms</a></li>
+            <li><a href="">Rooms</a></li>
             <li><a href="">Packages</a></li>
             <li><a href="">Dining</a></li>
-            <li><a href="/activities.html">Spa Activities</a></li>
-            <li><a href="/reservations.html">Reservations</a></li>
+            <li><a href="">Spa Activities</a></li>
+            <li><a href="">Reservations</a></li>
           </ul>
         </div>
       </nav>
       <div id="logo" class="col-span-full">
-        <img src="/images/couples_resort_logo.svg" alt="Couples Resort" />
+        <img
+          src="/images/couples_resort_logo.svg"
+          alt="Couples Resort's logo"
+        />
       </div>
     </header>
 
