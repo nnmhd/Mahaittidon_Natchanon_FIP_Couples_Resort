@@ -55,7 +55,12 @@
 
 .guest-info input,
 .billing-info input {
+  background-color: #f4f4f4;
   width: 315px;
+}
+
+.guest-info textarea {
+  background-color: #f4f4f4;
 }
 
 .billing-info:nth-child(4) {
@@ -121,6 +126,11 @@
   color: #f4f4f4;
 }
 
+.to-billing-btn input,
+.to-payment-btn input {
+  background-color: #9a2018;
+}
+
 /* Payment Section */
 
 .card-bx {
@@ -149,6 +159,7 @@
 .payment-box input {
   appearance: none;
   border: none;
+  background-color: none;
 }
 
 .payment-box:has(input:checked) {
@@ -174,6 +185,10 @@
   border-radius: 9px;
   padding: 30px;
   margin-bottom: 60px;
+}
+
+#card-info input {
+  background-color: white;
 }
 
 .card-info li {
@@ -250,13 +265,12 @@ input:valid + .check-icon::after {
 
 #lb-cf {
   position: absolute;
-  min-width: 412px;
+  width: 360px;
   top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0 auto;
   border: 1px solid #b8b8b8;
-  border-radius: 9px;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -272,19 +286,47 @@ input:valid + .check-icon::after {
 }
 
 .lb-cf-bx {
-  margin: 20px auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-#rm-cf img {
-  margin-top: 30px;
-  border-top: 3px solid #9a2018;
+.confirm {
+  display: flex;
+  flex-direction: column;
+}
+
+.room-headline-cf {
+  position: absolute;
+  box-sizing: border-box;
+  width: 330px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 25px 25px 5px 25px;
+}
+
+#cf-img {
+  width: 412px;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+  background-image: url(/images/chateau-assets/mobl/chateau-hero-m.jpg);
 }
 
 .cf-del {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
-  padding-inline: 25px;
+  margin: 0;
+  padding-inline: 25px !important;
+  gap: 30px;
+}
+
+.cf-del p {
+  margin-bottom: 10px;
 }
 
 .cf-del h4 {
@@ -293,24 +335,29 @@ input:valid + .check-icon::after {
 
 .close-lb {
   position: absolute;
+  font-size: 1.5rem;
+  color: #f4f4f4;
   top: 0;
   right: 0;
   transform: translateX(-10px) translateY(10px);
-  width: 15px;
-  height: 15px;
+}
+
+.close-lb:hover {
+  color: #b8b8b8;
 }
 
 .confirm-btn input {
   width: 100%;
+  margin-bottom: 30px;
 }
 
 /* Light box - Booking Success  */
 
 #sc {
-  width: 380px;
-  min-width: 412px;
+  width: 330px;
+  min-width: 300px;
   position: absolute;
-  top: 75%;
+  top: 76.5%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -336,9 +383,9 @@ input:valid + .check-icon::after {
 }
 
 .hr-det p {
-  font-size: 60px;
-  line-height: 65px;
-  padding-top: 50x;
+  font-size: 3rem;
+  line-height: 50px;
+  margin-top: 20px;
 }
 
 .lb-sc-bx {
