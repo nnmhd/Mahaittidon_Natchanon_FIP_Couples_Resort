@@ -6,23 +6,20 @@
     <link
       rel="icon"
       href="./images/couples_resort_logo-icon.svg"
-      type="image/x-icon"
-    />
-    <title>Couples Resort — Room Types</title>
+      type="image/x-icon" />
+    <title>Couples Resort - Home</title>
 
     <!-- Google Fonts installation -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
 
     <!-- Icon library link -->
     <script
       src="https://kit.fontawesome.com/5ea80a4b63.js"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
 
     <!-- CSS link -->
     <link rel="stylesheet" href="./css/main.css" />
@@ -39,19 +36,18 @@
         <div id="burger-con" class="full-span">
           <ul>
             <li><a href="/index.html">Home</a></li>
-            <li><a href="">Rooms</a></li>
+            <li><a href="/rooms.html">Rooms</a></li>
             <li><a href="">Packages</a></li>
             <li><a href="">Dining</a></li>
-            <li><a href="">Spa Activities</a></li>
-            <li><a href="">Reservations</a></li>
+            <li><a href="/activities.html">Spa Activities</a></li>
+            <li><a href="/reservations.html">Reservations</a></li>
           </ul>
         </div>
       </nav>
       <div id="logo" class="col-span-full">
         <img
           src="/images/couples_resort_logo.svg"
-          alt="Couples Resort's logo"
-        />
+          alt="Couples Resort's logo" />
       </div>
     </header>
 
@@ -59,22 +55,24 @@
 
     <main class="grid-con">
       <h2 class="hidden">Couples Resort Booking Details and Guest Info</h2>
-      <section id="hl-box-wo-image" class="col-span-full">
-        <div class="hl-box-wo-image">
-          <h4 class="txt-red-cr">You Almost Done</h4>
-          <h2 class="hl">Request Booking</h2>
+
+      <section id="chateau-rm" class="room-con col-span-full">
+        <div class="room-bx">
+            <div id="chateau-img" class="room-img full-span">
+            <div class="room-name-bx">
+                 <div class="room-headline">
+                    <div class="room-name">
+                        <h4 class="txt-red-cr">You Almost Done</h4>
+                        <h3>Request Booking</h3>
+                    </div>
+                </div>
+            </div>
+            </div>
         </div>
-      </section>
 
       <!--Booking Details Section -->
       <section id="request-detail" class="col-span-full line-separator">
         <div id="book-sum">
-          <div class="rm-img">
-            <img
-              src="./images/chateau-assets/mobl/chateau-hero-m.jpg"
-              alt="Chateau Room"
-            />
-          </div>
           <div class="book-sum-del">
             <div class="book-sum-del-l-bx">
               <div class="rm-type">
@@ -234,7 +232,7 @@
         </div>
       </section>
 
-      <section class="card-bx col-span-full">
+      <section id="card-bx" class="card-bx col-span-full">
         <label class="payment-box cards">
           <input type="radio" id="cards" name="payment" value="cards" />
           <i class="fa-regular fa-credit-card"></i>
@@ -321,7 +319,7 @@
           </a>
         </form>
       </section>
-    </main>
+      </section></main>
 
     <!-- Footer -->
     <footer id="footer-hero">
@@ -353,25 +351,31 @@
 
     <!-- Payment Confirmation - light box -->
 
-    <section id="lb-cf" class="lb-cf grid-con">
+    <section id="lb-cf" class="lb-cf">
       <h2 class="hidden">Confirmation Light box</h2>
       <a href="#card-info">
-        <div class="lb-cf-bx col-span-full">
+        <!-- relative -->
+        <div class="lb-cf-bx"> 
+          <div id="cf-img" class="room-img">
           <div class="close-lb">
             <a href="#card-info" class="close-lb"
-              ><img src="/images/xmark-solid-bk.svg" alt=""
-            /></a>
-          </div>
-          <div class="hl-box-wo-image">
-            <h4 class="sub_hl txt-red-cr">We are on the Last Step</h4>
-            <h2 class="hl">Booking Confirmation</h2>
+              ><i class="fa-regular fa-xmark"></i></a>
           </div>
 
-          <div id="rm-cf" class="rm-img">
-            <img src="./images/chateau-assets/mobl/chateau-hero-m.jpg" alt="" />
-          </div>
-          <img class="rm-cf" src="#" alt="" />
+          <div class="confirm-room-bx">
+    
+            <div class="room-name-bx">
+                 <div class="room-headline-cf">
+                    <div class="room-name">
+                        <h4 class="txt-red-cr">You Almost Done</h4>
+                        <h3>Request Booking</h3>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
 
+        <div class="confirm">
           <section class="cf-del">
             <div class="book-sum-del">
               <div class="book-sum-del-l-bx">
@@ -420,6 +424,7 @@
             </a>
           </div>
         </div>
+      </div>
       </a>
     </section>
 

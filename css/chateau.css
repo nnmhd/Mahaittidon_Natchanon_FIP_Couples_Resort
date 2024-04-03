@@ -7,7 +7,6 @@
   height: 218px;
   background: url(/images/chateau-assets/mobl/chateau-hero-m.jpg) no-repeat;
 }
-/*  */
 
 .rm-func-rm-pg {
   width: 220px;
@@ -89,34 +88,27 @@
   margin: 30px 0;
   background-color: #9a2018;
   color: #efefef;
+}
 
-  & p {
-    padding-bottom: 20px;
-  }
+.pro-dinn p {
+  padding-bottom: 20px;
+}
 
-  & img {
-    width: 55%;
-  }
+.pro-dinn img {
+  width: 55%;
 }
 
 /* Booking Section */
 
-.rm-price {
-  & h4 {
-    color: #9a2018;
-    font-size: 1.2rem;
-  }
-
-  & p {
-    font-size: 1.5rem;
-    padding: 20px 0;
-  }
+.rm-price h4 {
+  color: #9a2018;
+  font-size: 1.2rem;
 }
 
-/* .rm-price p {
+.rm-price p {
   font-size: 1.5rem;
-
-} */
+  padding: 20px 0;
+}
 
 #rm-booking-form {
   display: flex;
@@ -129,32 +121,31 @@
   justify-content: space-between;
   padding: 0;
   list-style-type: none;
-
-  & input {
-    height: 50px;
-    width: 140px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: 5px 0 20px 0;
-    border-radius: 9px;
-    border: 1px solid #999;
-  }
 }
 
-#guest {
-  position: relative;
+#rm-booking-fm-bx input {
+  height: 50px;
+  width: 180px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 5px 0 20px 0;
+  border-radius: 9px;
+  background-color: #f4f4f4;
+  border: 1px solid #999;
+}
 
-  & select {
-    height: 50px;
-    width: 382px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: 5px 0 20px 0;
-    border: 1px solid #999;
-    border-radius: 9px;
-    color: #999;
-    appearance: none;
-  }
+#guest select {
+  position: relative;
+  height: 50px;
+  width: 382px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 5px 0 20px 0;
+  border: 1px solid #999;
+  border-radius: 9px;
+  color: #999;
+  background-color: #f4f4f4;
+  appearance: none;
 }
 
 .booking-bx-chevron {

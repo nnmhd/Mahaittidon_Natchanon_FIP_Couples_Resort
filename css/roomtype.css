@@ -115,61 +115,79 @@ label:has(input:checked) {
 
 /* Filter results : Room type */
 
-.rm-sec {
-  width: 100%;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.rm-name {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .rdy-btn {
   padding: 15px 35px 15px 35px;
   color: white;
-}
-
-.not-rdy-btn {
-  padding: 15px 35px 15px 35px;
-  font-size: 0.85rem;
-  color: white;
-  background-color: #b8b8b8;
-  transition: 0.2s ease-in-out;
 }
 
 .not-rdy-btn:hover {
   opacity: 0.5;
 }
 
-.rm-func {
-  width: 200px;
+.room-bx {
+  position: relative;
+}
+
+.room-img {
+  position: relative;
+  width: 382px;
+  height: 250px;
+  background-color: #999;
+  margin-top: 30px;
+}
+
+#chateau-img {
+  background-image: url(/images/room-type-assets/mobl/chataeu-m.jpg);
+}
+#villas-img {
+  background-image: url(/images/room-type-assets/mobl/villas-m.jpg);
+}
+#master-img {
+  background-image: url(/images/room-type-assets/mobl/masters-m.jpg);
+}
+#exotic-img {
+  background-image: url(/images/room-type-assets/mobl/exotics-m.jpg);
+}
+#chalet-img {
+  background-image: url(/images/room-type-assets/mobl/chalets-m.jpg);
+}
+#juniors-img {
+  background-image: url(/images/room-type-assets/mobl/juniors-m.jpg);
+}
+
+.room-name-bx {
+  position: absolute;
+  bottom: 85px;
+  left: 15px;
+}
+
+.room-headline {
+  position: absolute;
+  box-sizing: border-box;
+  width: 382px;
   display: flex;
-  margin: 20px 0 10px 0;
   justify-content: space-between;
-  font-size: 11px;
   align-items: center;
+  background-color: white;
+  padding: 25px 25px 5px 25px;
 }
 
-.rm-func-rm-pg {
-  font-size: 0.6rem;
-}
-
-.rm-func-rm-pg p {
-  font-size: 0.6rem;
-}
-
-.rm-func-rm-pg i {
+.fucntion-bx i,
+.room-function i {
+  font-size: 0.8rem;
   color: #9a2018;
 }
 
-.rm-del-hl {
-  width: 100%;
-  font-size: 18px;
-  padding: 10px 0 10px 0px;
-  color: #9a2018;
+.fucntion-bx p,
+.room-function p {
+  font-size: 0.7rem;
+}
+
+.fucntion-bx {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .rm-del-p {
@@ -188,20 +206,6 @@ label:has(input:checked) {
   width: 100%;
   padding: 0;
   margin: 0;
-}
-
-.booking-minimum {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transform: translateY(15%);
-}
-
-.minimum {
-  margin-top: 10px;
-  font-size: 11px;
-  font-style: italic;
-  color: #9a2018;
 }
 
 /* Room Features */
@@ -248,6 +252,14 @@ label:has(input:checked) {
 
 .pro-dinn {
   display: flex;
+  margin: 0px;
+}
+
+#pro-dinn-rm-type-pg {
+  display: flex;
+  background-color: white;
+  margin: 0px;
+  color: black;
 }
 
 .pro-dinn p {
@@ -257,7 +269,6 @@ label:has(input:checked) {
 
 .book-btn-ads {
   margin-top: 0;
-  margin-bottom: 50px;
   padding: 20px;
   text-align: center;
   background-color: #9a2018;
@@ -283,8 +294,6 @@ label:has(input:checked) {
   padding: 30px 10px;
   background-color: #ffce00;
   color: black;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .pckg-pro-ctn h3:first-child {
@@ -318,21 +327,20 @@ label:has(input:checked) {
   margin: 50px 0 25px 0;
   background-color: white;
   color: black;
-}
-
-#policy details {
-  border-bottom: 1px solid #999;
-}
-
-#policy details:last-child {
-  border-bottom: none;
+  background-color: ;
 }
 
 #policy summary {
-  font-size: 22px;
+  font-size: 1rem;
   margin-top: 10px;
-  padding-bottom: 10px;
   list-style: none;
+  background-color: #f4f4f4;
+}
+
+#policy summary i {
+  padding: 10px;
+  color: #626262;
+  transition: 0.2s ease-in-out;
 }
 
 #policy summary::marker {
@@ -341,9 +349,8 @@ label:has(input:checked) {
 }
 
 #policy h3 {
+  padding-top: 5px;
   font-size: 30px;
-  text-decoration: underline;
-  margin-bottom: 40px;
 }
 
 #policy p {
@@ -358,9 +365,12 @@ label:has(input:checked) {
 #policy li {
   font-size: 14px;
 }
+#policy details[open] summary i {
+  transform: rotate(90deg);
+}
 
-#policy details[open] summary {
-  text-decoration: underline;
+.pc-del-bx {
+  margin-top: 20px;
 }
 
 .tdlr-bx {
