@@ -54,40 +54,12 @@ textarea {
 
 /* 2. ---Main Nav--- */
 
-#main-nav label img {
-  width: 20px;
-  height: 20px;
-  margin-top: 15px;
-  cursor: pointer;
-  transition: all 0.5s ease;
-  margin-bottom: 20px;
-}
-
-#main-nav input,
-#burger-con {
-  display: none;
-}
-
 #hero-heading-box span {
   font-size: 0.75rem;
 }
 
 #hero-heading-box h2 {
   font-size: 1.5rem;
-}
-
-/*   ~ sibling selector   */
-
-#main-nav ul li a {
-  display: block;
-  padding: 10px 0 10px 0;
-  text-align: center;
-  color: #626262;
-}
-
-#logo {
-  margin-bottom: 20px;
-  max-width: 382px;
 }
 
 /* 3. ---Main Hero Image--- */
