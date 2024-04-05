@@ -10,7 +10,7 @@
 /* ---Utility Classes--- */
 
 * {
-  outline: 1px solid greenyellow;
+  /* outline: 1px solid greenyellow; */
 }
 
 .hidden {
@@ -196,7 +196,8 @@ header {
 }
 
 #main-nav ul li {
-  padding: 20px 0 20px 20px;
+  width: auto;
+  padding: 20px 0;
   transition: 0.2s ease-in-out;
   border-bottom: 1px solid #efefef;
 }

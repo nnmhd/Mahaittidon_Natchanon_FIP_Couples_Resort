@@ -223,6 +223,30 @@
   width: 320px;
 }
 
+.to-confirm-btn input:active,
+.to-payment-btn input:active,
+.to-billing-btn input:active {
+  animation-name: button;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+/* Animation */
+
+@keyframes button {
+  0%,
+  100% {
+    border-radius: 9px;
+    color: white;
+  }
+
+  50% {
+    border-radius: 0px;
+    color: #9a2018;
+  }
+}
+
 #pay-now {
   display: flex;
   justify-content: space-between;
