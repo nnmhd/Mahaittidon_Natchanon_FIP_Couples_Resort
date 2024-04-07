@@ -30,7 +30,7 @@ The objective of this project is to redesign and modernize the existing website 
 
 To view the website locally or contribute to the project, follow these steps:
 
-1. Clone the repository to your local machine using the following command: git clone https://github.com/nnmhd/Mahaittidon_Natchanon_FIP_Couples_Resort.git
+1. Clone the repository to your local machine using the following command: git clone https://github.com/nnmhd/Mahaittidon_Natchanon_Integrated
 
 2. Open the project directory in your code editor of choice.
 
