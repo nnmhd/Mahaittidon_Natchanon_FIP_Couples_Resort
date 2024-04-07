@@ -7,7 +7,7 @@
       rel="icon"
       href="./images/couples_resort_logo-icon.svg"
       type="image/x-icon" />
-    <title>Couples Resort - Home</title>
+    <title>Couples Resort - Reservation</title>
 
     <!-- Google Fonts installation -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,6 +27,7 @@
 
   <body>
     <header class="grid-con" id="main-header">
+      <h1 class="hidden">Welcome to reservation page of Couples Resort</h1>
       <nav id="main-nav" class="col-span-full">
         <h2 class="hidden">Main Navigation</h2>
         <input type="checkbox" id="hamburger" />
@@ -58,268 +59,309 @@
 
       <section id="chateau-rm" class="room-con col-span-full">
         <div class="room-bx">
-            <div id="chateau-img" class="room-img full-span">
+          <div id="chateau-img" class="room-img full-span">
             <div class="room-name-bx">
-                 <div class="room-headline">
-                    <div class="room-name">
-                        <h4 class="txt-red-cr">You Almost Done</h4>
-                        <h3>Request Booking</h3>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-
-      <!--Booking Details Section -->
-      <section id="request-detail" class="col-span-full line-separator">
-        <div id="book-sum">
-          <div class="book-sum-del">
-            <div class="book-sum-del-l-bx">
-              <div class="rm-type">
-                <h4 class="txt-red-cr">Room Type</h4>
-                <p class="rm-type">Chateau</p>
-              </div>
-              <div class="date-sum">
-                <h4 class="txt-red-cr">Date</h4>
-                <p class="date-sum">4-5 April 2024</p>
-              </div>
-              <div class="guest-sum">
-                <h4 class="txt-red-cr">Guests</h4>
-                <p class="guest-sum">Couple</p>
-              </div>
-            </div>
-
-            <div class="book-sum-del-r-bx">
-              <div class="price-sum">
-                <div class="rm-price-sum">
-                  <p class="rm-price-sum">
-                    &dollar;<span class="rm-price">200</span> CAD x
-                    <span class="night-sum">1</span> night(s) <br />
-                    Taxes (additional 13%)
-                  </p>
-                </div>
-                <div class="total-price">
-                  <h4 class="txt-red-cr">in total</h4>
-                  <p>&dollar;<span class="total-price">226</span> CAD</p>
+              <div class="room-headline">
+                <div class="room-name">
+                  <span class="txt-red-cr sp-hl">You Almost Done</span>
+                  <h3>Request Booking</h3>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- Guest Info Section -->
-      <h2 class="hidden">Couples Resort : Guest Info</h2>
-      <section id="guest-info" class="col-span-full line-separator-grey">
-        <div class="guest-info">
-          <div class="guest-info-hl">
-            <h3>Guest Info</h3>
-            <h5 class="txt-red-cr"><i>1 / 3 steps</i></h5>
-          </div>
-          <form id="guest-form" class="guest-form" action="#">
-            <ul>
-              <li id="fname">
-                <label for="fname">Full Name</label>
-                <div class="input-bx">
-                  <input type="text" name="fname" required />
-                  <span class="check-icon"></span>
+        <!--Booking Details Section -->
+        <section id="request-detail" class="col-span-full line-separator">
+          <div id="book-sum">
+            <div class="book-sum-del">
+              <div class="book-sum-del-l-bx">
+                <div class="rm-type">
+                  <h4 class="txt-red-cr">Room Type</h4>
+                  <p class="rm-type">Chateau</p>
                 </div>
-              </li>
-              
-              <li id="email">
-                <label for="email">Email</label>
-                <div class="input-bx">
-                  <input type="email" name="email" required />
-                  <span class="check-icon"></span>
+                <div class="date-sum">
+                  <h4 class="txt-red-cr">Date</h4>
+                  <p class="date-sum">4-5 April 2024</p>
                 </div>
-              </li>
-              
-              <li id="tel">
-                <label for="tel">Phone Number</label>
-                <div class="input-bx">
-                  <input type="tel" name="tel" required />
-                  <span class="check-icon"></span>
+                <div class="guest-sum">
+                  <h4 class="txt-red-cr">Guests</h4>
+                  <p class="guest-sum">Couple</p>
                 </div>
-              </li>
-              
-              <li id="request">
-                <label for="request">Special requests (optional)</label>
-                <textarea name="request" cols="30" rows="10"></textarea>
-              </li>
-            </ul>
-            <div class="to-billing-btn">
-              <input class="cta" type="submit" value="Pay Now" />
+              </div>
+
+              <div class="book-sum-del-r-bx">
+                <div class="price-sum">
+                  <div class="rm-price-sum">
+                    <p class="rm-price-sum">
+                      &dollar;<span class="rm-price">200</span> CAD x
+                      <span class="night-sum">1</span> night(s) <br />
+                      Taxes (additional 13%)
+                    </p>
+                  </div>
+                  <div class="total-price">
+                    <h4 class="txt-red-cr">in total</h4>
+                    <p>&dollar;<span class="total-price">226</span> CAD</p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </form>
-        </div>
-      </section>
-
-      <!-- Payment : Billing info Section -->
-
-      <section id="billing" class="col-span-full line-separator-grey">
-        <h2 class="hidden">Couples Resort : Billing Info</h2>
-        <div class="billing-info">
-          <div class="billing-info-hl">
-            <h3>Billing Info</h3>
-            <h5 class="txt-red-cr"><i>2 / 3 steps</i></h5>
           </div>
-          <form id="billing-form" class="billing-form" action="#">
-            <ul>
-              <li id="billing-fname">
-                <label for="fname">Full Name</label>
-                <div class="input-bx">
-                  <input type="text" name="fname" pattern="[A-Za-z]{4,}" required />
-                  <span class="check-icon"></span>
-                </div>
-              </li>
-              
-              <li id="billing-add">
-                <label for="address">Address</label>
-                <div class="input-bx">
-                  <input type="text" name="address" pattern="[A-Za-z]{10,}" required />
-                  <span class="check-icon"></span>
-                </div>
-              </li>
-              
-              <li id="billing-city">
-                <label for="city">City</label>
+        </section>
+
+        <!-- Guest Info Section -->
+        <h2 class="hidden">Couples Resort : Guest Info</h2>
+        <section id="guest-info" class="col-span-full line-separator-grey">
+          <div class="guest-info">
+            <div class="guest-info-hl">
+              <h3>Guest Info</h3>
+              <span class="txt-red-cr"><i>1 / 3 steps</i></span>
+            </div>
+            <form id="guest-form" class="guest-form" action="#">
+              <ul>
+                <li id="fname">
+                  <label for="fname-guest">Full Name</label>
+                  <div class="input-bx">
+                    <input
+                      id="fname-guest"
+                      type="text"
+                      name="fname-guest"
+                      required />
+                    <span class="check-icon"></span>
+                  </div>
+                </li>
+
+                <li id="email">
+                  <label for="email-guest">Email</label>
+                  <div class="input-bx">
+                    <input
+                      id="email-guest"
+                      type="email"
+                      name="email-guest"
+                      required />
+                    <span class="check-icon"></span>
+                  </div>
+                </li>
+
+                <li id="tel">
+                  <label for="tel-guest">Phone Number</label>
+                  <div class="input-bx">
+                    <input
+                      id="tel-guest"
+                      type="tel"
+                      name="tel-guest"
+                      required />
+                    <span class="check-icon"></span>
+                  </div>
+                </li>
+
+                <li id="request">
+                  <label for="request-guest">Special requests (optional)</label>
+                  <textarea
+                    id="request-guest"
+                    name="request"
+                    cols="30"
+                    rows="10"></textarea>
+                </li>
+              </ul>
+              <div class="to-billing-btn">
+                <input class="cta" type="submit" value="Pay Now" />
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <!-- Payment : Billing info Section -->
+
+        <section id="billing" class="col-span-full line-separator-grey">
+          <h2 class="hidden">Couples Resort : Billing Info</h2>
+          <div class="billing-info">
+            <div class="billing-info-hl">
+              <h3>Billing Info</h3>
+              <span class="txt-red-cr"><i>2 / 3 steps</i></span>
+            </div>
+            <form id="billing-form" class="billing-form" action="#">
+              <ul>
+                <li id="billing-fname">
+                  <label for="fname-billing">Full Name</label>
+                  <div class="input-bx">
+                    <input
+                      id="fname-billing"
+                      type="text"
+                      name="fname-billing"
+                      pattern="[A-Za-z]{4,}"
+                      required />
+                    <span class="check-icon"></span>
+                  </div>
+                </li>
+
+                <li id="billing-add">
+                  <label for="add-billing">Address</label>
+                  <div class="input-bx">
+                    <input
+                      id="add-billing"
+                      type="text"
+                      name="add-billing"
+                      pattern="[A-Za-z]{10,}"
+                      required />
+                    <span class="check-icon"></span>
+                  </div>
+                </li>
+
+                <li id="billing-city">
+                  <label for="city-billing">City</label>
+                  <div class="input-bx">
+                    <input
+                      id="city-billing"
+                      type="text"
+                      name="city-billing"
+                      pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]"
+                      title="Please put your 3 characters and 3 numbers of your postcode"
+                      required />
+                    <span class="check-icon"></span>
+                  </div>
+                </li>
+
+                <li id="billing-postcode">
+                  <label for="postcode-billing">Postal Code</label>
+                  <div class="input-bx">
+                    <input
+                      id="postcode-billing"
+                      type="text"
+                      name="postcode-billing"
+                      required />
+                    <span class="check-icon"></span>
+                  </div>
+                </li>
+
+                <li>
+                  <label for="country">Country</label>
+                  <div class="input-bx">
+                    <input id="country" type="text" name="country" required />
+                    <span class="check-icon"></span>
+                  </div>
+                </li>
+              </ul>
+              <div class="to-payment-btn">
+                <input class="btn-sty cta" type="submit" value="Next" />
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <!-- Payment Section -->
+        <section id="pay-info" class="col-span-full line-separator-grey">
+          <h2 class="hidden">Couples Resort : Payment info</h2>
+
+          <div class="payment-info">
+            <div class="payment-info-hl">
+              <h3>Select Payment</h3>
+              <span class="txt-red-cr"><i>3 / 3 steps</i></span>
+            </div>
+          </div>
+        </section>
+
+        <section id="card-bx" class="card-bx col-span-full">
+          <label for="cards" class="payment-box cards">
+            <input type="radio" id="cards" name="payment" value="cards" />
+            <i class="fa-regular fa-credit-card"></i>
+          </label>
+
+          <label for="paypal" class="payment-box paypal">
+            <i class="fa-brands fa-cc-paypal"></i>
+            <input type="radio" id="paypal" name="payment" value="paypal" />
+          </label>
+
+          <label for="apple" class="payment-box apple">
+            <i class="fa-brands fa-cc-apple-pay"></i>
+            <input type="radio" id="apple" name="payment" value="apple" />
+          </label>
+        </section>
+
+        <section id="card-info" class="col-span-full">
+          <h2 class="hidden">Couples Resort : Card Info</h2>
+          <h3>Card Info</h3>
+          <form class="card-info" action="#">
+            <ul class="card-detail">
+              <li id="card-number">
+                <label for="card-no">Card Number</label>
                 <div class="input-bx">
                   <input
+                    id="card-no"
+                    name="card-no"
+                    type="tel"
+                    inputmode="numeric"
+                    pattern="[0-9\s]{13,19}"
+                    title="13 or 19 digits on your cards"
+                    placeholder="---- ---- ---- ----"
+                    required />
+                  <span class="check-icon"></span>
+                </div>
+              </li>
+
+              <li id="card-holder">
+                <label for="holder">Card Holder Name</label>
+                <div class="input-bx">
+                  <input
+                    id="holder"
+                    class="card-holder"
                     type="text"
-                    name="city"
-                    pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]"
-                    title="Please put your 3 characters and 3 numbers of your postcode"
-                    required
-                  />
+                    name="holder"
+                    pattern="[A-Za-z]{4,}"
+                    required />
                   <span class="check-icon"></span>
                 </div>
               </li>
-              
-              <li id="billing-postcode">
-                <label for="postcode">Postal Code</label>
-                <div class="input-bx">
-                  <input type="text" name="postcode" required />
-                  <span class="check-icon"></span>
-                </div>
-              </li>
-              
-
-              <li>
-                <label for="country">Country</label>
-                <div class="input-bx">
-                  <input type="text" name="country" required />
-                  <span class="check-icon"></span>
-                </div>
-              </li>
-              
             </ul>
-            <div class="to-payment-btn">
-              <input class="btn-sty cta" type="submit" value="Next" />
-            </div>
-          </form>
-        </div>
-      </section>
 
-      <!-- Payment Section -->
-      <section id="pay-info" class="col-span-full line-separator-grey">
-        <h2 class="hidden">Couples Resort : Payment info</h2>
-
-        <div class="payment-info">
-          <div class="payment-info-hl">
-            <h3>Select Payment</h3>
-            <h5 class="txt-red-cr"><i>3 / 3 steps</i></h5>
-          </div>
-        </div>
-      </section>
-
-      <section id="card-bx" class="card-bx col-span-full">
-        <label class="payment-box cards">
-          <input type="radio" id="cards" name="payment" value="cards" />
-          <i class="fa-regular fa-credit-card"></i>
-        </label>
-
-        <label class="payment-box paypal">
-          <i class="fa-brands fa-cc-paypal"></i>
-          <input type="radio" id="paypal" name="payment" value="paypal" />
-        </label>
-
-        <label class="payment-box apple">
-          <i class="fa-brands fa-cc-apple-pay"></i>
-          <input type="radio" id="apple" name="payment" value="apple" />
-        </label>
-      </section>
-
-      <section id="card-info" class="col-span-full">
-        <h3>Card Info</h3>
-        <form class="card-info" action="#">
-          <ul class="card-detail">
-            <li id="card-number">
-              <label for="card-no">Card Number</label>
-              <div class="input-bx">
-                <input
-                  type="tel"
-                  inputmode="numeric"
-                  pattern="[0-9\s]{13,19}"
-                  title="13 or 19 digits on your cards"
-                  placeholder="---- ---- ---- ----"
-                  required
-                />
-                <span class="check-icon"></span>
-              </div>
-            </li>
-            
-            <li id="card-holder">
-              <label for="holder">Card Holder Name</label>
-              <div class="input-bx">
-                <input class="card-holder" type="text" name="holder" pattern="[A-Za-z]{4,}" required />
-                <span class="check-icon"></span>
-              </div>
-            </li>
-            <div class="exp">
+            <ul class="exp">
               <li id="card-exp-mo">
                 <label for="exp">Expiration</label>
                 <input
+                  id="exp"
                   type="tel"
                   inputmode="numeric"
                   pattern="[0-9\s]{2}"
                   name="exp-month"
-                  required
-                />
+                  required />
               </li>
 
               <li id="card-exp-yr">
                 <input
+                  id="exp-year"
                   type="tel"
                   inputmode="numeric"
                   pattern="[0-9\s]{2}"
                   name="exp-year"
-                  required
-                />
+                  required />
               </li>
-            </div>
-            <li id="card-ccv">
-              <label for="ccv">CCV</label>
-              <input
-                type="tel"
-                inputmode="numeric"
-                pattern="[0-9]{3}"
-                name="ccv"
-                title="3 digits of CCV on your cards"
-                required
-              />
-            </li>
-          </ul>
-          <div id="pay-now" class="total-price">
-            <h4>Total</h4>
-            <p>&dollar;<span class="total-price">226</span> CAD</p>
-          </div>
+            </ul>
 
-          <a href="#lb-cf">
-            <div class="to-confirm-btn cta">Pay</div>
-          </a>
-        </form>
+            <ul>
+              <li id="card-ccv">
+                <label for="ccv">CCV</label>
+                <input
+                  id="ccv"
+                  type="tel"
+                  inputmode="numeric"
+                  pattern="[0-9]{3}"
+                  name="ccv"
+                  title="3 digits of CCV on your cards"
+                  required />
+              </li>
+            </ul>
+            <div id="pay-now" class="total-price">
+              <h4>Total</h4>
+              <p>&dollar;<span class="total-price">226</span> CAD</p>
+            </div>
+
+            <a href="#lb-cf">
+              <div class="to-confirm-btn cta">Pay</div>
+            </a>
+          </form>
+        </section>
       </section>
-      </section></main>
+    </main>
 
     <!-- Footer -->
     <footer id="footer-hero">
@@ -350,29 +392,26 @@
     </footer>
 
     <!-- Payment Confirmation - light box -->
-
     <section id="lb-cf" class="lb-cf">
       <h2 class="hidden">Confirmation Light box</h2>
-      <a href="#card-info">
-        <!-- relative -->
-        <div class="lb-cf-bx"> 
-          <div id="cf-img" class="room-img">
+      <div class="lb-cf-bx">
+        <div id="cf-img" class="room-img">
           <div class="close-lb">
-            <a href="#card-info" class="close-lb"
-              ><i class="fa-regular fa-xmark"></i></a>
+            <a href="#card-info" class="close-lb">
+              <i class="fa-regular fa-xmark"></i>
+            </a>
           </div>
 
           <div class="confirm-room-bx">
-    
             <div class="room-name-bx">
-                 <div class="room-headline-cf">
-                    <div class="room-name">
-                        <h4 class="txt-red-cr">You Almost Done</h4>
-                        <h3>Request Booking</h3>
-                    </div>
+              <div class="room-headline-cf">
+                <div class="room-name">
+                  <span class="txt-red-cr sp-hl">You Almost Done</span>
+                  <h3>Request Booking</h3>
                 </div>
+              </div>
             </div>
-            </div>
+          </div>
         </div>
 
         <div class="confirm">
@@ -415,32 +454,25 @@
           </section>
 
           <div class="confirm-btn">
-            <a href="#sc">
-              <input
-                class="pay-btn btn-sty cta txt-wh-cr"
-                type="submit"
-                value="Confirm"
-              />
-            </a>
+            <button id="to-success" class="cta" onclick="location.href='#sc'">
+              Confirm
+            </button>
           </div>
         </div>
       </div>
-      </a>
     </section>
 
     <!-- light box: Booking Success -->
-    <h2 class="hidden">Successfully booking Light box</h2>
-
     <section id="sc" class="lb-sc grid-con">
+      <h2 class="hidden">Successfully booking Light box</h2>
       <div class="lb-sc-bx col-span-full">
-        <section class="hr-det">
-          <a href="#card-info">
-            <h4 class="hr-sub_hl txt-red-cr">Congratulations!</h4>
+        <a href="#card-info">
+          <section class="hr-det">
+            <span class="hr-sub_hl txt-red-cr">Congratulations!</span>
             <p class="hr-hl">Booking Successful</p>
-
-        </section>
-        <img src="/images/couples_resort_logo-icon.svg" alt="" />
-      </a>
+          </section>
+          <img src="/images/couples_resort_logo-icon.svg" alt="" />
+        </a>
         <p>
           We can't wait the
           <span class="date-sum"> 4<sup>th</sup> April 2024</span>!

@@ -1,3 +1,13 @@
+/* Table of Contents */
+/* 1. Global styles */
+/* 2. Heading styles */
+/* 3. Link styles */
+/* 4. Text styles */
+/* 5. Form styles */
+/* 6. Navigation styles */
+/* 7. Header styles */
+/* 8. Other styles */
+
 @import url(./layout.css);
 @import url(./roomtype.css);
 @import url(./reset.css);
@@ -7,17 +17,9 @@
 @import url(./home.css);
 @import url(./grid.css);
 
-/* ---Utility Classes--- */
-
-* {
-  /* outline: 1px solid greenyellow; */
-}
-
 .hidden {
   display: none;
 }
-
-/* ---Typography and Space Styles--- */
 
 body {
   display: flex;
@@ -65,6 +67,10 @@ a {
   color: #9a2018;
 }
 
+.sp-hl {
+  font-size: 0.7rem;
+}
+
 .line-separator {
   margin-top: 20px;
   border-top: solid 3px #9a2018;
@@ -76,8 +82,6 @@ a {
   border-top: solid 1px #626262;
   padding-top: 20px;
 }
-
-/* Form styling */
 
 form label {
   margin-bottom: 5px;
@@ -153,8 +157,6 @@ html {
   transform: rotate(90deg);
 }
 
-/* 2. ---Main Nav--- */
-
 header {
   background-color: white;
   position: sticky;
@@ -197,6 +199,7 @@ header {
 
 #main-nav ul li {
   width: auto;
+  text-align: center;
   padding: 20px 0;
   transition: 0.2s ease-in-out;
   border-bottom: 1px solid #efefef;
@@ -216,8 +219,6 @@ header {
   max-width: 382px;
   margin-bottom: 20px;
 }
-
-/* 3. ---Hero Section--- */
 
 #hl-box {
   display: flex;
@@ -241,8 +242,6 @@ header {
 .hl-box-wo-image {
   margin: 20px 0 0px 15px;
 }
-
-/* Footer */
 
 #footer-hero {
   width: 412px;
@@ -270,184 +269,4 @@ footer p {
 #price-policy {
   text-align: center;
   font-size: 0.5rem;
-}
-
-/* Activities Page */
-
-#hl-box-activities {
-  display: flex;
-  align-items: flex-end;
-  height: 218px;
-  background: url(/images/activities-assets/mobl/activities-hero-m.jpg)
-    no-repeat;
-}
-
-.act-directory {
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  justify-content: space-between;
-}
-
-.act-box h3 {
-  font-size: 12px;
-  color: #b8b8b8;
-  border-radius: 9px;
-}
-
-.act-directory ul {
-  list-style-type: none;
-}
-
-.act-directory ul li a {
-  color: black;
-}
-
-.act-bx-sw {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 10px;
-  margin-bottom: 10px;
-  border: 1px solid #b8b8b8;
-  border-radius: 9px;
-  cursor: pointer;
-}
-
-.act-bx-sw h3 {
-  color: #b8b8b8;
-  font-size: 11px;
-}
-
-.act-bx-sw i {
-  font-size: 12px;
-  color: #b8b8b8;
-  transition: 0.3s;
-}
-
-.act-bx-sw:hover {
-  background-color: #9a2018;
-  border: #9a2018;
-}
-.act-bx-sw:hover h3 {
-  color: #f4f4f4;
-}
-.act-bx-sw:hover i {
-  color: #f4f4f4;
-  transform: rotate(90deg);
-}
-
-.acts {
-  width: 345px;
-  position: absolute;
-  background-color: #efefef;
-  display: none;
-  z-index: 999;
-}
-
-.acts li {
-  font-size: 12px;
-  padding-top: 10px;
-  text-align: left;
-}
-
-.acts li:last-child {
-  padding-bottom: 10px;
-}
-
-.acts li:hover {
-  text-decoration: underline;
-}
-
-.col3 {
-  width: 75px;
-}
-
-.river-links,
-.algonquin-park-links,
-.sports-links {
-  top: 45px;
-  left: 0;
-}
-
-.wildlife-viewing-links,
-.winter-links {
-  top: 85px;
-  left: 0;
-}
-
-#algonquin-park div {
-  width: 140px;
-}
-
-#river div,
-#sports div {
-  width: 80px;
-}
-
-#wildlife-viewing div,
-#winter div {
-  width: 165px;
-}
-
-#algonquin-park:hover .algonquin-park-links,
-#river:hover .river-links,
-#sports:hover .sports-links,
-#wildlife-viewing:hover .wildlife-viewing-links,
-#winter:hover .winter-links {
-  display: block;
-}
-
-#act-box img {
-  width: 100%;
-  margin-top: 20px;
-}
-
-#act-box h3 {
-  font-size: 12px;
-  padding-top: 20px;
-  color: #9a2018;
-}
-
-#act-box h4 {
-  font-size: 22px;
-  padding-top: 10px;
-}
-
-#act-box p {
-  font-size: 14px;
-  margin-top: 20px;
-}
-
-.more-details {
-  margin: 30px auto;
-  font-size: 11px;
-}
-
-.more-details a {
-  font-size: 11px;
-  color: #9a2018;
-  font-style: italic;
-  text-decoration: underline;
-}
-
-.to-act-link {
-  display: flex;
-  justify-content: flex-end;
-  font-size: 14px;
-  margin: 30px 0px;
-}
-
-.to-act-link a {
-  color: #9a2018;
-  text-decoration: underline;
-}
-
-/* Galeairy Lake */
-
-#hl-box-galeairy-lake {
-  display: flex;
-  align-items: flex-end;
-  height: 218px;
-  background: url(/images/Galeairy-lake-assets/mobl/galeairy-hero-m.jpg)
-    no-repeat;
 }

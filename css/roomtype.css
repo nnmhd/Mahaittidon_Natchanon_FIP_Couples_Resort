@@ -1,16 +1,20 @@
-/* Room Types Page */
-/* Contents Table 
-    Filter Section
-    Filter Container 
-    Filter Layout
-    
-
-*/
-
-/* Filter Section */
+/* Table of Contents */
+/* 1. Filter Buttons and Container */
+/* 2. Filter Layout */
+/* 3. Filter Results - Room Type */
+/* 4. Room Features */
+/* 5. Dining Promotion */
+/* 6. Package Promotion */
+/* 7. Policy */
 
 .filt-btn {
+  display: flex;
+  align-items: center;
   color: #9a2018;
+}
+
+.filt-btn p {
+  font-size: 0.8rem;
 }
 
 .filt-btn i {
@@ -19,7 +23,7 @@
   transition: 0.2s ease-in-out;
 }
 
-/* Filter container */
+/* 1. Filter Buttons and Container */
 
 #filt-btn {
   display: none;
@@ -41,7 +45,7 @@
   transform: rotate(90deg);
 }
 
-/* Filter layout */
+/* 2. Filter Layout */
 
 .filt-ctn ul {
   width: 100%;
@@ -105,15 +109,7 @@
   height: 15px;
 }
 
-label:has(input[type="date"]:valid),
-label:has(select[type="numerous"]:valid),
-label:has(select[type="text"]:valid),
-label:has(input:checked) {
-  outline: 2px solid #9a2018;
-  color: #9a2018;
-}
-
-/* Filter results : Room type */
+/* 3. Filter Results - Room Type */
 
 .rdy-btn {
   padding: 15px 35px 15px 35px;
@@ -208,7 +204,7 @@ label:has(input:checked) {
   margin: 0;
 }
 
-/* Room Features */
+/* 4. Room Features */
 
 .rm-feature-ctn {
   background-color: #f4f4f4;
@@ -248,7 +244,7 @@ label:has(input:checked) {
   color: white;
 }
 
-/* Dinning Promotion */
+/* 5. Dining Promotion */
 
 .pro-dinn {
   display: flex;
@@ -286,7 +282,7 @@ label:has(input:checked) {
   background-color: #d92322;
 }
 
-/* Package Promotion */
+/* 6. Package Promotion */
 
 .pckg-pro-ctn {
   position: relative;
@@ -322,12 +318,12 @@ label:has(input:checked) {
   transform: translateX(-20px) translateY(20px);
 }
 
-/* Policy */
+/* 7. Policy */
+
 #policy {
   margin: 50px 0 25px 0;
   background-color: white;
   color: black;
-  background-color: ;
 }
 
 #policy summary {
@@ -345,7 +341,6 @@ label:has(input:checked) {
 
 #policy summary::marker {
   text-decoration: none;
-  font-size: 18 px;
 }
 
 #policy h3 {
@@ -359,7 +354,8 @@ label:has(input:checked) {
 }
 
 #policy ol {
-  margin: 0;
+  margin: 20px;
+  padding: 0;
 }
 
 #policy li {
