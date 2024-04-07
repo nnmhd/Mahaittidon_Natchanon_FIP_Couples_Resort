@@ -7,7 +7,7 @@
       rel="icon"
       href="./images/couples_resort_logo-icon.svg"
       type="image/x-icon" />
-    <title>Couples Resort - Home</title>
+    <title>Couples Resort - Room Types</title>
 
     <!-- Google Fonts installation -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,6 +27,7 @@
 
   <body>
     <header class="grid-con" id="main-header">
+      <h1 class="hidden">Welcome to Room types page of Couples Resort</h1>
       <nav id="main-nav" class="col-span-full">
         <h2 class="hidden">Main Navigation</h2>
         <input type="checkbox" id="hamburger" />
@@ -51,620 +52,764 @@
       </div>
     </header>
 
-<!-- Main Section : Room Types -->
+    <!-- Main Section : Room Types -->
 
-<main class="grid-con">
-    <h2 class="hidden">Couples' Resort room types, Where you can grab the happiness.</h2>
-            <section id="hl-box" class="full-span">
-                <div class="hl-box">
-                    <h4 class="txt-red-cr">Couples Resort</h4>
-                    <h2>Room Types</h2>
-                </div>
-            </section>
+    <main class="grid-con">
+      <section id="hl-box" class="full-span">
+        <h2 class="hidden">
+          Couples' Resort room types, Where you can grab the happiness.
+        </h2>
+        <div class="hl-box">
+          <span class="txt-red-cr sp-hl">Couples Resort</span>
+          <h2>Room Types</h2>
+        </div>
+      </section>
 
-<!-- Room Filter -->
-    <section id="filt-rm" class="line-separator col-span-full">
-    <h2 class="hidden">Filter the Couples Resort room types</h2>
-            <input type="checkbox" id="filt-btn">
-            <label class="filt-btn" for="filt-btn">
-                <h4>Filter Rooms</h4>
-                <span><i class="fa-regular fa-chevron-right"></i></span>
-            </label>
+      <!-- Room Filter -->
+      <section id="filt-rm" class="line-separator col-span-full">
+        <h2 class="hidden">Filter the Couples Resort room types</h2>
+        <input type="checkbox" id="filt-btn" />
+        <label class="filt-btn" for="filt-btn">
+          Filter Rooms
+          <span><i class="fa-regular fa-chevron-right"></i></span>
+        </label>
 
-            <form class="filt-ctn">
-                <ul>
-                    <li class="filt-guest filt-bx">
-                        <label for="guest">Guest
-                        <select type="text" name="guest" required>
-                            <option value="" selected disabled></option>
-                            <option value="couple">Couple</option>
-                            <option value="single">Single</option>
-                        </select>
-                        </label>
-                    </li>
+        <form class="filt-ctn">
+          <ul>
+            <li class="filt-guest filt-bx">
+              <label for="guest-select"
+                >Guest
+                <select id="guest-select" name="guest" required>
+                  <option value="" selected disabled>&nbsp;</option>
+                  <option value="couple">Couple</option>
+                  <option value="single">Single</option>
+                </select>
+              </label>
+            </li>
 
-                    <li class="date-filt filt-bx">
-                        <label for="date">Arrive
-                        <input type="text" onfocus="(this.type='date')" placeholder="Date" name="date" required>
-                        </label>
-                    </li>
+            <li class="date-filt filt-bx">
+              <label for="date-arrive"
+                >Arrive
+                <input
+                  id="date-arrive"
+                  type="text"
+                  onfocus="(this.type='date')"
+                  placeholder="Date"
+                  name="date-arrive"
+                  required />
+              </label>
+            </li>
 
-                    <li class="night-filt filt-bx">
-                        <label for="night">Night
-                        <select type="numerous" name="night" required>
-                            <option value="" selected disabled></option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                        </select>
-                        </label>
-                    </li>
+            <li class="night-filt filt-bx">
+              <label for="night"
+                >Night
+                <select id="night" name="night" required>
+                  <option value="" selected disabled>&nbsp;</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                </select>
+              </label>
+            </li>
 
-                    <li class="private-tub-filt filt-bx">
-                        <label for="private-tub"> Private Tub
-                        <input name="private-tub" type="checkbox" id="private-tub">
-                        </label>
-                    </li>
+            <li class="private-tub-filt filt-bx">
+              <label for="private-tub">
+                Private Tub
+                <input name="private-tub" type="checkbox" id="private-tub" />
+              </label>
+            </li>
 
-                    <li class="private-sauna-filt filt-bx">
-                        <label for="private-sauna">Private Sauna
-                        <input name="private-sauna" type="checkbox" id="private-sauna">
-                        </label>
-                    </li>
+            <li class="private-sauna-filt filt-bx">
+              <label for="private-sauna"
+                >Private Sauna
+                <input
+                  name="private-sauna"
+                  type="checkbox"
+                  id="private-sauna" />
+              </label>
+            </li>
 
-                    <li class="private-cabin-filt filt-bx">
-                        <label for="private-cabin">Private Cabin
-                        <input name="private-cabin" type="checkbox" id="private-cabin">
-                        </label>
-                    </li>
+            <li class="private-cabin-filt filt-bx">
+              <label for="private-cabin"
+                >Private Cabin
+                <input
+                  name="private-cabin"
+                  type="checkbox"
+                  id="private-cabin" />
+              </label>
+            </li>
 
-                    <li class="river-view-filt filt-bx">
-                        <label for="river-view">River View
-                        <input name="river-view" type="checkbox" id="river-view">
-                        </label>
-                    </li>
+            <li class="river-view-filt filt-bx">
+              <label for="river-view"
+                >River View
+                <input name="river-view" type="checkbox" id="river-view" />
+              </label>
+            </li>
 
-                    <li class="large-ceiling-filt filt-bx">
-                        <label for="large-ceiling">Large Ceiling
-                        <input name="large-ceiling" type="checkbox" id="large-ceiling">
-                        </label>
-                    </li>
-                    
-                    <li class="steam-shower-filt filt-bx">
-                        <label for="steam-shower">Steam Shower
-                        <input name="steam-shower" type="checkbox" id="steam-shower">
-                        </label>
-                    </li>
-                </ul>
-            </form>
-    </section>
+            <li class="large-ceiling-filt filt-bx">
+              <label for="large-ceiling"
+                >Large Ceiling
+                <input
+                  name="large-ceiling"
+                  type="checkbox"
+                  id="large-ceiling" />
+              </label>
+            </li>
 
-    
-<!-- Filter results : Room Type : Chateau -->
-<h2 class="hidden">Take a look the Chateau room</h2>
-<section id="chateau-rm" class="room-con col-span-full">
-    <div class="room-bx">
-        <div id="chateau-img" class="room-img full-span">
-        <div class="room-name-bx">
-             <div class="room-headline">
+            <li class="steam-shower-filt filt-bx">
+              <label for="steam-shower"
+                >Steam Shower
+                <input name="steam-shower" type="checkbox" id="steam-shower" />
+              </label>
+            </li>
+          </ul>
+        </form>
+      </section>
+
+      <!-- Filter results : Room Type : Chateau -->
+      <section id="chateau-rm" class="room-con col-span-full">
+        <h2 class="hidden">Take a look the Chateau room</h2>
+        <div class="room-bx">
+          <div id="chateau-img" class="room-img full-span">
+            <div class="room-name-bx">
+              <div class="room-headline">
                 <div class="room-name">
-                    <h4 class="txt-red-cr">Couples Resort</h4>
-                    <h3>Chateau</h3>
+                  <span class="txt-red-cr sp-hl">Couples Resort</span>
+                  <h3>Chateau</h3>
                 </div>
                 <div class="room-booking-cta">
-                    <a href="/chateau.html" class="rdy-btn cta">Ready to Book</a>
+                  <a href="/chateau.html" class="rdy-btn cta">Ready to Book</a>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        </div>
-    </div>
 
-    <div class="room-function col-span-full line-separator">
-        <div class="fucntion-bx">
+        <div class="room-function col-span-full line-separator">
+          <div class="fucntion-bx">
             <span
-            ><i
-                class="fa-light fa-arrow-up-right-and-arrow-down-left-from-center"
-            ></i
+              ><i
+                class="fa-light fa-arrow-up-right-and-arrow-down-left-from-center"></i
             ></span>
             <p>1400 ft<sup>2</sup></p>
             <span> <i class="fa-regular fa-bed-empty"></i></span>
             <p>King Size Beds</p>
+          </div>
         </div>
-    </div>
-    
-    <div class="room-detail">
-        <p class="rm-del-p">
-            Private Out Door Hot Tubs <br>
-            Private Sauna <br>
-            Steam Generator for the double shower <br>
-            4 shower heads &amp; benches <br>
-            Bidet <br>
-            Microwave <br>
-        </p>
-        <p class="rm-del-p">
-            <span> FREE: </span><br>
-            Room Basket of lotions, bath salts, specialty products <br>
-            Soapstone products (Bath and Body) in room. <br>
+
+        <div class="room-detail">
+          <p class="rm-del-p">
+            Private Out Door Hot Tubs <br />
+            Private Sauna <br />
+            Steam Generator for the double shower <br />
+            4 shower heads &amp; benches <br />
+            Bidet <br />
+            Microwave <br />
+          </p>
+          <p class="rm-del-p">
+            <span> FREE: </span><br />
+            Room Basket of lotions, bath salts, specialty products <br />
+            Soapstone products (Bath and Body) in room. <br />
             lly Espresso / Americano Machine with Caps.
-        </p>
-    </div>
-</section>
+          </p>
+        </div>
+      </section>
 
-
-<!-- Room — Villas -->
-<h2 class="hidden">Chilling in the Villas room</h2>
-<section id="villas-rm" class="room-con col-span-full">
-    <div class="room-bx">
-        <div id="villas-img" class="room-img full-span">
-        <div class="room-name-bx">
-             <div class="room-headline">
+      <!-- Room — Villas -->
+      <h2 class="hidden">Chilling in the Villas room</h2>
+      <section id="villas-rm" class="room-con col-span-full">
+        <div class="room-bx">
+          <div id="villas-img" class="room-img full-span">
+            <div class="room-name-bx">
+              <div class="room-headline">
                 <div class="room-name">
-                    <h4 class="txt-red-cr">Couples Resort</h4>
-                    <h3>Villas</h3>
+                  <span class="txt-red-cr sp-hl">Couples Resort</span>
+                  <h3>Villas</h3>
                 </div>
                 <div class="room-booking-cta">
-                    <a href="#" class="rdy-btn cta">Ready to Book</a>
+                  <a href="#" class="rdy-btn cta">Ready to Book</a>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        </div>
-    </div>
 
-    <div class="room-function col-span-full line-separator">
-        <div class="fucntion-bx">
+        <div class="room-function col-span-full line-separator">
+          <div class="fucntion-bx">
             <span
-            ><i
-                class="fa-light fa-arrow-up-right-and-arrow-down-left-from-center"
-            ></i
+              ><i
+                class="fa-light fa-arrow-up-right-and-arrow-down-left-from-center"></i
             ></span>
             <p>1400 ft<sup>2</sup></p>
             <span> <i class="fa-regular fa-bed-empty"></i></span>
             <p>King Size Beds</p>
+          </div>
         </div>
-    </div>
-    
-    <div class="room-detail">
-        <p class="rm-del-p">
-            Private Screened in Gazebo with Outdoor Hot Tub <br>
-            14 foot vaulted Pine ceiling <br>
-            2 Person Shower, 4 Shower Head and Benches <br>
-            Sauna <br>
+
+        <div class="room-detail">
+          <p class="rm-del-p">
+            Private Screened in Gazebo with Outdoor Hot Tub <br />
+            14 foot vaulted Pine ceiling <br />
+            2 Person Shower, 4 Shower Head and Benches <br />
+            Sauna <br />
             Steam Shower
-        </p>
-        <p class="rm-del-p">
-            <span> FREE: </span><br>
+          </p>
+          <p class="rm-del-p">
+            <span> FREE: </span><br />
             lly Espresso / Americano Machine with Caps.
-        </p>
-    </div>
-</section>
+          </p>
+        </div>
+      </section>
 
-
-<!-- Aside : Room Features -->
-<h2 class="hidden">All rooms features</h2>
-    <section class="rm-feature col-span-full full-span">
+      <!-- Aside : Room Features -->
+      <h2 class="hidden">All rooms features</h2>
+      <section class="rm-feature col-span-full full-span">
         <div class="rm-feature-ctn">
-            <h3>Every Guest room features</h3>
-            <div class="feature-bx">
-                <p>
-                    Exceeds 5 Diamond/Star Room Standards <br>
-                    Private Out Door Hot Tubs <br>
-                    Spacious Lakeside View <br>
-                    Walkout Balcony or Deck <br>
-                    King Size Beds <br>
-                    Fiber-optic Internet - Free WIFI <br>
-                    Free - Netflix <br>
-                    European Shower (2 or more heads) <br>
-                    50 inch Television <br>
-                    Wood Burning Fireplace <br>
-                    2 bath robes <br>
-                </p>
-                <p>
-                    Hair Dryer, cosmetic mirror <br>
-                    Irons/Ironing Boards <br>
-                    Keurig Coffee Maker with K-caps <br>
-                    Bar Fridge <br>
-                    Phones - Free long Distance <br>
-                    2 Chaise Lounge Chairs - Spring, Summer, Fall <br>
-                    2 person Whirlpool Bath Tub <br>
-                    Safes <br>
-                    Alarm Clock <br>
-                    Drink - Tap Water - Algonquin Park Aquifer
-                </p>
-            </div>
+          <h3>Every Guest room features</h3>
+          <div class="feature-bx">
+            <p>
+              Exceeds 5 Diamond/Star Room Standards <br />
+              Private Out Door Hot Tubs <br />
+              Spacious Lakeside View <br />
+              Walkout Balcony or Deck <br />
+              King Size Beds <br />
+              Fiber-optic Internet - Free WIFI <br />
+              Free - Netflix <br />
+              European Shower (2 or more heads) <br />
+              50 inch Television <br />
+              Wood Burning Fireplace <br />
+              2 bath robes <br />
+            </p>
+            <p>
+              Hair Dryer, cosmetic mirror <br />
+              Irons/Ironing Boards <br />
+              Keurig Coffee Maker with K-caps <br />
+              Bar Fridge <br />
+              Phones - Free long Distance <br />
+              2 Chaise Lounge Chairs - Spring, Summer, Fall <br />
+              2 person Whirlpool Bath Tub <br />
+              Safes <br />
+              Alarm Clock <br />
+              Drink - Tap Water - Algonquin Park Aquifer
+            </p>
+          </div>
         </div>
         <div class="call-cr-bx">
-            <i class="fa-thin fa-circle-phone"></i>
-            <p>Call for <br> Information</p>
-            <p><a href="tel:+18662021179">1 866 202-1179</a></p>
-            <!-- <p>1 866 202-1179</p> -->
+          <i class="fa-thin fa-circle-phone"></i>
+          <p>
+            Call for <br />
+            Information
+          </p>
+          <p><a href="tel:+18662021179">1 866 202-1179</a></p>
         </div>
-    </section>
+      </section>
 
-<!-- Dining Promotion -->
-<h2 class="hidden">Dining Promotion</h2>
-    <aside class="pro col-span-full full-span">
+      <!-- Dining Promotion -->
+      <h2 class="hidden">Dining Promotion</h2>
+      <aside class="pro col-span-full full-span">
         <div id="pro-dinn-rm-type-pg" class="pro-dinn">
-            <p>All room prices include daily 5 course dinner and breakfast</p>
-            <img src="/images/room-type-assets/mobl//ad-m.jpg" alt="Free dining and breakfast courses for every booking">
+          <p>All room prices include daily 5 course dinner and breakfast</p>
+          <img
+            src="/images/room-type-assets/mobl//ad-m.jpg"
+            alt="Free dining and breakfast courses for every booking" />
         </div>
         <div class="book-btn-ads">
-        <a href="#">Book Now</a>
+          <a href="#">Book Now</a>
         </div>
-    </aside>
+      </aside>
 
-
-<!-- Room — Master -->
-<h2 class="hidden">More about the Master room</h2>
-<section id="master-rm" class="room-con col-span-full">
-    <div class="room-bx">
-        <div id="master-img" class="room-img full-span">
-        <div class="room-name-bx">
-             <div class="room-headline">
+      <!-- Room — Master -->
+      <h2 class="hidden">More about the Master room</h2>
+      <section id="master-rm" class="room-con col-span-full">
+        <div class="room-bx">
+          <div id="master-img" class="room-img full-span">
+            <div class="room-name-bx">
+              <div class="room-headline">
                 <div class="room-name">
-                    <h4 class="txt-red-cr">Couples Resort</h4>
-                    <h3>Master</h3>
+                  <span class="txt-red-cr sp-hl">Couples Resort</span>
+                  <h3>Master</h3>
                 </div>
                 <div class="room-booking-cta">
-                    <a href="#" class="rdy-btn cta">Ready to Book</a>
+                  <a href="#" class="rdy-btn cta">Ready to Book</a>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        </div>
-    </div>
 
-    <div class="room-function col-span-full line-separator">
-        <div class="fucntion-bx">
+        <div class="room-function col-span-full line-separator">
+          <div class="fucntion-bx">
             <span
-            ><i
-                class="fa-light fa-arrow-up-right-and-arrow-down-left-from-center"
-            ></i
+              ><i
+                class="fa-light fa-arrow-up-right-and-arrow-down-left-from-center"></i
             ></span>
             <p>1000 ft<sup>2</sup></p>
             <span> <i class="fa-regular fa-bed-empty"></i></span>
             <p>King Size Beds</p>
+          </div>
         </div>
-    </div>
-    
-    <div class="room-detail">
-        <p class="rm-del-p">
-            Private Out Door Hot Tubs <br>
-            Private Sauna <br>
-            Steam Generator for the double shower <br>
-            4 shower heads &amp; benches <br>
-            Bidet <br>
-            Microwave <br>
-        </p>
-        <p class="rm-del-p">
-            <span> FREE: </span><br>
-            Room Basket of lotions, bath salts, specialty products <br>
-            Soapstone products (Bath and Body) in room. <br>
+
+        <div class="room-detail">
+          <p class="rm-del-p">
+            Private Out Door Hot Tubs <br />
+            Private Sauna <br />
+            Steam Generator for the double shower <br />
+            4 shower heads &amp; benches <br />
+            Bidet <br />
+            Microwave <br />
+          </p>
+          <p class="rm-del-p">
+            <span> FREE: </span><br />
+            Room Basket of lotions, bath salts, specialty products <br />
+            Soapstone products (Bath and Body) in room. <br />
             lly Espresso / Americano Machine with Caps.
-        </p>
-    </div>
-</section>
+          </p>
+        </div>
+      </section>
 
-
-<!-- Room — Exotics -->
-<h2 class="hidden">Explore the Exotics room</h2>
-<section id="exotic-rm" class="room-con col-span-full">
-    <div class="room-bx">
-        <div id="exotic-img" class="room-img full-span">
-        <div class="room-name-bx">
-             <div class="room-headline">
+      <!-- Room — Exotics -->
+      <h2 class="hidden">Explore the Exotics room</h2>
+      <section id="exotic-rm" class="room-con col-span-full">
+        <div class="room-bx">
+          <div id="exotic-img" class="room-img full-span">
+            <div class="room-name-bx">
+              <div class="room-headline">
                 <div class="room-name">
-                    <h4 class="txt-red-cr">Couples Resort</h4>
-                    <h3>Master</h3>
+                  <span class="txt-red-cr sp-hl">Couples Resort</span>
+                  <h3>Exotics</h3>
                 </div>
                 <div class="room-booking-cta">
-                    <a href="#" class="rdy-btn cta">Ready to Book</a>
+                  <a href="#" class="rdy-btn cta">Ready to Book</a>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        </div>
-    </div>
 
-    <div class="room-function col-span-full line-separator">
-        <div class="fucntion-bx">
+        <div class="room-function col-span-full line-separator">
+          <div class="fucntion-bx">
             <span
-            ><i
-                class="fa-light fa-arrow-up-right-and-arrow-down-left-from-center"
-            ></i
+              ><i
+                class="fa-light fa-arrow-up-right-and-arrow-down-left-from-center"></i
             ></span>
             <p>1000 ft<sup>2</sup></p>
             <span> <i class="fa-regular fa-bed-empty"></i></span>
             <p>King Size Beds</p>
+          </div>
         </div>
-    </div>
-    
-    <div class="room-detail">
-        <p class="rm-del-p">
-            2 at 1000 sq ft &amp; 4 at 600 sq ft <br>
-            Private Out Door Hot Tubs on Balcony <br>
-            2 Person Shower <br>
-            Steam Shower <br>
+
+        <div class="room-detail">
+          <p class="rm-del-p">
+            2 at 1000 sq ft &amp; 4 at 600 sq ft <br />
+            Private Out Door Hot Tubs on Balcony <br />
+            2 Person Shower <br />
+            Steam Shower <br />
             Microwave
-        </p>
-    </div>
-</section>
+          </p>
+        </div>
+      </section>
 
-
-<!-- Room — Chalet -->
-<h2 class="hidden">Chalet room type</h2>
-<section id="chalet-rm" class="room-con col-span-full">
-    <div class="room-bx">
-        <div id="chalet-img" class="room-img full-span">
-        <div class="room-name-bx">
-             <div class="room-headline">
+      <!-- Room — Chalet -->
+      <h2 class="hidden">Chalet room type</h2>
+      <section id="chalet-rm" class="room-con col-span-full">
+        <div class="room-bx">
+          <div id="chalet-img" class="room-img full-span">
+            <div class="room-name-bx">
+              <div class="room-headline">
                 <div class="room-name">
-                    <h4 class="txt-red-cr">Couples Resort</h4>
-                    <h3>Chalet</h3>
+                  <span class="txt-red-cr sp-hl">Couples Resort</span>
+                  <h3>Chalet</h3>
                 </div>
                 <div class="room-booking-cta">
-                    <a href="#" class="rdy-btn cta">Ready to Book</a>
+                  <a href="#" class="rdy-btn cta">Ready to Book</a>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        </div>
-    </div>
 
-    <div class="room-function col-span-full line-separator">
-        <div class="fucntion-bx">
+        <div class="room-function col-span-full line-separator">
+          <div class="fucntion-bx">
             <span
-            ><i
-                class="fa-light fa-arrow-up-right-and-arrow-down-left-from-center"
-            ></i
+              ><i
+                class="fa-light fa-arrow-up-right-and-arrow-down-left-from-center"></i
             ></span>
             <p>700 ft<sup>2</sup></p>
             <span> <i class="fa-regular fa-bed-empty"></i></span>
             <p>King Size Beds</p>
+          </div>
         </div>
-    </div>
-    
-    <div class="room-detail">
-        <p class="rm-del-p">
-            Private Cabin with Outdoor Hot Tub on Deck <br>
+
+        <div class="room-detail">
+          <p class="rm-del-p">
+            Private Cabin with Outdoor Hot Tub on Deck <br />
             Rain Shower
-        </p>
-    </div>
-</section>
+          </p>
+        </div>
+      </section>
 
-<!-- Room — Juniors -->
-<h2 class="hidden">Junior room type</h2>
-<section id="junior-rm" class="room-con col-span-full">
-    <div class="room-bx">
-        <div id="juniors-img" class="room-img full-span">
-        <div class="room-name-bx">
-             <div class="room-headline">
+      <!-- Room — Juniors -->
+      <h2 class="hidden">Junior room type</h2>
+      <section id="junior-rm" class="room-con col-span-full">
+        <div class="room-bx">
+          <div id="juniors-img" class="room-img full-span">
+            <div class="room-name-bx">
+              <div class="room-headline">
                 <div class="room-name">
-                    <h4 class="txt-red-cr">Couples Resort</h4>
-                    <h3>Junior</h3>
+                  <span class="txt-red-cr sp-hl">Couples Resort</span>
+                  <h3>Junior</h3>
                 </div>
                 <div class="room-booking-cta">
-                    <a href="#" class="rdy-btn cta">Ready to Book</a>
+                  <a href="#" class="rdy-btn cta">Ready to Book</a>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        </div>
-    </div>
 
-    <div class="room-function col-span-full line-separator">
-        <div class="fucntion-bx">
+        <div class="room-function col-span-full line-separator">
+          <div class="fucntion-bx">
             <span
-            ><i
-                class="fa-light fa-arrow-up-right-and-arrow-down-left-from-center"
-            ></i
+              ><i
+                class="fa-light fa-arrow-up-right-and-arrow-down-left-from-center"></i
             ></span>
             <p>700 ft<sup>2</sup></p>
             <span> <i class="fa-regular fa-bed-empty"></i></span>
             <p>King Size Beds</p>
+          </div>
         </div>
-    </div>
-    
-    <div class="room-detail">
-        <p class="rm-del-p">
-            Private Out Door Hot Tub on Balcony
-        </p>
-    </div>
-</section>
 
-<!-- Package Promotion -->
-<h2 class="hidden">Couples Resort's Sweet packages</h2>
-<section class="pckg-pro-ctn col-span-full">
-    <h3><a href="#">Explore Our <br>Sweet Packages</a></h3>
-    <div class="pck-bx">
-        <a href="#">
-        <img src="/images/room-type-assets/mobl/3rd-m.jpg" alt="Free night on third night">
-        </a>
-        <h3>Free Night on 3<sup>rd</sup> Day</h3>
-        <p>Determine your stay duration, add a night before and after to check for Very Low Rates or Free Nights. Repeat this process as Free Nights are included in online prices.</p>
+        <div class="room-detail">
+          <p class="rm-del-p">Private Out Door Hot Tub on Balcony</p>
+        </div>
+      </section>
 
-    </div>
+      <!-- Package Promotion -->
+      <h2 class="hidden">Couples Resort's Sweet packages</h2>
+      <section class="pckg-pro-ctn col-span-full">
+        <h3>
+          <a href="#">Explore Our <br />Sweet Packages</a>
+        </h3>
+        <div class="pck-bx">
+          <a href="#">
+            <img
+              src="/images/room-type-assets/mobl/3rd-m.jpg"
+              alt="Free night on third night" />
+          </a>
+          <h3>Free Night on 3<sup>rd</sup> Day</h3>
+          <p>
+            Determine your stay duration, add a night before and after to check
+            for Very Low Rates or Free Nights. Repeat this process as Free
+            Nights are included in online prices.
+          </p>
+        </div>
 
-    <div class="pck-box">
-        <a href="#">
-        <img src="/images/room-type-assets/mobl/spring-m.jpg" alt="Spring Activities is coming">
-        </a>
-        <h3>Spring Activities</h3>
-        <p>Join us for daily hikes, free motorboat use, and Moose Sightings in June! Plus, enjoy Pickleball, Tennis, and Spa.</p>
-    </div>
-    <div><a href="#"><i class="fa-light fa-tag"></i></a></div>
+        <div class="pck-box">
+          <a href="#">
+            <img
+              src="/images/room-type-assets/mobl/spring-m.jpg"
+              alt="Spring Activities is coming" />
+          </a>
+          <h3>Spring Activities</h3>
+          <p>
+            Join us for daily hikes, free motorboat use, and Moose Sightings in
+            June! Plus, enjoy Pickleball, Tennis, and Spa.
+          </p>
+        </div>
+        <div>
+          <a href="#"><i class="fa-light fa-tag"></i></a>
+        </div>
+      </section>
 
-</section>
+      <!-- Reservation information / Policy -->
+      <section id="policy" class="policy col-span-full">
+        <h2 class="hidden">Reservation Policies</h2>
 
-<!-- Reservation information / Policy -->
-<h2 class="hidden">Reservation Policies</h2>
-    <section id="policy" class="policy col-span-full">
-        <h4 class="txt-red-cr">Couples Resort</h4>
+        <span class="txt-red-cr sp-hl">Couples Resort</span>
         <h3>Reservations Information</h3>
 
         <div class="detail-bx line-separator">
-        <details>
-            <summary><span><i class="fa-sharp fa-solid fa-play"></i></span>Location</summary>
+          <details>
+            <summary>
+              <span><i class="fa-sharp fa-solid fa-play"></i></span>Location
+            </summary>
             <p class="pc-del-bx">
-                Couples Resort <br>
-                139 Galeairy Lake Road <br>
-                Whitney, Ontario, Canada, K0J 2M0 <br>
-                1-866-202-1179
+              Couples Resort <br />
+              139 Galeairy Lake Road <br />
+              Whitney, Ontario, Canada, K0J 2M0 <br />
+              1-866-202-1179
             </p>
-        </details>
-        <details>
-            <summary><span><i class="fa-sharp fa-solid fa-play"></i></span>Policies</summary>
+          </details>
+          <details>
+            <summary>
+              <span><i class="fa-sharp fa-solid fa-play"></i></span>Policies
+            </summary>
             <p class="pc-del-bx">
-                You will not be signing a registration upon arrival. You will be accepting your invoice and paying upfront for your stay in advance and taking full responsibility for any and all charges made during your stay. We are strictly a NO-TIPPING RESORT therefore NO tipping allowed nor expected. All prices are quoted in Canadian Dollars. We accept Debit Card, Visa, MasterCard, American Express and Cash (NO Cheques). Rates are guaranteed at time of booking with deposit, Plus 13% Harmonized Sales Tax. Check in time is around 4 pm-5 pm Check out time is 11 am Sorry no pets allowed. No Smoking nor Vaping inside any accommodation. Please be aware that we are a Destination Resort and Not a Hotel and that the Following Deposits, Change Date Fees and Cancellation Fees must Apply:
+              You will not be signing a registration upon arrival. You will be
+              accepting your invoice and paying upfront for your stay in advance
+              and taking full responsibility for any and all charges made during
+              your stay. We are strictly a NO-TIPPING RESORT therefore NO
+              tipping allowed nor expected. All prices are quoted in Canadian
+              Dollars. We accept Debit Card, Visa, MasterCard, American Express
+              and Cash (NO Cheques). Rates are guaranteed at time of booking
+              with deposit, Plus 13% Harmonized Sales Tax. Check in time is
+              around 4 pm-5 pm Check out time is 11 am Sorry no pets allowed. No
+              Smoking nor Vaping inside any accommodation. Please be aware that
+              we are a Destination Resort and Not a Hotel and that the Following
+              Deposits, Change Date Fees and Cancellation Fees must Apply:
             </p>
-        </details>
-        <details>
-            <summary><span><i class="fa-sharp fa-solid fa-play"></i></span>Deposit</summary>
+          </details>
+          <details>
+            <summary>
+              <span><i class="fa-sharp fa-solid fa-play"></i></span>Deposit
+            </summary>
             <p class="pc-del-bx">
-                &dollar;500 Required on Booking an accommodation.
-                WE ABSOLUTELY DO NOT REQUEST OR ACCEPT EMAIL TRANSFERS
+              &dollar;500 Required on Booking an accommodation. WE ABSOLUTELY DO
+              NOT REQUEST OR ACCEPT EMAIL TRANSFERS
             </p>
-        </details>
-        <details>
-            <summary><span><i class="fa-sharp fa-solid fa-play"></i></span>Guest Cancellation and Fees</summary>
+          </details>
+          <details>
+            <summary>
+              <span><i class="fa-sharp fa-solid fa-play"></i></span>Guest
+              Cancellation and Fees
+            </summary>
+            <ol class="pc-del-bx">
+              <li>
+                $200 Administration Fee will be charged to Change Dates and to
+                Cancellations, Absolutely No Exceptions. There is a 24 hour
+                delay, from booking time, before Fee takes effect.
+              </li>
+              <li>
+                CHARGED FULL 1 NIGHTS ACCOMMODATION to GUEST who DO NOT Show up
+                on Arrival Date, and did not prior Change Date or Prior Cancel.
+              </li>
+              <li>NO REFUND will be given for shortened Resort stays.</li>
+            </ol>
+          </details>
+          <details>
+            <summary>
+              <span><i class="fa-sharp fa-solid fa-play"></i></span>Extra Fees
+            </summary>
             <p class="pc-del-bx">
-                <ol>
-                    <li>$200 Administration Fee will be charged to Change Dates and to Cancellations, Absolutely No Exceptions. There is a 24 hour delay, from booking time, before Fee takes effect.</li>
-                    <li>CHARGED FULL 1 NIGHTS ACCOMMODATION to GUEST who DO NOT Show up on Arrival Date, and did not prior Change Date or Prior Cancel.</li>
-                    <li>NO REFUND will be given for shortened Resort stays.</li>
-                </ol>
+              13% HST TAX, Lunches, Extra food, Spa Treatments (however, repeat
+              guests receive 2 free 1/2 treatments if here in the last 2 years),
+              Horse Riding (seasonal), 20/30/40 hpr Italian Deck Boat(s), Drinks
+              from the Bar, Store, Parking $20/Night. Spa Products.
             </p>
-        </details>
-        <details>
-            <summary><span><i class="fa-sharp fa-solid fa-play"></i></span>Extra Fees</summary>
+          </details>
+          <details>
+            <summary>
+              <span><i class="fa-sharp fa-solid fa-play"></i></span>Guarantee
+            </summary>
             <p class="pc-del-bx">
-                13% HST TAX, Lunches, Extra food, Spa Treatments (however, repeat guests receive 2 free 1/2 treatments if here in the last 2 years), Horse Riding (seasonal), 20/30/40 hpr Italian Deck Boat(s), Drinks from the Bar, Store, Parking $20/Night. Spa Products.
-            </p>
-        </details>
-        <details>
-            <summary><span><i class="fa-sharp fa-solid fa-play"></i></span>Guarantee</summary>
-            <p class="pc-del-bx">
-                We aim to please. If at any time you need our help, please ask for immediate assistance. We are very fast at fixing what is broken or not right, usually we are always successful. <br><br>
+              We aim to please. If at any time you need our help, please ask for
+              immediate assistance. We are very fast at fixing what is broken or
+              not right, usually we are always successful. <br /><br />
 
-                <b>Property Policy</b><br><br>
-                
-                Front Desk office hours are 8:30 am to 10:00 pm. <br>
-                Fiber-Optic Internet Feeds this remote Resort, currently we provide it Free. <br>
-                Cell phone coverage is also available in our area. <br><br>
-                
-                Breakfast: 8:30 am to 10:30 am - Please reserve a room service time. <br>
-                Lunch: 12:00 pm to 4:00 pm - Served/Take out/Room Service. <br>
-                Dinner: Please reserve a Table or Room Service time by calling Extension 108 between 1:00 pm - 5:00 pm the day of your arrival. <br><br>
-                
-                All Accommodations have Hot Tubs: Resort Policy for your Health Protection is that Hot Tub Chemical Testing is done daily in your Hot Tub, regardless of signage you hang at your door. <br><br>
-                
-                Cleaning will occur between 9 am and mid-afternoon. The cleaning card MUST be displayed on your outside door handle or in the plastic holder for housekeeping. <br><br>
-                
-                Business Services are available - Inquire at Front Desk. <br><br>
-                
-                Please no disturbing music around the lake front or from your private deck. <br><br>
-                
-                Keep rooms quiet after 12 midnight. <br><br>
-                
-                No Pets Allowed. <br><br>
-                
-                All rooms are non-smoking and non-vaping. There are ashtrays provided for smokers located on the balcony or patio. There will be a $300 surcharge applied, if you are smoking or vaping or leaving Cannabis in your accommodation. Leave Cannabis in your vehicle as it is known to stink up the accommodation. During the Spring, Summer and Fall there are Firepits set up by the lake for those that indulge, to enjoy. <br><br>
-                
-                All Damages to Accommodations and facilities are the guest's responsibility! <br><br>
-                
-                Please give privacy &amp; respect to homes &amp; cottages on the lake and on the Resort. Do Not Trespass. <br><br>
-            </p>
-        </details>
-        <details>
-            <summary><span><i class="fa-sharp fa-solid fa-play"></i></span>Tipping and Gratuity Advice</summary>
-            <p class="pc-del-bx">
-                If you feel you really must tip or leave a gratuity, then we encourage you to tell the amazing staff and the World on TripAdvisor or Yelp or Google Reviews or Facebook as they, the staff, love to read it. Your action will affect them both emotionally positively and financially positively as it will help their “joy of the day” and their careers as they move forward in life. <br><br>
-                
-                <b>POWER OUTAGE POLICY</b><br><br>
-                
-                Power Outage Policy was introduced due to outage in winter 2009, the first time in 42 years that the resort had to shut down due to a power outage. Currently in a Power Outage we can Provide the Following Services:<br><br>
-                
-                <ol>
-                    <li>Wood burning fireplace in all Accommodations; for Romance ( Possibly # 1 Reason Guests stay with us)</li>
-                    <li>Fully operational Kitchen; Gourmet Dining (Possible also the #1 Reason Guests stay with us)</li>
-                    <li>Cold running water in all Accommodations</li>
-                    <li>Hot and Cold Showers in the Gym/Sauna Facilities</li>
-                    <li>Recreation Room with Big TV for the Vital Game (Much lower on the list of reasons to stay with us…but May be critical)</li>
-                    <li>Office has access to the outside world with Phone and Data Line services</li>
-                    <li>We Apologize that all the Toys in your Accommodation, and the Pool/Hot Tub will Not be operational</li>
-                </ol>
+              <b>Property Policy</b><br /><br />
 
+              Front Desk office hours are 8:30 am to 10:00 pm. <br />
+              Fiber-Optic Internet Feeds this remote Resort, currently we
+              provide it Free. <br />
+              Cell phone coverage is also available in our area. <br /><br />
+
+              Breakfast: 8:30 am to 10:30 am - Please reserve a room service
+              time. <br />
+              Lunch: 12:00 pm to 4:00 pm - Served/Take out/Room Service. <br />
+              Dinner: Please reserve a Table or Room Service time by calling
+              Extension 108 between 1:00 pm - 5:00 pm the day of your arrival.
+              <br /><br />
+
+              All Accommodations have Hot Tubs: Resort Policy for your Health
+              Protection is that Hot Tub Chemical Testing is done daily in your
+              Hot Tub, regardless of signage you hang at your door. <br /><br />
+
+              Cleaning will occur between 9 am and mid-afternoon. The cleaning
+              card MUST be displayed on your outside door handle or in the
+              plastic holder for housekeeping. <br /><br />
+
+              Business Services are available - Inquire at Front Desk.
+              <br /><br />
+
+              Please no disturbing music around the lake front or from your
+              private deck. <br /><br />
+
+              Keep rooms quiet after 12 midnight. <br /><br />
+
+              No Pets Allowed. <br /><br />
+
+              All rooms are non-smoking and non-vaping. There are ashtrays
+              provided for smokers located on the balcony or patio. There will
+              be a $300 surcharge applied, if you are smoking or vaping or
+              leaving Cannabis in your accommodation. Leave Cannabis in your
+              vehicle as it is known to stink up the accommodation. During the
+              Spring, Summer and Fall there are Firepits set up by the lake for
+              those that indulge, to enjoy. <br /><br />
+
+              All Damages to Accommodations and facilities are the guest's
+              responsibility! <br /><br />
+
+              Please give privacy &amp; respect to homes &amp; cottages on the
+              lake and on the Resort. Do Not Trespass. <br /><br />
+            </p>
+          </details>
+          <details>
+            <summary>
+              <span><i class="fa-sharp fa-solid fa-play"></i></span>Tipping and
+              Gratuity Advice
+            </summary>
+            <p class="pc-del-bx">
+              If you feel you really must tip or leave a gratuity, then we
+              encourage you to tell the amazing staff and the World on
+              TripAdvisor or Yelp or Google Reviews or Facebook as they, the
+              staff, love to read it. Your action will affect them both
+              emotionally positively and financially positively as it will help
+              their “joy of the day” and their careers as they move forward in
+              life. <br /><br />
+
+              <b>POWER OUTAGE POLICY</b><br /><br />
+
+              Power Outage Policy was introduced due to outage in winter 2009,
+              the first time in 42 years that the resort had to shut down due to
+              a power outage. Currently in a Power Outage we can Provide the
+              Following Services:<br /><br />
+            </p>
+            <ol>
+              <li>
+                Wood burning fireplace in all Accommodations; for Romance (
+                Possibly # 1 Reason Guests stay with us)
+              </li>
+              <li>
+                Fully operational Kitchen; Gourmet Dining (Possible also the #1
+                Reason Guests stay with us)
+              </li>
+              <li>Cold running water in all Accommodations</li>
+              <li>Hot and Cold Showers in the Gym/Sauna Facilities</li>
+              <li>
+                Recreation Room with Big TV for the Vital Game (Much lower on
+                the list of reasons to stay with us…but May be critical)
+              </li>
+              <li>
+                Office has access to the outside world with Phone and Data Line
+                services
+              </li>
+              <li>
+                We Apologize that all the Toys in your Accommodation, and the
+                Pool/Hot Tub will Not be operational
+              </li>
+            </ol>
+
+            <ul>
+              <li>
+                We will try to update the home page of our website to tell when
+                we are up again.
+              </li>
+              <li>
+                If there is a power outage we will try to notify guests. If we
+                are successful the deposit will be refunded if desired.
+              </li>
+              <li>
+                If guests arrive or if a power outage happens while guests are
+                here, we will offer:
                 <ul>
-                    <li>We will try to update the home page of our website to tell when we are up again.</li>
-                    <li>If there is a power outage we will try to notify guests. If we are successful the deposit will be refunded if desired.</li>
-                    <li>If guests arrive or if a power outage happens while guests are here, we will offer:
-                        <ul>
-                            <li>If power goes out for two hours between 4pm and 11pm: 10% off</li>
-                            <li>If power goes out for three hours between 8pm and 11pm: 20% off</li>
-                            <li>If power goes out for four hours between 7pm and 11pm: 30% off</li>
-                            <li>If power goes out for five hours between 6pm and 11pm: 35% off and one free night stay in the future, similar accommodation</li>
-                            <li>Power outages after 11pm through to 4pm will have no discount attached.</li>
-                        </ul>
-                    </li>
+                  <li>
+                    If power goes out for two hours between 4pm and 11pm: 10%
+                    off
+                  </li>
+                  <li>
+                    If power goes out for three hours between 8pm and 11pm: 20%
+                    off
+                  </li>
+                  <li>
+                    If power goes out for four hours between 7pm and 11pm: 30%
+                    off
+                  </li>
+                  <li>
+                    If power goes out for five hours between 6pm and 11pm: 35%
+                    off and one free night stay in the future, similar
+                    accommodation
+                  </li>
+                  <li>
+                    Power outages after 11pm through to 4pm will have no
+                    discount attached.
+                  </li>
                 </ul>
-            </p>
-        </details>
-        <details>
-            <summary><span><i class="fa-sharp fa-solid fa-play"></i></span>Revision to This Policy</summary>
+              </li>
+            </ul>
+          </details>
+          <details>
+            <summary>
+              <span><i class="fa-sharp fa-solid fa-play"></i></span>Revision to
+              This Policy
+            </summary>
             <p class="pc-del-bx">
-                The Couples Resort reserves the right to revise, amend, or modify this policy, our Internet Service Agreement and our other policies and agreements at any time and in any manner. Notice of any revision, amendment, or modification will be posted in accordance with the Internet Service Agreement.
+              The Couples Resort reserves the right to revise, amend, or modify
+              this policy, our Internet Service Agreement and our other policies
+              and agreements at any time and in any manner. Notice of any
+              revision, amendment, or modification will be posted in accordance
+              with the Internet Service Agreement.
             </p>
-        </details>
-        <details>
-            <summary><span><i class="fa-sharp fa-solid fa-play"></i></span>Where to Direct Questions</summary>
+          </details>
+          <details>
+            <summary>
+              <span><i class="fa-sharp fa-solid fa-play"></i></span>Where to
+              Direct Questions
+            </summary>
             <p class="pc-del-bx">
-                If you have any questions about this Privacy Policy or the practices described herein, you may contact: <br>
-                <br>
-                <b>Attention:</b> John Sorensen <br><br>
-                Couples Resort <br>
-                P. O. Box 310 <br>
-                139 Galeairy Lake Road <br>
-                Whitney - Algonquin Park, ON K0J 2M0 <br>
-                Canada
+              If you have any questions about this Privacy Policy or the
+              practices described herein, you may contact: <br />
+              <br />
+              <b>Attention:</b> John Sorensen <br /><br />
+              Couples Resort <br />
+              P. O. Box 310 <br />
+              139 Galeairy Lake Road <br />
+              Whitney - Algonquin Park, ON K0J 2M0 <br />
+              Canada
             </p>
-        </details>
-    </div>
-    </section>
+          </details>
+        </div>
+      </section>
 
-    <div class="tdlr-bx col-span-full">
+      <div class="tdlr-bx col-span-full">
         <p>
-            The content and pricing on this website is accurate to the best of our abilities. All prices on this website and in our reservation system are based on conditions at the time of publishing and are subject to change. Please call to confirm availability and pricing
-        </p>
-
-    </div>
-</main>
-
-
-  <!-- Footer -->
-  <footer id="footer-hero">
-    <h2 class="hidden">Footer of Couples Resort</h2>
-    <section id="footer-contact-info">
-      <h3>Couples Resort</h3>
-      <p>
-        1198 Osprey Rd, (End of) <br />
-        Minden, Soyers Lake, ON, <br />
-        K0M 2K0
-      </p>
-      <p>
-        Toll Free: +1 877 201-1156 <br />
-        FAX:+1 613 638 2217 <br />
-        E-mail: info@coupleresort.com
-      </p>
-
-      <div id="footer-privacy" class="col-span-full line-separator">
-        <p id="price-policy">
-          All Prices and services on this website and in our reservation
-          system are based on conditions at the time of publishing abd are
-          subject to change. Please call to confirm services, availability and
-          pricing. &copy;2013 Couples Resort Inc. All Rights Reserved Privacy
-          Policy
+          The content and pricing on this website is accurate to the best of our
+          abilities. All prices on this website and in our reservation system
+          are based on conditions at the time of publishing and are subject to
+          change. Please call to confirm availability and pricing
         </p>
       </div>
-    </section>
-  </footer>
-</body>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer-hero">
+      <h2 class="hidden">Footer of Couples Resort</h2>
+      <section id="footer-contact-info">
+        <h3>Couples Resort</h3>
+        <p>
+          1198 Osprey Rd, (End of) <br />
+          Minden, Soyers Lake, ON, <br />
+          K0M 2K0
+        </p>
+        <p>
+          Toll Free: +1 877 201-1156 <br />
+          FAX:+1 613 638 2217 <br />
+          E-mail: info@coupleresort.com
+        </p>
+
+        <div id="footer-privacy" class="col-span-full line-separator">
+          <p id="price-policy">
+            All Prices and services on this website and in our reservation
+            system are based on conditions at the time of publishing abd are
+            subject to change. Please call to confirm services, availability and
+            pricing. &copy;2013 Couples Resort Inc. All Rights Reserved Privacy
+            Policy
+          </p>
+        </div>
+      </section>
+    </footer>
+  </body>
 </html>

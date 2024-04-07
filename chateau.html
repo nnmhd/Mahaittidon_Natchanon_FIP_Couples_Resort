@@ -7,7 +7,7 @@
       rel="icon"
       href="./images/couples_resort_logo-icon.svg"
       type="image/x-icon" />
-    <title>Couples Resort - Home</title>
+    <title>Couples Resort - Chateau</title>
 
     <!-- Google Fonts installation -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,6 +27,7 @@
 
   <body>
     <header class="grid-con" id="main-header">
+      <h1 class="hidden">Welcome to the Chateau room - Couples Resort</h1>
       <nav id="main-nav" class="col-span-full">
         <h2 class="hidden">Main Navigation</h2>
         <input type="checkbox" id="hamburger" />
@@ -53,10 +54,10 @@
 
     <!-- Hero Section : Chateau -->
     <main class="grid-con">
-      <h2 class="hidden">Chateau Room's details</h2>
       <section id="hl-box-chateau" class="col-span-full full-span">
+        <h2 class="hidden">Chateau Room's details</h2>
         <div class="hl-box">
-          <h4 class="txt-red-cr">Room Style</h4>
+          <span class="txt-red-cr sp-hl">Room Style</span>
           <h2>Chateau</h2>
         </div>
       </section>
@@ -125,22 +126,30 @@
         <!-- Room's album light Box  -->
         <a href="#rm-album" class="ab-lb" id="sl-1">
           <span>
-            <img src="./images/chateau-assets/mobl/chateau-m-1.jpg" />
+            <img
+              src="./images/chateau-assets/mobl/chateau-m-1.jpg"
+              alt="Kitchen with modern appliances and rustic wooden decor" />
           </span>
         </a>
         <a href="#rm-album" class="ab-lb" id="sl-2">
           <span>
-            <img src="./images/chateau-assets/mobl/chateau-m-2.jpg" />
+            <img
+              src="./images/chateau-assets/mobl/chateau-m-2.jpg"
+              alt="Sitting area with unique fireplace and warm string lighting" />
           </span>
         </a>
         <a href="#rm-album" class="ab-lb" id="sl-3">
           <span>
-            <img src="./images/chateau-assets/mobl/chateau-m-3.jpg" />
+            <img
+              src="./images/chateau-assets/mobl/chateau-m-3.jpg"
+              alt="Large stone fireplace with firewood, cabin’s cozy centerpiece" />
           </span>
         </a>
         <a href="#rm-album" class="ab-lb" id="sl-4">
           <span>
-            <img src="./images/chateau-assets/mobl/chateau-m-4.jpg" />
+            <img
+              src="./images/chateau-assets/mobl/chateau-m-4.jpg"
+              alt="Wooden nightstand with a simple vase and flowers" />
           </span>
         </a>
 
@@ -193,7 +202,7 @@
         <h2 class="hidden">Booking the room</h2>
 
         <div class="rm-price">
-          <h4>Room Price</h4>
+          <h3>Room Price</h3>
           <p class="price">
             <span>&dollar;200 CAD</span>
             / night
@@ -204,8 +213,9 @@
           <ul id="rm-booking-fm-bx">
             <li>
               <div id="check-in">
-                <label for="check-in">Check-in</label>
+                <label for="check-in-date">Check-in</label>
                 <input
+                  id="check-in-date"
                   type="text"
                   onfocus="(this.type='date')"
                   placeholder="Date"
@@ -215,8 +225,9 @@
 
             <li>
               <div id="check-out">
-                <label for="check-out">Check-out</label>
+                <label for="check-out-date">Check-out</label>
                 <input
+                  id="check-out-date"
                   type="text"
                   onfocus="(this.type='date')"
                   placeholder="Date"
@@ -226,9 +237,9 @@
 
             <li>
               <div id="guest">
-                <label for="guest">Guest</label>
+                <label for="guest-person">Guest</label>
                 <br />
-                <select name="guest" required>
+                <select id="guest-person" name="guest" required>
                   <option value="single">Single</option>
                   <option value="couple">Couple</option>
                 </select>
@@ -241,7 +252,11 @@
           </ul>
           <div class="booking-rm-btn">
             <a href="/reservations.html">
-              <input class="cta" type="submit" value="Book" />
+              <input
+                class="cta"
+                type="submit"
+                value="Book"
+                onclick="location.href='/reservations.html'" />
             </a>
           </div>
         </form>

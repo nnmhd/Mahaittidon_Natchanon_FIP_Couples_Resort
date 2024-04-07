@@ -1,4 +1,14 @@
-/* Activities Page */
+/* Table of Contents */
+/* 1. Activities Section */
+/* 2. Galeairy Lake Section */
+
+#hl-box-activities {
+  display: flex;
+  align-items: flex-end;
+  height: 218px;
+  background: url(/images/activities-assets/mobl/activities-hero-m.jpg)
+    no-repeat;
+}
 
 .activity-bx {
   position: relative;
@@ -133,28 +143,28 @@
 }
 
 #act-box h3 {
-  font-size: 12px;
+  font-size: 0.8rem;
   padding-top: 20px;
   color: #9a2018;
 }
 
 #act-box h4 {
-  font-size: 22px;
+  font-size: 1.25rem;
   padding-top: 10px;
 }
 
 #act-box p {
-  font-size: 14px;
+  font-size: 1rem;
   margin-top: 20px;
 }
 
 .more-details {
   margin: 30px auto;
-  font-size: 11px;
+  font-size: 0.8rem;
 }
 
 .more-details a {
-  font-size: 11px;
+  font-size: 0.8rem;
   color: #9a2018;
   font-style: italic;
   text-decoration: underline;
@@ -164,7 +174,7 @@
   display: flex;
   justify-content: flex-end;
   font-size: 14px;
-  margin: 30px 0px;
+  margin: 40px 0;
 }
 
 .to-act-link a {
